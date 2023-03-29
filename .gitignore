@@ -1,8 +1,8 @@
-src
-static
-CHANGELOG.md
-package-lock.json
-package.json
-postcss.config.js
-README.md
-webpack.config.js
+/adminkit-pro-3-3-0/src/
+/adminkit-pro-3-3-0/static/
+/adminkit-pro-3-3-0/CHANGELOG.md
+/adminkit-pro-3-3-0/package-lock.json
+/adminkit-pro-3-3-0/package.json
+/adminkit-pro-3-3-0/postcss.config.js
+/adminkit-pro-3-3-0/README.md
+/adminkit-pro-3-3-0/webpack.config.js
