@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Responsive Admin &amp; Dashboard Template based on Bootstrap 5">
+    <meta name="author" content="AdminKit">
+    <meta name="keywords" content="adminkit, bootstrap, bootstrap 5, admin, dashboard, template, responsive, css, sass, html, theme, front-end, ui kit, web">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="shortcut icon" href="img/logo.svg" type="image/svg+xml">
+
+    <link rel="canonical" href="/" />
+
+    <title>Restock Settings | ForecastRx UI</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <link class="js-stylesheet" href="adminkit-pro-3-3-0/dist/css/light.css" rel="stylesheet">
+</head>
+
+<body data-theme="default" data-layout="fluid" data-sidebar-position="left" data-sidebar-layout="default">
+    <div class="wrapper">
+        <nav id="sidebar" class="sidebar js-sidebar">
+            <div class="sidebar-content js-simplebar">
+                <a class="sidebar-brand" href="index.html">
+                    <img src="img/logoTextWhite.svg" alt="ForecastRx" style="max-width: 160px;" />
+                </a>
+
+                <ul class="sidebar-nav">
+                    <li class="sidebar-header">
+                        <strong>Navigation</strong>
+                    </li>
+
+                    <li class="sidebar-item">
+                        <a data-bs-target="#manage" data-bs-toggle="collapse" class="sidebar-link collapsed">
+                            <i class="align-middle" data-feather="pie-chart"></i> <span class="align-middle">Manage Company</span>
+                        </a>
+                        <ul id="manage" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-manage-details.html">Company Details</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-subpage.html">Suppliers</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-subpage.html">Items</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-subpage.html">Demand</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-subpage.html">Supply</a></li>
+                            <li class="sidebar-item">
+                                <a data-bs-target="#multiple" data-bs-toggle="collapse" class="sidebar-link collapsed" aria-expanded="false">
+                                    <i class="align-middle" data-feather="bar-chart-2"></i>
+                                    <span class="align-middle">Advanced</span>
+                                </a>
+                                <ul id="multiple" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#manage" style="">
+                                    <li class="sidebar-item"><a class="sidebar-link" href="template-subpage.html">Edit Kits</a></li>
+                                    <li class="sidebar-item"><a class="sidebar-link" href="template-subpage.html">Edit Item History</a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li class="sidebar-item">
+                        <a data-bs-target="#purchasing" data-bs-toggle="collapse" class="sidebar-link collapsed">
+                            <i class="align-middle" data-feather="target"></i> <span class="align-middle">Purchasing</span>
+                        </a>
+                        <ul id="purchasing" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-subpage.html">My Suggested</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-subpage.html">Custom</a></li>
+                        </ul>
+                    </li>
+                    <li class="sidebar-item">
+                        <a data-bs-target="#restock" data-bs-toggle="collapse" class="sidebar-link collapsed">
+                            <i class="align-middle" data-feather="box"></i> <span class="align-middle">RestockAMZ</span>
+                        </a>
+                        <ul id="restock" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-restock-warehouse.html">Restock from Warehouse</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-admin.html">Restock from Supplier</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-admin.html">Address Book</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-admin.html">Manage Shipments</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-restock-settings.html">Settings</a></li>
+                        </ul>
+                    </li>
+                    <li class="sidebar-item">
+                        <a data-bs-target="#admin" data-bs-toggle="collapse" class="sidebar-link collapsed">
+                            <i class="align-middle" data-feather="settings"></i> <span class="align-middle">Administration</span>
+                        </a>
+                        <ul id="admin" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-admin.html">Companies</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-admin.html">Users</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <div class="sidebar-cta">
+                    <div class="sidebar-cta-content">
+                        <small>v3.75.0</small>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="main overflow-visible">
+
+            <nav class="navbar navbar-expand navbar-light navbar-bg sticky-top" id="header">
+                <a class="sidebar-toggle js-sidebar-toggle">
+                    <i class="hamburger align-self-center"></i>
+                </a>
+
+                <form class="d-none d-lg-inline-block">
+                    <div class="input-group input-group-navbar">
+                        <input type="text" class="form-control" placeholder="Search…" aria-label="Search">
+                        <button class="btn" type="button">
+                            <i class="align-middle" data-feather="search"></i>
+                        </button>
+                    </div>
+                </form>
+
+                <ul class="navbar-nav d-none d-md-flex">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="resourcesDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Choose Company
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="resourcesDropdown">
+                            <a class="dropdown-item" href="index.html">Fishers Finery Amazon</a>
+                            <a class="dropdown-item" href="template-add.html">+ Add Company</a>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="navbar-collapse collapse">
+                    <ul class="navbar-nav navbar-align">
+
+                        <li class="nav-item">
+                            <a class="nav-icon" href="#">
+                                <div class="position-relative">
+                                    <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Forecast Report">
+                                        <i class="align-middle" data-feather="book"></i>
+                                    </span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-icon" href="#">
+                                <div class="position-relative">
+                                    <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Last Sync: [date]">
+                                        <i class="align-middle" data-feather="repeat"></i>
+                                    </span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-icon" href="#">
+                                <div class="position-relative">
+                                    <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Last Forecast: [date]">
+                                        <i class="align-middle" data-feather="trending-up"></i>
+                                    </span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-icon" href="#">
+                                <div class="position-relative">
+                                    <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Support" onclick="window.open('https://forecastrx.zendesk.com/', '_blank');">
+                                        <i class="align-middle" data-feather="help-circle"></i>
+                                    </span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-icon js-fullscreen d-none d-lg-block" href="#">
+                                <div class="position-relative">
+                                    <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Full Screen">
+                                        <i class="align-middle" data-feather="maximize"></i>
+                                    </span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-icon pe-md-0 dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                                <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="User: [name]">
+                                    <i class="align-middle" data-feather="user"></i>
+                                </span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end">
+                                <span class="dropdown-item pe-none"><strong>Name</strong></span>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="template-profile.html"><i class="align-middle me-1" data-feather="user"></i> Profile</a>
+                                <a class="dropdown-item" href="template-subscription.html"><i class="align-middle me-1" data-feather="dollar-sign"></i> Subscription</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="template-login.html"><i class="align-middle me-1" data-feather="log-out"></i> Log out</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <main class="content">
+                <div class="container-fluid p-0">
+
+                    <div class="card">
+                        <div class="card-body">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb mb-0">
+                                    <li class="breadcrumb-item" style="line-height: 1.2;"><a href="index.html"><i class="align-middle" data-feather="home"></i> </a></li>
+                                    <li class="breadcrumb-item pe-none"><a href="#">RestockAMZ</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page"><strong>Settings</strong></li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header pb-0">
+                            <h1 class="card-title mb-0"><i class="fa-solid fa-calculator me-2"></i>FBA Replenishment Model</h1>
+                        </div>
+                        <div class="card-body">
+                            <p>Select how you typically replenish products so your forecast will account for the correct lead times when calculating your restock suggestions.</p>
+                            <select class="form-select w-auto">
+                                <option value="1">Supplier Ships to FBA</option>
+                            </select>
+                            <p class="mt-3 mb-0"><i class="fa-regular fa-lightbulb text-success me-1"></i><em><span class="text-success">Tip:</span> Global Default Value, this can also be set on the Item or Supplier Level.</em></p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header pb-0">
+                            <h1 class="card-title mb-0"><i class="fa-solid fa-truck me-2"></i>Warehouse Lead Time</h1>
+                        </div>
+                        <div class="card-body">
+                            <p>The average # of days it takes from creating a shipment to arrival at Amazon.</p>
+                            <div class="mb-3">
+                                <input class="form-control form-control-lg d-inline align-middle" type="number" value="7" style="width: 80px;"> days
+                            </div>
+                            <p class="mt-3 mb-0"><i class="fa-regular fa-lightbulb text-success me-1"></i><em><span class="text-success">Tip:</span> This setting can be changed at any time and is often good to increase during peak seasons, e.g., fourth quarter, to account for longer shipment processing times at Amazon.</em></p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header pb-0">
+                            <h1 class="card-title mb-0"><i class="fa-solid fa-cart-shopping me-2"></i>Ideal FBA Inventory</h1>
+                        </div>
+                        <div class="card-body">
+                            <p>Choose a range for the number of days of inventory coverage you'd like to keep at Amazon.
+                                <br />Products quantities <strong>below</strong> your <strong>minimum</strong> will be flagged <strong style="color:#FE8945;">orange</strong> in your Restock Suggestions. <br />Products quantities <strong>between</strong> your <strong>minimum and maximum</strong> will be flagged <strong style="color:#D1BD06;">yellow</strong> in your Restock Suggestions.</p>
+                            <div class="mb-3">
+                                <input class="form-control form-control-lg d-inline align-middle" type="number" value="30" style="width: 80px;"> <i class="fa-solid fa-flag" style="color:#FE8945;"></i> Minimum Days of FBA Inventory
+                            </div>
+                            <div class="mb-3">
+                                <input class="form-control form-control-lg d-inline align-middle" type="number" value="45" style="width: 80px;"> <i class="fa-solid fa-flag" style="color:#D1BD06;"></i> Maximum Days of FBA Inventory
+                            </div>
+                            <p class="mt-3 mb-0"><i class="fa-regular fa-lightbulb text-success me-1"></i><em><span class="text-success">Tip:</span> We recommend starting with '30' and '45' days and adjusting the time period up or down if desired.</em></p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header pb-0">
+                            <h1 class="card-title mb-0"><i class="fa-solid fa-percent me-2"></i>RestockAMZ Daily Sales Rate Rules</h1>
+                        </div>
+                        <div class="card-body">
+                            <select class="form-select w-auto">
+                                <option value="1">Average Daily Sales Rate Weightings</option>
+                            </select>
+
+                            <div class="table-responsive mt-3">
+                                <table class="table table-borderless" style="min-width: 820px;max-width: 860px;">
+                                    <thead>
+                                        <tr>
+                                            <td class="pb-0">&nbsp;</td>
+                                            <td class="pe-0 pb-0"><strong>2-Day</strong></td>
+                                            <td class="pe-0 pb-0"><strong>7-Day</strong></td>
+                                            <td class="pe-0 pb-0"><strong>14-Day</strong></td>
+                                            <td class="pe-0 pb-0"><strong>30-Day</strong></td>
+                                            <td class="pe-0 pb-0"><strong>60-Day</strong></td>
+                                            <td class="pe-0 pb-0"><strong>90-Day</strong></td>
+                                            <td class="pe-0 pb-0"><strong>180-Day</strong></td>
+                                            <td class="pe-0 pb-0"><strong>ForecastRx Demand</strong></td>
+                                            <td class="pb-0">&nbsp;</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>Rate</strong></td>
+                                            <td class="pe-0"><input value="10" type="text" style="width: 36px;" class="form-control form-control-lg d-inline align-middle ps-1 pe-1 text-center"><span class="ms-3">+</span></td>
+                                            <td class="pe-0"><input value="10" type="text" style="width: 36px;" class="form-control form-control-lg d-inline align-middle ps-1 pe-1 text-center"><span class="ms-3">+</span></td>
+                                            <td class="pe-0"><input value="10" type="text" style="width: 36px;" class="form-control form-control-lg d-inline align-middle ps-1 pe-1 text-center"><span class="ms-3">+</span></td>
+                                            <td class="pe-0"><input value="10" type="text" style="width: 36px;" class="form-control form-control-lg d-inline align-middle ps-1 pe-1 text-center"><span class="ms-3">+</span></td>
+                                            <td class="pe-0"><input value="10" type="text" style="width: 36px;" class="form-control form-control-lg d-inline align-middle ps-1 pe-1 text-center"><span class="ms-3">+</span></td>
+                                            <td class="pe-0"><input value="10" type="text" style="width: 36px;" class="form-control form-control-lg d-inline align-middle ps-1 pe-1 text-center"><span class="ms-3">+</span></td>
+                                            <td class="pe-0"><input value="15" type="text" style="width: 36px;" class="form-control form-control-lg d-inline align-middle ps-1 pe-1 text-center"><span class="ms-3">+</span></td>
+                                            <td class="pe-0"><input value="25" type="text" style="width: 36px;" class="form-control form-control-lg d-inline align-middle ps-1 pe-1 text-center"></td>
+                                            <td><strong><big>= 100%</big></strong></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+
+                            <div class="row mt-3">
+                                <div class="col-lg-3 col-md-4 col-sm-12 mb-3">
+                                    <label class="form-label"><strong>From</strong></label>
+                                    <input type="text" class="form-control flatpickr-minimum" placeholder="Select date.." />
+
+                                </div>
+                                <div class="col-lg-3 col-md-4 col-sm-12 mb-3">
+                                    <label class="form-label"><strong>To</strong></label>
+                                    <input type="text" class="form-control flatpickr-minimum" placeholder="Select date.." />
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    
+                    <a href="#" class="btn btn-lg btn-primary"><i class="fa-solid fa-floppy-disk align-middle me-2"></i><span class="align-middle">Save Changes</span></a>
+
+                </div>
+
+            </main>
+
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="row text-muted">
+                        <div class="col-md-6 col-sm-12 text-start">
+                            <p class="mb-0">
+                                <a href="https://www.forecastrx.com/" target="_blank" class="text-muted"><strong>&copy;&nbsp;ForecastRx</strong></a> &copy;
+                            </p>
+                        </div>
+                        <div class="col-md-6 col-sm-12 text-md-end text-sm-start">
+                            <ul class="list-inline">
+                                <li class="list-inline-item">
+                                    <a class="text-muted" href="https://forecastrx.zendesk.com" target="_blank">Support</a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a class="text-muted" href="https://www.forecastrx.com/privacy-policy/" target="_blank">Privacy</a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a class="text-muted" href="https://www.forecastrx.com/terms/" target="_blank">Terms</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="adminkit-pro-3-3-0/dist/js/app.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Flatpickr
+            flatpickr(".flatpickr-minimum");
+            flatpickr(".flatpickr-datetime", {
+                enableTime: true,
+                dateFormat: "Y-m-d H:i",
+            });
+            flatpickr(".flatpickr-human", {
+                altInput: true,
+                altFormat: "F j, Y",
+                dateFormat: "Y-m-d",
+            });
+            flatpickr(".flatpickr-multiple", {
+                mode: "multiple",
+                dateFormat: "Y-m-d"
+            });
+            flatpickr(".flatpickr-range", {
+                mode: "range",
+                dateFormat: "Y-m-d"
+            });
+            flatpickr(".flatpickr-time", {
+                enableTime: true,
+                noCalendar: true,
+                dateFormat: "H:i",
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>
