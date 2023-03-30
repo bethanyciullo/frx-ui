@@ -306,12 +306,129 @@
                                 </div>
                             </div>
 
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#estModal">
+                                Estimated Margin Modal
+                            </button>
+
                         </div>
                     </div>
-                    
+
                     <a href="#" class="btn btn-lg btn-primary"><i class="fa-solid fa-floppy-disk align-middle me-2"></i><span class="align-middle">Save Changes</span></a>
 
                 </div>
+
+                <!-- Modal -->
+                <div class="modal fade" id="estModal" tabindex="-1" aria-labelledby="estModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="estModalLabel">Estimated Margin</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="card">
+                                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                                        <div class="accordion-item bg-white">
+                                            <h2 class="accordion-header bg-white" id="flush-headingOne">
+                                                <button class="accordion-button collapsed bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                                    <strong class="text-success">Price</strong>
+                                                </button>
+                                            </h2>
+                                            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                                <div class="accordion-body">
+                                                    <small>Average 7-day Sales Price </small>
+                                                    <p>Text</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row d-flex align-items-stretch">
+                                    <div class="col-md-6 col-sm-12">
+                                        <div class="card h-100">
+                                            <div class="card-body pb-0">
+                                                <table class="table mb-0">
+                                                    <thead>
+                                                        <tr>
+                                                            <td class="fw-bold text-warning">Cost</td>
+                                                            <td class="fw-bold text-warning align-right text-end">$12</td>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Current Supplier</td>
+                                                            <td class="text-end">$2</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Inbound Shipping</td>
+                                                            <td class="text-end">$2</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Reshipping</td>
+                                                            <td class="text-end">$2</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Repackaging Material</td>
+                                                            <td class="text-end">$2</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Repackaging Labor</td>
+                                                            <td class="text-end">$2</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="border-bottom-0">Supplier Rebate</td>
+                                                            <td class="border-bottom-0 text-end">$2</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-12">
+                                        <div class="card h-100">
+                                            <div class="card-body pb-0">
+                                                <table class="table mb-0">
+                                                    <thead>
+                                                        <tr>
+                                                            <td class="fw-bold text-primary">Amazon Fees</td>
+                                                            <td class="fw-bold text-primary text-end">$8</td>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>FBA</td>
+                                                            <td class="text-end">$2</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Referral</td>
+                                                            <td class="text-end">$2</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Monthly Storage</td>
+                                                            <td class="text-end">$2</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="border-bottom-0">Variable Closing</td>
+                                                            <td class="border-bottom-0 text-end">$2</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <p class="fw-bold mt-4">Estimated Margin ($)</p>
+                                
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Okay</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
 
             </main>
 
