@@ -14,7 +14,7 @@
 
     <link rel="canonical" href="/" />
 
-    <title>ForecastRx UI</title>
+    <title>Subpage | ForecastRx UI</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
@@ -232,104 +232,78 @@
                         </div>
                     </div>
 
-                    <h2 class="text-center fw-bold fs-4 mt-3 mb-2">Dashboard</h2>
-                    <div class="row">
-                        <div class="col-lg-4 col-md-4 col-sm-12 mb-3 d-flex align-items-stretch">
-                            <div class="card w-100 mb-2">
-                                <div class="card-body d-flex flex-column text-center">
-                                    <h5 class="card-title">Scalable Items</h5>
-                                    <div class="card-text">
-                                        <img src="img/chart-1left-min.png" alt="Chart" class="w-75" />
-                                        <p class="mt-2 mb-0">[Kendo Existing Chart]</p>
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb mb-0">
+                                    <li class="breadcrumb-item" style="line-height: 1.2;"><a href="index.html"><i class="align-middle" data-feather="home"></i> </a></li>
+                                    <li class="breadcrumb-item pe-none"><a href="#">Top Level</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page"><strong>Subpage Template</strong></li>
+                                </ol>
+                            </nav>
                         </div>
-                        <div class="col-lg-4 col-md-4 col-sm-12 mb-3 d-flex align-items-stretch">
-                            <div class="card w-100 mb-2">
-                                <div class="card-body d-flex flex-column text-center">
-                                    <h5 class="card-title">Active &amp; Inactive Items</h5>
-                                    <div class="card-text">
-                                        <img src="img/chart-2middle-min.png" alt="Chart" class="w-75" />
-                                        <p class="mt-2 mb-0">[Kendo Existing Chart]</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-12 mb-3 d-flex align-items-stretch">
-                            <div class="card w-100 mb-2">
-                                <div class="card-body d-flex flex-column text-center">
-                                    <h5 class="card-title">How well stocked are you?</h5>
-                                    <div class="card-text">
-                                        <img src="img/chart-3right-min.png" alt="Chart" class="w-75" />
-                                        <p class="mt-2 mb-0">[Kendo Existing Chart]</p>
+                    </div>
+
+                    <div class="card">
+                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                            <div class="accordion-item bg-white">
+                                <h2 class="accordion-header bg-white" id="flush-headingOne">
+                                    <button class="accordion-button collapsed bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                        Upload Instructions
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        <p>You will use a pre-formatted CSV template to import data for the list of Suppliers you procure your items from. Once imported you will be presented with the results in the management grid below and have the opportunity to configure optional settings that will improve your forecasts and purchase recommendations. It’s helpful to import your suppliers so you can associate them with your items. ForecastRx will suggest Purchase Orders based on those associations!</p>
+                                        <ol>
+                                            <li>Download the template from the &ldquo;Bulk Managment&rdquo; dropdown in the management grid below.</li>
+                                            <li>Open the templete in a CSV editor (i.e. Microsoft Excel)</li>
+                                            <li>Add one row for each Supplier, making sure not to modify any of the column headers.</li>
+                                        </ol>
+                                        <p><strong class="text-danger">Required</strong></p>
+                                        <ul>
+                                            <li>Supplier Name - The common business name of your suppliers.</li>
+                                        </ul>
+                                        <p><strong>Recommended (for improved forecasts and purchase calculations)</strong></p>
+                                        <ul>
+                                            <li>Lead Time - The number of days it takes for the item to become saleable, including any assembly/manufacturing, from the time you place the order.</li>
+                                            <li>Order Interval - The preferred number of days between placing purchase orders.</li>
+                                            <li>FBA Replenishment Model - Show how you typically replenish products so your forecast will account for the correct lead times when calculating your restock suggestions. (Possible values: GLOBAL, LOCAL, DIRECT_SHIP)</li>
+                                        </ul>
+                                        <p><strong>Example (Apply for the default template)</strong></p>
+                                        <div class="table-responsive">
+                                            <table class="table mb-0">
+                                                <thead>
+                                                    <tr>
+                                                        <td><strong>Supplier Name</strong></td>
+                                                        <td><strong>Lead Time</strong></td>
+                                                        <td><strong>Order Interval</strong></td>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Acme, Inc</td>
+                                                        <td>60</td>
+                                                        <td>3</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="border-bottom-0">Widgets, LLC</td>
+                                                        <td class="border-bottom-0">90</td>
+                                                        <td class="border-bottom-0">7</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    <h2 class="text-center fw-bold fs-4 mt-3 mb-2">KPIs</h2>
-
-                    <div class="row">
-                        <div class="col-lg-3 col-md-6 mb-3 d-flex align-items-stretch">
-                            <div class="card w-100 mb-2">
-                                <div class="card-body d-flex flex-column text-center">
-                                    <h5 class="card-title">Top Selling Items</h5>
-                                    <div class="card-text">
-                                        <ul class="list-inline mb-0">
-                                            <li><a href="#">Item 1</a></li>
-                                            <li><a href="#">Item 2</a></li>
-                                            <li><a href="#">Item 3</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 mb-3 d-flex align-items-stretch">
-                            <div class="card w-100 mb-2">
-                                <div class="card-body d-flex flex-column text-center">
-                                    <h5 class="card-title">Items Requiring Restock</h5>
-                                    <div class="card-text">
-                                        <ul class="list-inline mb-0">
-                                            <li><a href="#">Item 1</a></li>
-                                            <li><a href="#">Item 2</a></li>
-                                            <li><a href="#">Item 3</a></li>
-                                            <li><a href="#">Item 4</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 mb-3 d-flex align-items-stretch">
-                            <div class="card w-100 mb-2">
-                                <div class="card-body d-flex flex-column text-center">
-                                    <h5 class="card-title">Items Requiring Ordering</h5>
-                                    <div class="card-text">
-                                        <ul class="list-inline mb-0">
-                                            <li><a href="#">Item 1</a></li>
-                                            <li><a href="#">Item 2</a></li>
-                                            <li><a href="#">Item 3</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 mb-3 d-flex align-items-stretch">
-                            <div class="card w-100 mb-2">
-                                <div class="card-body d-flex flex-column text-center">
-                                    <h5 class="card-title">Top Projected Selling Items</h5>
-                                    <div class="card-text">
-                                        <ul class="list-inline mb-0">
-                                            <li><a href="#">Item 1</a></li>
-                                            <li><a href="#">Item 2</a></li>
-                                            <li><a href="#">Item 3</a></li>
-                                            <li><a href="#">Item 4</a></li>
-                                            <li><a href="#">Item 5</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
+                    
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="img/grid-min.png" alt="Grid" class="w-100" />
+                            <p class="mb-0 text-center mt-2">[Kendo Existing Grid]</p>
                         </div>
                     </div>
 

@@ -14,7 +14,7 @@
 
     <link rel="canonical" href="/" />
 
-    <title>ForecastRx UI</title>
+    <title>Subscription | ForecastRx UI</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
@@ -196,137 +196,45 @@
             <main class="content">
                 <div class="container-fluid p-0">
 
-                    <div class="card">
-                        <div class="card-header">
-                            <div class="row">
-                                <div class="col-md-4 col-sm-12">
-                                    <h1 class="card-title mb-0">Fishers Finery Amazon (NA)</h1>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <h1 class="card-title mb-0">Subscription(s)</h1>
+                                            <p class="mb-0 mt-1">Use this screen to manage your subscription(s). You can upgrade, renew, or cancel your subscription. </p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="col-md-8 col-sm-12">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-body">
 
                                     <div class="table-responsive">
                                         <table class="table table-hover mb-0">
+                                            <thead>
+                                                <tr>
+                                                    <td><strong>Company Name</strong></td>
+                                                    <td><strong>Plan</strong></td>
+                                                    <td><strong>Status</strong></td>
+                                                    <td><strong>Expiration Date</strong></td>
+                                                </tr>
+                                            </thead>
                                             <tbody>
-                                                <tr style="cursor: pointer;" onclick="window.open('template-subpage.html', '_self');">
-                                                    <td class="pt-1 pb-1">Items Out of Stock - Amazon</td>
-                                                    <td class="pt-1 pb-1">1,169</td>
-                                                </tr>
-                                                <tr style="cursor: pointer;" onclick="window.open('template-subpage.html', '_self');">
-                                                    <td class="pt-1 pb-1">Items Out of Stock - Warehouse</td>
-                                                    <td class="pt-1 pb-1">409</td>
-                                                </tr>
-                                                <tr style="cursor: pointer;" onclick="window.open('template-subpage.html', '_self');">
-                                                    <td class="pt-1 pb-1">New Items (last 30 days)</td>
-                                                    <td class="pt-1 pb-1">4</td>
-                                                </tr>
-                                                <tr style="cursor: pointer;" onclick="window.open('template-subpage.html', '_self');">
-                                                    <td class="pt-1 pb-1 border-bottom-0">Items w/o Suppliers Assigned</td>
-                                                    <td class="pt-1 pb-1 border-bottom-0">4,004</td>
+                                                <tr style="cursor: pointer;" onclick="window.open('template-pricing.html', '_self');">
+                                                    <td class="border-bottom-0">Fishers Finery Amazon</td>
+                                                    <td class="border-bottom-0">Enterprise Monthly Subscription</td>
+                                                    <td class="border-bottom-0"><span class="text-danger">Unpaid</span><!-- https://adminkit.io/docs/utilities/text-colors/ --></td>
+                                                    <td class="border-bottom-0">04/29/2023</td>
                                                 </tr>
                                             </tbody>
                                         </table>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <h2 class="text-center fw-bold fs-4 mt-3 mb-2">Dashboard</h2>
-                    <div class="row">
-                        <div class="col-lg-4 col-md-4 col-sm-12 mb-3 d-flex align-items-stretch">
-                            <div class="card w-100 mb-2">
-                                <div class="card-body d-flex flex-column text-center">
-                                    <h5 class="card-title">Scalable Items</h5>
-                                    <div class="card-text">
-                                        <img src="img/chart-1left-min.png" alt="Chart" class="w-75" />
-                                        <p class="mt-2 mb-0">[Kendo Existing Chart]</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-12 mb-3 d-flex align-items-stretch">
-                            <div class="card w-100 mb-2">
-                                <div class="card-body d-flex flex-column text-center">
-                                    <h5 class="card-title">Active &amp; Inactive Items</h5>
-                                    <div class="card-text">
-                                        <img src="img/chart-2middle-min.png" alt="Chart" class="w-75" />
-                                        <p class="mt-2 mb-0">[Kendo Existing Chart]</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-12 mb-3 d-flex align-items-stretch">
-                            <div class="card w-100 mb-2">
-                                <div class="card-body d-flex flex-column text-center">
-                                    <h5 class="card-title">How well stocked are you?</h5>
-                                    <div class="card-text">
-                                        <img src="img/chart-3right-min.png" alt="Chart" class="w-75" />
-                                        <p class="mt-2 mb-0">[Kendo Existing Chart]</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <h2 class="text-center fw-bold fs-4 mt-3 mb-2">KPIs</h2>
-
-                    <div class="row">
-                        <div class="col-lg-3 col-md-6 mb-3 d-flex align-items-stretch">
-                            <div class="card w-100 mb-2">
-                                <div class="card-body d-flex flex-column text-center">
-                                    <h5 class="card-title">Top Selling Items</h5>
-                                    <div class="card-text">
-                                        <ul class="list-inline mb-0">
-                                            <li><a href="#">Item 1</a></li>
-                                            <li><a href="#">Item 2</a></li>
-                                            <li><a href="#">Item 3</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 mb-3 d-flex align-items-stretch">
-                            <div class="card w-100 mb-2">
-                                <div class="card-body d-flex flex-column text-center">
-                                    <h5 class="card-title">Items Requiring Restock</h5>
-                                    <div class="card-text">
-                                        <ul class="list-inline mb-0">
-                                            <li><a href="#">Item 1</a></li>
-                                            <li><a href="#">Item 2</a></li>
-                                            <li><a href="#">Item 3</a></li>
-                                            <li><a href="#">Item 4</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 mb-3 d-flex align-items-stretch">
-                            <div class="card w-100 mb-2">
-                                <div class="card-body d-flex flex-column text-center">
-                                    <h5 class="card-title">Items Requiring Ordering</h5>
-                                    <div class="card-text">
-                                        <ul class="list-inline mb-0">
-                                            <li><a href="#">Item 1</a></li>
-                                            <li><a href="#">Item 2</a></li>
-                                            <li><a href="#">Item 3</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 mb-3 d-flex align-items-stretch">
-                            <div class="card w-100 mb-2">
-                                <div class="card-body d-flex flex-column text-center">
-                                    <h5 class="card-title">Top Projected Selling Items</h5>
-                                    <div class="card-text">
-                                        <ul class="list-inline mb-0">
-                                            <li><a href="#">Item 1</a></li>
-                                            <li><a href="#">Item 2</a></li>
-                                            <li><a href="#">Item 3</a></li>
-                                            <li><a href="#">Item 4</a></li>
-                                            <li><a href="#">Item 5</a></li>
-                                        </ul>
                                     </div>
                                 </div>
                             </div>

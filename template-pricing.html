@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Responsive Admin &amp; Dashboard Template based on Bootstrap 5">
+    <meta name="author" content="AdminKit">
+    <meta name="keywords" content="adminkit, bootstrap, bootstrap 5, admin, dashboard, template, responsive, css, sass, html, theme, front-end, ui kit, web">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="shortcut icon" href="img/logo.svg" type="image/svg+xml">
+
+    <link rel="canonical" href="/" />
+
+    <title>Pricing | ForecastRx UI</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <link class="js-stylesheet" href="adminkit-pro-3-3-0/dist/css/light.css" rel="stylesheet">
+</head>
+
+<body data-theme="default" data-layout="fluid" data-sidebar-position="left" data-sidebar-layout="default">
+    <div class="wrapper">
+        <nav id="sidebar" class="sidebar js-sidebar">
+            <div class="sidebar-content js-simplebar">
+                <a class="sidebar-brand" href="index.html">
+                    <img src="img/logoTextWhite.svg" alt="ForecastRx" style="max-width: 160px;" />
+                </a>
+
+                <ul class="sidebar-nav">
+                    <li class="sidebar-header">
+                        <strong>Navigation</strong>
+                    </li>
+
+                    <li class="sidebar-item">
+                        <a data-bs-target="#manage" data-bs-toggle="collapse" class="sidebar-link collapsed">
+                            <i class="align-middle" data-feather="pie-chart"></i> <span class="align-middle">Manage Company</span>
+                        </a>
+                        <ul id="manage" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-manage-details.html">Company Details</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-subpage.html">Suppliers</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-subpage.html">Items</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-subpage.html">Demand</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-subpage.html">Supply</a></li>
+                            <li class="sidebar-item">
+                                <a data-bs-target="#multiple" data-bs-toggle="collapse" class="sidebar-link collapsed" aria-expanded="false">
+                                    <i class="align-middle" data-feather="bar-chart-2"></i>
+                                    <span class="align-middle">Advanced</span>
+                                </a>
+                                <ul id="multiple" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#manage" style="">
+                                    <li class="sidebar-item"><a class="sidebar-link" href="template-subpage.html">Edit Kits</a></li>
+                                    <li class="sidebar-item"><a class="sidebar-link" href="template-subpage.html">Edit Item History</a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li class="sidebar-item">
+                        <a data-bs-target="#purchasing" data-bs-toggle="collapse" class="sidebar-link collapsed">
+                            <i class="align-middle" data-feather="target"></i> <span class="align-middle">Purchasing</span>
+                        </a>
+                        <ul id="purchasing" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-subpage.html">My Suggested</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-subpage.html">Custom</a></li>
+                        </ul>
+                    </li>
+                    <li class="sidebar-item">
+                        <a data-bs-target="#restock" data-bs-toggle="collapse" class="sidebar-link collapsed">
+                            <i class="align-middle" data-feather="box"></i> <span class="align-middle">RestockAMZ</span>
+                        </a>
+                        <ul id="restock" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-restock-warehouse.html">Restock from Warehouse</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-admin.html">Restock from Supplier</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-admin.html">Address Book</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-admin.html">Manage Shipments</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-restock-settings.html">Settings</a></li>
+                        </ul>
+                    </li>
+                    <li class="sidebar-item">
+                        <a data-bs-target="#admin" data-bs-toggle="collapse" class="sidebar-link collapsed">
+                            <i class="align-middle" data-feather="settings"></i> <span class="align-middle">Administration</span>
+                        </a>
+                        <ul id="admin" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-admin.html">Companies</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-admin.html">Users</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <div class="sidebar-cta">
+                    <div class="sidebar-cta-content">
+                        <small>v3.75.0</small>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="main overflow-visible">
+
+            <nav class="navbar navbar-expand navbar-light navbar-bg sticky-top" id="header">
+                <a class="sidebar-toggle js-sidebar-toggle">
+                    <i class="hamburger align-self-center"></i>
+                </a>
+
+                <form class="d-none d-lg-inline-block">
+                    <div class="input-group input-group-navbar">
+                        <input type="text" class="form-control" placeholder="Search…" aria-label="Search">
+                        <button class="btn" type="button">
+                            <i class="align-middle" data-feather="search"></i>
+                        </button>
+                    </div>
+                </form>
+
+                <ul class="navbar-nav d-none d-md-flex">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="resourcesDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Choose Company
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="resourcesDropdown">
+                            <a class="dropdown-item" href="index.html">Fishers Finery Amazon</a>
+                            <a class="dropdown-item" href="template-add.html">+ Add Company</a>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="navbar-collapse collapse">
+                    <ul class="navbar-nav navbar-align">
+
+                        <li class="nav-item">
+                            <a class="nav-icon" href="#">
+                                <div class="position-relative">
+                                    <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Forecast Report">
+                                        <i class="align-middle" data-feather="book"></i>
+                                    </span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-icon" href="#">
+                                <div class="position-relative">
+                                    <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Last Sync: [date]">
+                                        <i class="align-middle" data-feather="repeat"></i>
+                                    </span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-icon" href="#">
+                                <div class="position-relative">
+                                    <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Last Forecast: [date]">
+                                        <i class="align-middle" data-feather="trending-up"></i>
+                                    </span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-icon" href="#">
+                                <div class="position-relative">
+                                    <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Support" onclick="window.open('https://forecastrx.zendesk.com/', '_blank');">
+                                        <i class="align-middle" data-feather="help-circle"></i>
+                                    </span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-icon js-fullscreen d-none d-lg-block" href="#">
+                                <div class="position-relative">
+                                    <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Full Screen">
+                                        <i class="align-middle" data-feather="maximize"></i>
+                                    </span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-icon pe-md-0 dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                                <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="User: [name]">
+                                    <i class="align-middle" data-feather="user"></i>
+                                </span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end">
+                                <span class="dropdown-item pe-none"><strong>Name</strong></span>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="template-profile.html"><i class="align-middle me-1" data-feather="user"></i> Profile</a>
+                                <a class="dropdown-item" href="template-subscription.html"><i class="align-middle me-1" data-feather="dollar-sign"></i> Subscription</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="template-login.html"><i class="align-middle me-1" data-feather="log-out"></i> Log out</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <main class="content">
+                <div class="container-fluid p-0">
+
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <h1 class="fs-3 fw-bold">Pricing: Fishers Finery Amazon</h1>
+                            <h2 class="fs-4">Enterprise Monthly Subscription</h2>
+                            <p>Upgrade, downgrade, or cancel at any time.</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-10 col-xl-9 mx-auto">
+                            <div class="card mb-5">
+                                <div class="card-body">
+                                    <div class="row text-center">
+                                        <div class="col-md-6 col-sm-12">
+                                            <h3 class="fs-4 fw-bold">11 Users</h3>
+                                            <p class="mb-0">Your current plan allows up to 20 Users.</p>
+                                            <hr class="d-sm-block d-md-none" />
+                                        </div>
+                                        <div class="col-md-6 col-sm-12">
+                                            <h3 class="fs-4 fw-bold">4045 Active Items</h3>
+                                            <p class="mb-0">Your current plan allows up to 20000 active items.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-center mt-3 mb-2">
+                        <div class="col-auto">
+                            <nav class="nav btn-group" role="tablist">
+                                <a href="#monthly" class="btn btn-outline-primary active" data-bs-toggle="tab" aria-selected="true" role="tab">Monthly billing</a>
+                                <a href="#annual" class="btn btn-outline-primary" data-bs-toggle="tab" aria-selected="false" tabindex="-1" role="tab">Annual billing</a>
+                            </nav>
+                        </div>
+                    </div>
+
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="monthly" role="tabpanel">
+                            <div class="row py-4">
+                                <div class="col-sm-6 col-md-6 col-lg-3 mb-3 mb-lg-0">
+                                    <div class="card text-center h-100">
+                                        <div class="card-body d-flex flex-column">
+                                            <div class="mb-4">
+                                                <h5>Starter</h5>
+                                                <span class="display-4 fs-2 fw-bold">$99.99</span>
+                                            </div>
+                                            <h6 class="fw-bold">Includes:</h6>
+                                            <ul class="list-unstyled">
+                                                <li class="mb-1">User Accounts: 2</li>
+                                                <li class="mb-1">Active SKUs: Up to 250</li>
+                                                <li class="mb-1">Amazon Seller Central</li>
+                                                <li class="mb-1">Quickbooks Online</li>
+                                                <li class="mb-1">Quickbooks Desktop</li>
+                                                <li class="mb-1">CSV</li>
+                                                <li class="mb-1">Knowledge Base/Self Help</li>
+                                                <li class="mb-1">Webinars &amp; Video Tutorials</li>
+                                                <li class="mb-1">Email Support</li>
+                                            </ul>
+                                            <div class="mt-auto">
+                                                <a href="#" class="btn btn-lg btn-success">Choose Plan</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-6 col-lg-3 mb-3 mb-lg-0">
+                                    <div class="card text-center h-100">
+                                        <div class="card-body d-flex flex-column">
+                                            <div class="mb-4">
+                                                <h5>Advanced</h5>
+                                                <span class="display-4 fs-2 fw-bold">$199.99</span>
+                                            </div>
+                                            <h6 class="fw-bold">Includes:</h6>
+                                            <ul class="list-unstyled">
+                                                <li class="mb-1">User Accounts: 2</li>
+                                                <li class="mb-1">Active SKUs: Up to 2500</li>
+                                                <li class="mb-1">Amazon Seller Central</li>
+                                                <li class="mb-1">Quickbooks Online</li>
+                                                <li class="mb-1">Quickbooks Desktop</li>
+                                                <li class="mb-1">CSV</li>
+                                                <li class="mb-1">Knowledge Base/Self Help</li>
+                                                <li class="mb-1">Webinars &amp; Video Tutorials</li>
+                                                <li class="mb-1">Email Support</li>
+                                                <li class="mb-1">Phone Support</li>
+                                            </ul>
+                                            <div class="mt-auto">
+                                                <a href="#" class="btn btn-lg btn-success">Choose Plan</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-6 col-lg-3 mb-3 mb-lg-0">
+                                    <div class="card text-center h-100">
+                                        <div class="card-body d-flex flex-column">
+                                            <div class="mb-4">
+                                                <h5>Pro</h5>
+                                                <span class="display-4 fs-2 fw-bold">$299.99</span>
+                                                <span>/mo</span>
+                                            </div>
+                                            <h6 class="fw-bold">Includes:</h6>
+                                            <ul class="list-unstyled">
+                                                <li class="mb-1">User Accounts: 3</li>
+                                                <li class="mb-1">Active SKUs: Up to 5000</li>
+                                                <li class="mb-1">Amazon Seller Central</li>
+                                                <li class="mb-1">Quickbooks Online</li>
+                                                <li class="mb-1">Quickbooks Desktop</li>
+                                                <li class="mb-1">CSV</li>
+                                                <li class="mb-1">Knowledge Base/Self Help</li>
+                                                <li class="mb-1">Webinars &amp; Video Tutorials</li>
+                                                <li class="mb-1">Email Support</li>
+                                                <li class="mb-1">Phone Support</li>
+                                            </ul>
+                                            <div class="mt-auto">
+                                                <a href="#" class="btn btn-lg btn-success">Choose Plan</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-6 col-lg-3 mb-3 mb-lg-0">
+                                    <div class="card text-center h-100">
+                                        <div class="card-body d-flex flex-column">
+                                            <div class="mb-4">
+                                                <h5>Enterprise</h5>
+                                                <span class="display-4 fs-2 fw-bold">$399.99</span>
+                                                <span>/mo</span>
+                                            </div>
+                                            <h6 class="fw-bold">Includes:</h6>
+                                            <ul class="list-unstyled">
+                                                <li class="mb-1">User Accounts: 5</li>
+                                                <li class="mb-1">Active SKUs: Up to 10,000</li>
+                                                <li class="mb-1">Amazon Seller Central</li>
+                                                <li class="mb-1">Quickbooks Online</li>
+                                                <li class="mb-1">Quickbooks Desktop</li>
+                                                <li class="mb-1">CSV</li>
+                                                <li class="mb-1">Knowledge Base/Self Help</li>
+                                                <li class="mb-1">Webinars &amp; Video Tutorials</li>
+                                                <li class="mb-1">Email Support</li>
+                                                <li class="mb-1">Phone Support</li>
+                                                <li class="mb-1">Dedicated Account Representative</li>
+                                            </ul>
+                                            <div class="mt-auto">
+                                                <a href="#" class="btn btn-lg btn-danger">Cancel Plan</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="annual" role="tabpanel">
+                            <div class="row py-4">
+                                <div class="col-sm-6 col-md-6 col-lg-3 mb-3 mb-lg-0">
+                                    <div class="card text-center h-100">
+                                        <div class="card-body d-flex flex-column">
+                                            <div class="mb-4">
+                                                <h5>Starter</h5>
+                                                <span class="display-4 fs-2 fw-bold">$999.99</span>
+                                            </div>
+                                            <p class="text-success">Saving -20%</p>
+                                            <h6 class="fw-bold">Includes:</h6>
+                                            <ul class="list-unstyled">
+                                                <li class="mb-1">User Accounts: 2</li>
+                                                <li class="mb-1">Active SKUs: Up to 250</li>
+                                                <li class="mb-1">Amazon Seller Central</li>
+                                                <li class="mb-1">Quickbooks Online</li>
+                                                <li class="mb-1">Quickbooks Desktop</li>
+                                                <li class="mb-1">CSV</li>
+                                                <li class="mb-1">Knowledge Base/Self Help</li>
+                                                <li class="mb-1">Webinars &amp; Video Tutorials</li>
+                                                <li class="mb-1">Email Support</li>
+                                            </ul>
+                                            <div class="mt-auto">
+                                                <a href="#" class="btn btn-lg btn-success">Choose Plan</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-6 col-lg-3 mb-3 mb-lg-0">
+                                    <div class="card text-center h-100">
+                                        <div class="card-body d-flex flex-column">
+                                            <div class="mb-4">
+                                                <h5>Advanced</h5>
+                                                <span class="display-4 fs-2 fw-bold">$1999.99</span>
+                                            </div>
+                                            <p class="text-success">Saving -20%</p>
+                                            <h6 class="fw-bold">Includes:</h6>
+                                            <ul class="list-unstyled">
+                                                <li class="mb-1">User Accounts: 2</li>
+                                                <li class="mb-1">Active SKUs: Up to 2500</li>
+                                                <li class="mb-1">Amazon Seller Central</li>
+                                                <li class="mb-1">Quickbooks Online</li>
+                                                <li class="mb-1">Quickbooks Desktop</li>
+                                                <li class="mb-1">CSV</li>
+                                                <li class="mb-1">Knowledge Base/Self Help</li>
+                                                <li class="mb-1">Webinars &amp; Video Tutorials</li>
+                                                <li class="mb-1">Email Support</li>
+                                                <li class="mb-1">Phone Support</li>
+                                            </ul>
+                                            <div class="mt-auto">
+                                                <a href="#" class="btn btn-lg btn-success">Choose Plan</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-6 col-lg-3 mb-3 mb-lg-0">
+                                    <div class="card text-center h-100">
+                                        <div class="card-body d-flex flex-column">
+                                            <div class="mb-4">
+                                                <h5>Pro</h5>
+                                                <span class="display-4 fs-2 fw-bold">$2999.99</span>
+                                                <span class="text-small4">/mo</span>
+                                            </div>
+                                            <p class="text-success">Saving -20%</p>
+                                            <h6 class="fw-bold">Includes:</h6>
+                                            <ul class="list-unstyled">
+                                                <li class="mb-1">User Accounts: 3</li>
+                                                <li class="mb-1">Active SKUs: Up to 5000</li>
+                                                <li class="mb-1">Amazon Seller Central</li>
+                                                <li class="mb-1">Quickbooks Online</li>
+                                                <li class="mb-1">Quickbooks Desktop</li>
+                                                <li class="mb-1">CSV</li>
+                                                <li class="mb-1">Knowledge Base/Self Help</li>
+                                                <li class="mb-1">Webinars &amp; Video Tutorials</li>
+                                                <li class="mb-1">Email Support</li>
+                                                <li class="mb-1">Phone Support</li>
+                                            </ul>
+                                            <div class="mt-auto">
+                                                <a href="#" class="btn btn-lg btn-success">Choose Plan</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-6 col-lg-3 mb-3 mb-lg-0">
+                                    <div class="card text-center h-100">
+                                        <div class="card-body d-flex flex-column">
+                                            <div class="mb-4">
+                                                <h5>Enterprise</h5>
+                                                <span class="display-4 fs-2 fw-bold">$3999.99</span>
+                                                <span>/mo</span>
+                                            </div>
+                                            <p class="text-success">Saving -20%</p>
+                                            <h6 class="fw-bold">Includes:</h6>
+                                            <ul class="list-unstyled">
+                                                <li class="mb-1">User Accounts: 5</li>
+                                                <li class="mb-1">Active SKUs: Up to 10,000</li>
+                                                <li class="mb-1">Amazon Seller Central</li>
+                                                <li class="mb-1">Quickbooks Online</li>
+                                                <li class="mb-1">Quickbooks Desktop</li>
+                                                <li class="mb-1">CSV</li>
+                                                <li class="mb-1">Knowledge Base/Self Help</li>
+                                                <li class="mb-1">Webinars &amp; Video Tutorials</li>
+                                                <li class="mb-1">Email Support</li>
+                                                <li class="mb-1">Phone Support</li>
+                                                <li class="mb-1">Dedicated Account Representative</li>
+                                            </ul>
+                                            <div class="mt-auto">
+                                                <a href="#" class="btn btn-lg btn-success">Choose Plan</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row text-center mt-6 mb-6">
+                        <div class="col-md-10 col-xl-9 mx-auto">
+                            <h2>Billing Periods</h2>
+                            <p>Your current period ends on <strong>Saturday, April 29th 2023, at 10:53:45 pm</strong>.
+                                <br />Your default payment method will be charged <strong>$399.99</strong>.</p>
+                            <hr />
+                            <h3>Payment Method</h3>
+                            <a href="#" class="btn btn-lg btn-warning">Change Card</a>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+
+            </main>
+
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="row text-muted">
+                        <div class="col-md-6 col-sm-12 text-start">
+                            <p class="mb-0">
+                                <a href="https://www.forecastrx.com/" target="_blank" class="text-muted"><strong>&copy;&nbsp;ForecastRx</strong></a> &copy;
+                            </p>
+                        </div>
+                        <div class="col-md-6 col-sm-12 text-md-end text-sm-start">
+                            <ul class="list-inline">
+                                <li class="list-inline-item">
+                                    <a class="text-muted" href="https://forecastrx.zendesk.com" target="_blank">Support</a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a class="text-muted" href="https://www.forecastrx.com/privacy-policy/" target="_blank">Privacy</a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a class="text-muted" href="https://www.forecastrx.com/terms/" target="_blank">Terms</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="adminkit-pro-3-3-0/dist/js/app.js"></script>
+
+</body>
+
+</html>

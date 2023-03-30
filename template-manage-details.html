@@ -14,7 +14,7 @@
 
     <link rel="canonical" href="/" />
 
-    <title>ForecastRx UI</title>
+    <title>Company Details | Manage Company | ForecastRx UI</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
@@ -232,104 +232,103 @@
                         </div>
                     </div>
 
-                    <h2 class="text-center fw-bold fs-4 mt-3 mb-2">Dashboard</h2>
-                    <div class="row">
-                        <div class="col-lg-4 col-md-4 col-sm-12 mb-3 d-flex align-items-stretch">
-                            <div class="card w-100 mb-2">
-                                <div class="card-body d-flex flex-column text-center">
-                                    <h5 class="card-title">Scalable Items</h5>
-                                    <div class="card-text">
-                                        <img src="img/chart-1left-min.png" alt="Chart" class="w-75" />
-                                        <p class="mt-2 mb-0">[Kendo Existing Chart]</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-12 mb-3 d-flex align-items-stretch">
-                            <div class="card w-100 mb-2">
-                                <div class="card-body d-flex flex-column text-center">
-                                    <h5 class="card-title">Active &amp; Inactive Items</h5>
-                                    <div class="card-text">
-                                        <img src="img/chart-2middle-min.png" alt="Chart" class="w-75" />
-                                        <p class="mt-2 mb-0">[Kendo Existing Chart]</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-12 mb-3 d-flex align-items-stretch">
-                            <div class="card w-100 mb-2">
-                                <div class="card-body d-flex flex-column text-center">
-                                    <h5 class="card-title">How well stocked are you?</h5>
-                                    <div class="card-text">
-                                        <img src="img/chart-3right-min.png" alt="Chart" class="w-75" />
-                                        <p class="mt-2 mb-0">[Kendo Existing Chart]</p>
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb mb-0">
+                                    <li class="breadcrumb-item" style="line-height: 1.2;"><a href="index.html"><i class="align-middle" data-feather="home"></i> </a></li>
+                                    <li class="breadcrumb-item pe-none"><a href="#">Manage Company</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page"><strong>Company Details</strong></li>
+                                </ol>
+                            </nav>
                         </div>
                     </div>
 
-                    <h2 class="text-center fw-bold fs-4 mt-3 mb-2">KPIs</h2>
-
-                    <div class="row">
-                        <div class="col-lg-3 col-md-6 mb-3 d-flex align-items-stretch">
-                            <div class="card w-100 mb-2">
-                                <div class="card-body d-flex flex-column text-center">
-                                    <h5 class="card-title">Top Selling Items</h5>
-                                    <div class="card-text">
-                                        <ul class="list-inline mb-0">
-                                            <li><a href="#">Item 1</a></li>
-                                            <li><a href="#">Item 2</a></li>
-                                            <li><a href="#">Item 3</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title mb-0">Company Info</h2>
                         </div>
-                        <div class="col-lg-3 col-md-6 mb-3 d-flex align-items-stretch">
-                            <div class="card w-100 mb-2">
-                                <div class="card-body d-flex flex-column text-center">
-                                    <h5 class="card-title">Items Requiring Restock</h5>
-                                    <div class="card-text">
-                                        <ul class="list-inline mb-0">
-                                            <li><a href="#">Item 1</a></li>
-                                            <li><a href="#">Item 2</a></li>
-                                            <li><a href="#">Item 3</a></li>
-                                            <li><a href="#">Item 4</a></li>
-                                        </ul>
-                                    </div>
+                        <div class="card-body">
+                            <h3 class="fs-5 fw-bold">Global Defaults:</h3>
+                            <div class="row">
+                                <div class="col-md-4 col-sm-12">
+                                    <label for="default1" class="form-label">Lead Time:</label>
+                                    <input type="number" class="form-control" id="default1" value="17">
+                                </div>
+                                <div class="col-md-4 col-sm-12">
+                                    <label for="default2" class="form-label">Order Interval:</label>
+                                    <input type="number" class="form-control" id="default2" value="13">
+                                </div>
+                                <div class="col-md-4 col-sm-12">
+                                    <label for="default3" class="form-label">Service Level:</label>
+                                    <input type="number" class="form-control" id="default3" value="85">
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 mb-3 d-flex align-items-stretch">
-                            <div class="card w-100 mb-2">
-                                <div class="card-body d-flex flex-column text-center">
-                                    <h5 class="card-title">Items Requiring Ordering</h5>
-                                    <div class="card-text">
-                                        <ul class="list-inline mb-0">
-                                            <li><a href="#">Item 1</a></li>
-                                            <li><a href="#">Item 2</a></li>
-                                            <li><a href="#">Item 3</a></li>
-                                        </ul>
-                                    </div>
+                            <hr class="mt-4" />
+                            <h3 class="fs-5 fw-bold mt-4">Email Notifications</h3>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="toggle1">
+                                <label class="form-check-label" for="toggle1">Get emailed after forecast is run.</label>
+                            </div>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="toggle2">
+                                <label class="form-check-label" for="toggle2">Get emailed after sync is run.</label>
+                            </div>
+                            <h3 class="fs-5 fw-bold mt-4">Lost Sale Tracking</h3>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="toggle3">
+                                <label class="form-check-label" for="toggle3">Lost sale tracking.</label>
+                            </div>
+                            <h3 class="fs-5 fw-bold mt-4">Add pending orders to the units sold calculation</h3>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="toggle4" checked>
+                                <label class="form-check-label" for="toggle4">Add pending orders</label>
+                            </div>
+                            <h3 class="fs-5 fw-bold mt-4">Inventory Source(s) Preference</h3>
+                            <div class="row">
+                                <div class="col-lg-4 col-md-6 col-sm-12">
+                                    <select class="form-select">
+                                        <option disabled>Select Preference</option>
+                                        <option value="FBA">Fullfilled By Amazon (FBA)</option>
+                                        <option value="FBM">Fullfilled By Merchant (FBM)</option>
+                                        <option value="FBA+FBM"> FBA + FBM </option>
+                                    </select>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 mb-3 d-flex align-items-stretch">
-                            <div class="card w-100 mb-2">
-                                <div class="card-body d-flex flex-column text-center">
-                                    <h5 class="card-title">Top Projected Selling Items</h5>
-                                    <div class="card-text">
-                                        <ul class="list-inline mb-0">
-                                            <li><a href="#">Item 1</a></li>
-                                            <li><a href="#">Item 2</a></li>
-                                            <li><a href="#">Item 3</a></li>
-                                            <li><a href="#">Item 4</a></li>
-                                            <li><a href="#">Item 5</a></li>
-                                        </ul>
-                                    </div>
+                            <p class="mt-2">Inventory Source(s) Preference tells the forecasting process which inventory values to use. This setting can be configured at the company level or the item level in items management.</p>
+                            <ul>
+                                <li>Selecting fulfilled by amazon (FBA), we will only forecast using items part of the Amazon's fulfillment network.</li>
+                                <li>Selecting fulfilled by Merchant (FBM), we will only forecast using items outside of Amazon's fulfillment network.</li>
+                                <li>Selecting both, we will use all inventory data for both FBA and FBM.</li>
+                            </ul>
+                            <hr class="mt-4" />
+                            <p class="mb-1"><i class="align-middle" data-feather="user"></i> <span class="align-middle">Craig Barnell (craig.barnell@fishersfinery.com)</span></p>
+                            <p class="text-danger fw-bold mb-1"><i class="align-middle" data-feather="user"></i> <span class="align-middle">Ryan Carbone (ryan.carbone@forecastrx.com)</span></p>
+                            <p class="mb-1"><i class="align-middle" data-feather="user"></i> <span class="align-middle">Kayla Michaud (kayla.j.simpson@outlook.com)</span></p>
+                            <p class="mb-1"><i class="align-middle" data-feather="user"></i> <span class="align-middle">John Dietle (john.dietle@ctcomp.com)</span></p>
+                            <p class="mb-1"><i class="align-middle" data-feather="user"></i> <span class="align-middle">Nicole Widen (nicole.widen@ctcomp.com)</span></p>
+                            <p class="text-danger fw-bold mb-1"><i class="align-middle" data-feather="user"></i> <span class="align-middle">Samantha Torres (samantha.torres@forecastrx.com)</span></p>
+                            <p class="mb-1"><i class="align-middle" data-feather="user"></i> <span class="align-middle">Bethany Ciullo (bethany.ciullo@ctcomp.com)</span></p>
+                            <form class="mt-3">
+                                <input class="form-control form-control-lg d-inline-block w-auto align-middle" type="email" name="email" placeholder="user@address.com">
+                                <a href="#" class="btn btn-lg btn-primary align-middle">Add User</a>
+                                <a href="#" class="btn btn-lg btn-secondary align-middle">Clear</a>
+                            </form>
+                            <hr class="mt-4" />
+                            <h3 class="fs-5 fw-bold mt-4">Inventory Source(s) Preference</h3>
+                            <div class="row">
+                                <div class="col-lg-4 col-md-6 col-sm-12">
+                                    <select class="form-select">
+                                        <option disabled>Select Preference</option>
+                                        <option value="average">Average</option>
+                                        <option value="dateRange">Date Range</option>
+                                        <option value="auto">Automatically Adjusted Weightings</option>
+                                    </select>
                                 </div>
                             </div>
+                            <p class="mt-2">These settings will auto-apply weight to calculation.</p>
+                            <hr class="mt-4 mb-4" />
+                            <a href="#" class="btn btn-lg btn-primary">Save Company Info</a>
                         </div>
                     </div>
 
