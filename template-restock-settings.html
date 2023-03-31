@@ -256,54 +256,65 @@
                             <h1 class="card-title mb-0"><i class="fa-solid fa-percent me-2"></i>RestockAMZ Daily Sales Rate Rules</h1>
                         </div>
                         <div class="card-body">
-                            <select class="form-select w-auto">
-                                <option value="1">Average Daily Sales Rate Weightings</option>
+                            <select class="form-select w-auto mb-2" id="sales-velocity-settings" autocomplete="off">
+                                <option value="average">Average</option>
+                                <option value="dateRange">Date Range</option>
+                                <option value="auto" selected>Automatically Adjusted Weightings</option>
                             </select>
 
-                            <div class="table-responsive mt-3">
-                                <table class="table table-borderless" style="min-width: 820px;max-width: 860px;">
-                                    <thead>
-                                        <tr>
-                                            <td class="pb-0">&nbsp;</td>
-                                            <td class="pe-0 pb-0"><strong>2-Day</strong></td>
-                                            <td class="pe-0 pb-0"><strong>7-Day</strong></td>
-                                            <td class="pe-0 pb-0"><strong>14-Day</strong></td>
-                                            <td class="pe-0 pb-0"><strong>30-Day</strong></td>
-                                            <td class="pe-0 pb-0"><strong>60-Day</strong></td>
-                                            <td class="pe-0 pb-0"><strong>90-Day</strong></td>
-                                            <td class="pe-0 pb-0"><strong>180-Day</strong></td>
-                                            <td class="pe-0 pb-0"><strong>ForecastRx Demand</strong></td>
-                                            <td class="pb-0">&nbsp;</td>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td><strong>Rate</strong></td>
-                                            <td class="pe-0"><input value="10" type="text" style="width: 36px;" class="form-control form-control-lg d-inline align-middle ps-1 pe-1 text-center"><span class="ms-3">+</span></td>
-                                            <td class="pe-0"><input value="10" type="text" style="width: 36px;" class="form-control form-control-lg d-inline align-middle ps-1 pe-1 text-center"><span class="ms-3">+</span></td>
-                                            <td class="pe-0"><input value="10" type="text" style="width: 36px;" class="form-control form-control-lg d-inline align-middle ps-1 pe-1 text-center"><span class="ms-3">+</span></td>
-                                            <td class="pe-0"><input value="10" type="text" style="width: 36px;" class="form-control form-control-lg d-inline align-middle ps-1 pe-1 text-center"><span class="ms-3">+</span></td>
-                                            <td class="pe-0"><input value="10" type="text" style="width: 36px;" class="form-control form-control-lg d-inline align-middle ps-1 pe-1 text-center"><span class="ms-3">+</span></td>
-                                            <td class="pe-0"><input value="10" type="text" style="width: 36px;" class="form-control form-control-lg d-inline align-middle ps-1 pe-1 text-center"><span class="ms-3">+</span></td>
-                                            <td class="pe-0"><input value="15" type="text" style="width: 36px;" class="form-control form-control-lg d-inline align-middle ps-1 pe-1 text-center"><span class="ms-3">+</span></td>
-                                            <td class="pe-0"><input value="25" type="text" style="width: 36px;" class="form-control form-control-lg d-inline align-middle ps-1 pe-1 text-center"></td>
-                                            <td><strong><big>= 100%</big></strong></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                            <div id="select_average" class="select_options d-none">
+                                <p>Daily Sales Rate Weightings</p>
+                                <div class="table-responsive mt-3">
+                                    <table class="table table-borderless" style="min-width: 820px;max-width: 860px;">
+                                        <thead>
+                                            <tr>
+                                                <td class="pb-0">&nbsp;</td>
+                                                <td class="pe-0 pb-0"><strong>2-Day</strong></td>
+                                                <td class="pe-0 pb-0"><strong>7-Day</strong></td>
+                                                <td class="pe-0 pb-0"><strong>14-Day</strong></td>
+                                                <td class="pe-0 pb-0"><strong>30-Day</strong></td>
+                                                <td class="pe-0 pb-0"><strong>60-Day</strong></td>
+                                                <td class="pe-0 pb-0"><strong>90-Day</strong></td>
+                                                <td class="pe-0 pb-0"><strong>180-Day</strong></td>
+                                                <td class="pe-0 pb-0"><strong>ForecastRx Demand</strong></td>
+                                                <td class="pb-0">&nbsp;</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><strong>Rate</strong></td>
+                                                <td class="pe-0"><input value="10" type="text" style="width: 36px;" class="form-control form-control-lg d-inline align-middle ps-1 pe-1 text-center"><span class="ms-3">+</span></td>
+                                                <td class="pe-0"><input value="10" type="text" style="width: 36px;" class="form-control form-control-lg d-inline align-middle ps-1 pe-1 text-center"><span class="ms-3">+</span></td>
+                                                <td class="pe-0"><input value="10" type="text" style="width: 36px;" class="form-control form-control-lg d-inline align-middle ps-1 pe-1 text-center"><span class="ms-3">+</span></td>
+                                                <td class="pe-0"><input value="10" type="text" style="width: 36px;" class="form-control form-control-lg d-inline align-middle ps-1 pe-1 text-center"><span class="ms-3">+</span></td>
+                                                <td class="pe-0"><input value="10" type="text" style="width: 36px;" class="form-control form-control-lg d-inline align-middle ps-1 pe-1 text-center"><span class="ms-3">+</span></td>
+                                                <td class="pe-0"><input value="10" type="text" style="width: 36px;" class="form-control form-control-lg d-inline align-middle ps-1 pe-1 text-center"><span class="ms-3">+</span></td>
+                                                <td class="pe-0"><input value="15" type="text" style="width: 36px;" class="form-control form-control-lg d-inline align-middle ps-1 pe-1 text-center"><span class="ms-3">+</span></td>
+                                                <td class="pe-0"><input value="25" type="text" style="width: 36px;" class="form-control form-control-lg d-inline align-middle ps-1 pe-1 text-center"></td>
+                                                <td><strong><big>= 100%</big></strong></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
 
+                            <div id="select_dateRange" class="select_options d-none">
+                                <p>Past date range to be used to calculate sales rate</p>
+                                <div class="row mt-3">
+                                    <div class="col-lg-3 col-md-4 col-sm-12 mb-3">
+                                        <label class="form-label"><strong>From</strong></label>
+                                        <input type="text" class="form-control flatpickr-minimum" placeholder="Select date.." />
 
-                            <div class="row mt-3">
-                                <div class="col-lg-3 col-md-4 col-sm-12 mb-3">
-                                    <label class="form-label"><strong>From</strong></label>
-                                    <input type="text" class="form-control flatpickr-minimum" placeholder="Select date.." />
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-sm-12 mb-3">
+                                        <label class="form-label"><strong>To</strong></label>
+                                        <input type="text" class="form-control flatpickr-minimum" placeholder="Select date.." />
+                                    </div>
+                                </div>
+                            </div>
 
-                                </div>
-                                <div class="col-lg-3 col-md-4 col-sm-12 mb-3">
-                                    <label class="form-label"><strong>To</strong></label>
-                                    <input type="text" class="form-control flatpickr-minimum" placeholder="Select date.." />
-                                </div>
+                            <div id="select_auto" class="select_options">
+                                <p>Auto-apply weight to calculation.</p>
                             </div>
 
                             <!-- Button trigger modal -->
@@ -323,22 +334,26 @@
                     <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="estModalLabel">Estimated Margin</h5>
+                                <h5 class="modal-title fw-bold" id="estModalLabel">Estimated Margin</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                <div class="card">
-                                    <div class="accordion accordion-flush" id="accordionFlushExample">
-                                        <div class="accordion-item bg-white">
-                                            <h2 class="accordion-header bg-white" id="flush-headingOne">
-                                                <button class="accordion-button collapsed bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                                                    <strong class="text-success">Price</strong>
-                                                </button>
-                                            </h2>
-                                            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                                                <div class="accordion-body">
-                                                    <small>Average 7-day Sales Price </small>
-                                                    <p>Text</p>
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-12">
+                                        <div class="card">
+                                            <div class="accordion accordion-flush" id="accordionFlushExample">
+                                                <div class="accordion-item bg-white">
+                                                    <h2 class="accordion-header bg-white" id="flush-headingOne">
+                                                        <button class="accordion-button collapsed bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                                            <strong class="text-success">Price</strong>
+                                                        </button>
+                                                    </h2>
+                                                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                                        <div class="accordion-body">
+                                                            <small>Average 7-day Sales Price </small>
+                                                            <p>Text</p>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -351,34 +366,34 @@
                                                 <table class="table mb-0">
                                                     <thead>
                                                         <tr>
-                                                            <td class="fw-bold text-warning">Cost</td>
-                                                            <td class="fw-bold text-warning align-right text-end">$12</td>
+                                                            <td class="pt-2 pb-2 fw-bold text-warning">Cost</td>
+                                                            <td class="pt-2 pb-2 fw-bold text-warning align-right text-end">$12</td>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
                                                         <tr>
-                                                            <td>Current Supplier</td>
-                                                            <td class="text-end">$2</td>
+                                                            <td class="pt-2 pb-2">Current Supplier</td>
+                                                            <td class="pt-2 pb-2 text-end">$2</td>
                                                         </tr>
                                                         <tr>
-                                                            <td>Inbound Shipping</td>
-                                                            <td class="text-end">$2</td>
+                                                            <td class="pt-2 pb-2">Inbound Shipping</td>
+                                                            <td class="pt-2 pb-2 text-end">$2</td>
                                                         </tr>
                                                         <tr>
-                                                            <td>Reshipping</td>
-                                                            <td class="text-end">$2</td>
+                                                            <td class="pt-2 pb-2">Reshipping</td>
+                                                            <td class="pt-2 pb-2 text-end">$2</td>
                                                         </tr>
                                                         <tr>
-                                                            <td>Repackaging Material</td>
-                                                            <td class="text-end">$2</td>
+                                                            <td class="pt-2 pb-2">Repackaging Material</td>
+                                                            <td class="pt-2 pb-2 text-end">$2</td>
                                                         </tr>
                                                         <tr>
-                                                            <td>Repackaging Labor</td>
-                                                            <td class="text-end">$2</td>
+                                                            <td class="pt-2 pb-2">Repackaging Labor</td>
+                                                            <td class="pt-2 pb-2 text-end">$2</td>
                                                         </tr>
                                                         <tr>
-                                                            <td class="border-bottom-0">Supplier Rebate</td>
-                                                            <td class="border-bottom-0 text-end">$2</td>
+                                                            <td class="pt-2 pb-2 border-bottom-0">Supplier Rebate</td>
+                                                            <td class="pt-2 pb-2 border-bottom-0 text-end">$2</td>
                                                         </tr>
                                                     </tbody>
                                                 </table>
@@ -391,26 +406,26 @@
                                                 <table class="table mb-0">
                                                     <thead>
                                                         <tr>
-                                                            <td class="fw-bold text-primary">Amazon Fees</td>
-                                                            <td class="fw-bold text-primary text-end">$8</td>
+                                                            <td class="pt-2 pb-2 fw-bold text-primary">Amazon Fees</td>
+                                                            <td class="pt-2 pb-2 fw-bold text-primary text-end">$8</td>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
                                                         <tr>
-                                                            <td>FBA</td>
-                                                            <td class="text-end">$2</td>
+                                                            <td class="pt-2 pb-2">FBA</td>
+                                                            <td class="pt-2 pb-2 text-end">$2</td>
                                                         </tr>
                                                         <tr>
-                                                            <td>Referral</td>
-                                                            <td class="text-end">$2</td>
+                                                            <td class="pt-2 pb-2">Referral</td>
+                                                            <td class="pt-2 pb-2 text-end">$2</td>
                                                         </tr>
                                                         <tr>
-                                                            <td>Monthly Storage</td>
-                                                            <td class="text-end">$2</td>
+                                                            <td class="pt-2 pb-2">Monthly Storage</td>
+                                                            <td class="pt-2 pb-2 text-end">$2</td>
                                                         </tr>
                                                         <tr>
-                                                            <td class="border-bottom-0">Variable Closing</td>
-                                                            <td class="border-bottom-0 text-end">$2</td>
+                                                            <td class="pt-2 pb-2 border-bottom-0">Variable Closing</td>
+                                                            <td class="pt-2 pb-2 border-bottom-0 text-end">$2</td>
                                                         </tr>
                                                     </tbody>
                                                 </table>
@@ -418,9 +433,29 @@
                                         </div>
                                     </div>
                                 </div>
-                                
-                                <p class="fw-bold mt-4">Estimated Margin ($)</p>
-                                
+
+                                <div class="table-responsive mt-4">
+                                    <table class="table table-borderless fw-bold w-auto">
+                                        <tbody>
+                                            <tr>
+                                                <td class="pt-2 pb-2">Estimated Margin ($)&nbsp;&nbsp;=</td>
+                                                <td class="pt-2 pb-2 ps-0"><span class="text-success">Price</span> ($140) - <span class="text-warning">Cost</span> ($12) - <span class="text-primary">Amazon Fees</span> ($34)</td>
+                                                <td class="pt-2 pb-2 ps-0">=&nbsp;&nbsp;$94</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="pt-2 pb-2">Estimated Margin (%)&nbsp;&nbsp;=</td>
+                                                <td class="pt-2 pb-2 ps-0">Estimated Margin ($94) / <span class="text-success">Price</span> ($140)</td>
+                                                <td class="pt-2 pb-2 ps-0">=&nbsp;&nbsp;67.1%</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="pt-2 pb-2">Estimated Margin (%)&nbsp;&nbsp;=</td>
+                                                <td class="pt-2 pb-2 ps-0">Estimated Margin ($94) / <span class="text-warning">Cost</span> ($12)</td>
+                                                <td class="pt-2 pb-2 ps-0">=&nbsp;&nbsp;783.3%</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Okay</button>
@@ -485,6 +520,15 @@
                 enableTime: true,
                 noCalendar: true,
                 dateFormat: "H:i",
+            });
+        });
+
+        /* select show/hide */
+        $(document).ready(function() {
+            $('#sales-velocity-settings').on('change', function(e) {
+                var opt = '#select_' + $(this).val();
+                $('.select_options').addClass('d-none').removeClass('d-block');
+                $(opt).addClass('d-block').removeClass('d-none');
             });
         });
 
