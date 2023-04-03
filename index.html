@@ -234,9 +234,10 @@
                                 <div class="card-body d-flex flex-column text-center">
                                     <h5 class="card-title">Salable Items</h5>
                                     <div class="card-text">
-                                        <div class="chart chart-sm">
-                                            <canvas id="chartjs-pie1"></canvas>
-                                        </div>
+                                        <a href="https://demos.telerik.com/kendo-ui/pie-charts/index" target="_blank">
+                                            <img src="img/world-map-min.png" alt="Pie Chart" class="mw-100" />
+                                            <span>[Kendo UI for jQuery Pie Charts]</span>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -246,9 +247,10 @@
                                 <div class="card-body d-flex flex-column text-center">
                                     <h5 class="card-title">Active &amp; Inactive Items</h5>
                                     <div class="card-text">
-                                        <div class="chart chart-sm">
-                                            <canvas id="chartjs-pie2"></canvas>
-                                        </div>
+                                        <a href="https://demos.telerik.com/kendo-ui/pie-charts/index" target="_blank">
+                                            <img src="img/world-map-min.png" alt="Pie Chart" class="mw-100" />
+                                            <span>[Kendo UI for jQuery Pie Charts]</span>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -258,9 +260,10 @@
                                 <div class="card-body d-flex flex-column text-center">
                                     <h5 class="card-title">How well stocked are you?</h5>
                                     <div class="card-text">
-                                        <div class="chart chart-sm">
-                                            <canvas id="chartjs-pie3"></canvas>
-                                        </div>
+                                        <a href="https://demos.telerik.com/kendo-ui/pie-charts/index" target="_blank">
+                                            <img src="img/world-map-min.png" alt="Pie Chart" class="mw-100" />
+                                            <span>[Kendo UI for jQuery Pie Charts]</span>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -446,84 +449,6 @@
     </div>
 
     <script src="adminkit-pro-3-3-0/dist/js/app.js"></script>
-
-    <!-- CHARTS -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            // Pie chart 1
-            new Chart(document.getElementById("chartjs-pie1"), {
-                type: "pie",
-                data: {
-                    labels: ["Salable Items", "Warehouse, PO, or Shipment", "Out of Stock"],
-                    datasets: [{
-                        data: [2876, 3637, 1169],
-                        backgroundColor: [
-                            window.theme.primary,
-                            window.theme.warning,
-                            window.theme.danger,
-                            "#dee2e6"
-                        ],
-                        borderColor: "transparent"
-                    }]
-                },
-                options: {
-                    maintainAspectRatio: false,
-                    legend: {
-                        display: true
-                    }
-                }
-            });
-
-            // Pie chart 2
-            new Chart(document.getElementById("chartjs-pie2"), {
-                type: "pie",
-                data: {
-                    labels: ["Active Items", "Inactive Items"],
-                    datasets: [{
-                        data: [1723, 2316],
-                        backgroundColor: [
-                            window.theme.primary,
-                            window.theme.danger,
-                            "#dee2e6"
-                        ],
-                        borderColor: "transparent"
-                    }]
-                },
-                options: {
-                    maintainAspectRatio: false,
-                    legend: {
-                        display: true
-                    }
-                }
-            });
-
-            // Pie chart 3
-            new Chart(document.getElementById("chartjs-pie3"), {
-                type: "pie",
-                data: {
-                    labels: ["In Stock", "Warehouse, PO, or Shipment", "Out of Stock"],
-                    datasets: [{
-                        data: [2770, 102, 1169],
-                        backgroundColor: [
-                            window.theme.primary,
-                            window.theme.warning,
-                            window.theme.danger,
-                            "#dee2e6"
-                        ],
-                        borderColor: "transparent"
-                    }]
-                },
-                options: {
-                    maintainAspectRatio: false,
-                    legend: {
-                        display: true
-                    }
-                }
-            });
-
-        });
-
-    </script>
 
 </body>
 
