@@ -233,10 +233,11 @@
                         <div class="col-lg-4 col-md-4 col-sm-12 mb-3 d-flex align-items-stretch">
                             <div class="card w-100 mb-2">
                                 <div class="card-body d-flex flex-column text-center">
-                                    <h5 class="card-title">Scalable Items</h5>
+                                    <h5 class="card-title">Salable Items</h5>
                                     <div class="card-text">
-                                        <img src="img/chart-1left-min.png" alt="Chart" class="w-75" />
-                                        <p class="mt-2 mb-0">[Kendo Existing Chart]</p>
+                                        <div class="chart chart-sm">
+                                            <canvas id="chartjs-pie1"></canvas>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -246,8 +247,9 @@
                                 <div class="card-body d-flex flex-column text-center">
                                     <h5 class="card-title">Active &amp; Inactive Items</h5>
                                     <div class="card-text">
-                                        <img src="img/chart-2middle-min.png" alt="Chart" class="w-75" />
-                                        <p class="mt-2 mb-0">[Kendo Existing Chart]</p>
+                                        <div class="chart chart-sm">
+                                            <canvas id="chartjs-pie2"></canvas>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -257,8 +259,9 @@
                                 <div class="card-body d-flex flex-column text-center">
                                     <h5 class="card-title">How well stocked are you?</h5>
                                     <div class="card-text">
-                                        <img src="img/chart-3right-min.png" alt="Chart" class="w-75" />
-                                        <p class="mt-2 mb-0">[Kendo Existing Chart]</p>
+                                        <div class="chart chart-sm">
+                                            <canvas id="chartjs-pie3"></canvas>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -446,6 +449,84 @@
     </div>
 
     <script src="adminkit-pro-3-3-0/dist/js/app.js"></script>
+
+    <!-- CHARTS -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Pie chart 1
+            new Chart(document.getElementById("chartjs-pie1"), {
+                type: "pie",
+                data: {
+                    labels: ["Salable Items", "Warehouse, PO, or Shipment", "Out of Stock"],
+                    datasets: [{
+                        data: [2876, 3637, 1169],
+                        backgroundColor: [
+                            window.theme.primary,
+                            window.theme.warning,
+                            window.theme.danger,
+                            "#dee2e6"
+                        ],
+                        borderColor: "transparent"
+                    }]
+                },
+                options: {
+                    maintainAspectRatio: false,
+                    legend: {
+                        display: true
+                    }
+                }
+            });
+
+            // Pie chart 2
+            new Chart(document.getElementById("chartjs-pie2"), {
+                type: "pie",
+                data: {
+                    labels: ["Active Items", "Inactive Items"],
+                    datasets: [{
+                        data: [1723, 2316],
+                        backgroundColor: [
+                            window.theme.primary,
+                            window.theme.danger,
+                            "#dee2e6"
+                        ],
+                        borderColor: "transparent"
+                    }]
+                },
+                options: {
+                    maintainAspectRatio: false,
+                    legend: {
+                        display: true
+                    }
+                }
+            });
+
+            // Pie chart 3
+            new Chart(document.getElementById("chartjs-pie3"), {
+                type: "pie",
+                data: {
+                    labels: ["In Stock", "Warehouse, PO, or Shipment", "Out of Stock"],
+                    datasets: [{
+                        data: [2770, 102, 1169],
+                        backgroundColor: [
+                            window.theme.primary,
+                            window.theme.warning,
+                            window.theme.danger,
+                            "#dee2e6"
+                        ],
+                        borderColor: "transparent"
+                    }]
+                },
+                options: {
+                    maintainAspectRatio: false,
+                    legend: {
+                        display: true
+                    }
+                }
+            });
+
+        });
+
+    </script>
 
 </body>
 
