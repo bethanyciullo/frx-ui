@@ -602,22 +602,318 @@
                                 </div>
                             </div>
                             <!-- /end Change Item Information Modal -->
-                            
-                            
+
+
                             <!-- Restock from Suppliers Calculations Modal -->
                             <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#calcModal">
                                 Restock from Suppliers Calculations Modal
                             </button>
                             <small class="d-block mt-1 mb-3"><strong>Location(s):</strong> RestockAmz &rsaquo; Restock from Supplier &rsaquo; [all suppliers] &rsaquo; scroll right &rsaquo; warehouse icon</small>
                             <div class="modal fade" id="calcModal" tabindex="-1" aria-labelledby="calcModalLabel" aria-hidden="true">
-                                <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+                                <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
                                     <div class="modal-content">
                                         <div class="modal-header">
                                             <h5 class="modal-title fw-bold" id="estModalLabel">Restock from Suppliers Calculations</h5>
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body">
-                                            Calculations
+                                            <div class="row">
+                                                <div class="col-md-6 col-sm-12">
+                                                    <div class="accordion accordion-flush" id="accordionAvg">
+                                                        <div class="accordion-item">
+                                                            <h2 class="accordion-header bg-white" id="flush-headingAvg">
+                                                                <button class="accordion-button collapsed bg-white text-center" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseAvg" aria-expanded="false" aria-controls="flush-collapseAvg">
+                                                                    Average Daily Sales Rate
+                                                                </button>
+                                                            </h2>
+                                                            <div id="flush-collapseAvg" class="accordion-collapse collapse" aria-labelledby="flush-headingAvg" data-bs-parent="#accordionAvg">
+                                                                <div class="accordion-body bg-white pe-0 ps-0">
+                                                                    <table class="table table-bordered table-sm">
+                                                                        <thead>
+                                                                            <tr>
+                                                                                <th> Period
+                                                                                </th>
+                                                                                <th> Daily Sales Rate
+                                                                                </th>
+                                                                                <th> Adj. Daily Sales Rate <span ngbtooltip="Daily sales rate adjusted to exclude days out of stock" placement="bottom" class="m-r-2"><i class="fas fa-info-circle"></i></span>
+                                                                                </th>
+                                                                                <th> Weight (%)
+                                                                                </th>
+                                                                                <th> Weighted (units/day)
+                                                                                </th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <div>2-day</div>
+                                                                                </td>
+                                                                                <td class="text-right">0</td>
+                                                                                <td class="text-right">0</td>
+                                                                                <td class="text-right">10%</td>
+                                                                                <td class="text-right">0</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <div>7-day</div>
+                                                                                </td>
+                                                                                <td class="text-right">0</td>
+                                                                                <td class="text-right">0</td>
+                                                                                <td class="text-right">45%</td>
+                                                                                <td class="text-right">0</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <div>14-day</div>
+                                                                                </td>
+                                                                                <td class="text-right">0</td>
+                                                                                <td class="text-right">0</td>
+                                                                                <td class="text-right">45%</td>
+                                                                                <td class="text-right">0</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <div>30-day</div>
+                                                                                </td>
+                                                                                <td class="text-right">0</td>
+                                                                                <td class="text-right">0</td>
+                                                                                <td class="text-right">0%</td>
+                                                                                <td class="text-right">0</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <div>60-day</div>
+                                                                                </td>
+                                                                                <td class="text-right">0</td>
+                                                                                <td class="text-right">0</td>
+                                                                                <td class="text-right">0%</td>
+                                                                                <td class="text-right">0</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <div>90-day</div>
+                                                                                </td>
+                                                                                <td class="text-right">0</td>
+                                                                                <td class="text-right">0</td>
+                                                                                <td class="text-right">0%</td>
+                                                                                <td class="text-right">0</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <div>180-day</div>
+                                                                                </td>
+                                                                                <td class="text-right">0</td>
+                                                                                <td class="text-right">0</td>
+                                                                                <td class="text-right">0%</td>
+                                                                                <td class="text-right">0</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <div>ForecastRx Demand</div>
+                                                                                </td>
+                                                                                <td class="text-right">0</td>
+                                                                                <td class="text-right">0</td>
+                                                                                <td class="text-right">0%</td>
+                                                                                <td class="text-right">0</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <div>Units/day</div>
+                                                                                </td>
+                                                                                <td class="text-right"></td>
+                                                                                <td class="text-right"></td>
+                                                                                <td class="text-right"></td>
+                                                                                <td class="text-right">0</td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <hr class="mt-0" />
+                                                    <p class="text-center mb-1 fs-2">0 unit/day</p>
+                                                    <p class="text-center">based on Average or Date Range</p>
+                                                </div>
+                                                <div class="col-md-3 col-sm-12">
+                                                    <div class="accordion accordion-flush" id="accordionReq">
+                                                        <div class="accordion-item">
+                                                            <h2 class="accordion-header bg-white" id="flush-headingReq">
+                                                                <button class="accordion-button collapsed bg-white text-center" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseReq" aria-expanded="false" aria-controls="flush-collapseReq">
+                                                                    Required Inventory
+                                                                </button>
+                                                            </h2>
+                                                            <div id="flush-collapseReq" class="accordion-collapse collapse" aria-labelledby="flush-headingReq" data-bs-parent="#accordionReq">
+                                                                <div class="accordion-body bg-white pe-0 ps-0">
+                                                                    <table class="table table-bordered table-sm">
+                                                                        <thead>
+                                                                            <tr>
+                                                                                <th> Required Inventory </th>
+                                                                                <th> Days </th>
+                                                                                <th> Units </th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td>Ideal FBA Inventory</td>
+                                                                                <td class="text-right"> 45 </td>
+                                                                                <td class="text-right"> 0 </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>Supplier/Item Lead Time</td>
+                                                                                <td class="text-right"> 15 </td>
+                                                                                <td class="text-right"> 0 </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td class="font-weight-bold text-uppercase"> Total </td>
+                                                                                <td class="text-right font-weight-bold"> 60 </td>
+                                                                                <td class="text-right font-weight-bold"> 0 </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <hr class="mt-0" />
+                                                    <p class="text-center mb-1 fs-2">0 unit</p>
+                                                    <p class="text-center">60 days&rsquo; worth</p>
+                                                </div>
+                                                <div class="col-md-3 col-sm-12">
+                                                    <div class="accordion accordion-flush" id="accordionInv">
+                                                        <div class="accordion-item">
+                                                            <h2 class="accordion-header bg-white" id="flush-headingInv">
+                                                                <button class="accordion-button collapsed bg-white text-center" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseInv" aria-expanded="false" aria-controls="flush-collapseInv">
+                                                                    Inventory Available
+                                                                </button>
+                                                            </h2>
+                                                            <div id="flush-collapseInv" class="accordion-collapse collapse" aria-labelledby="flush-headingInv" data-bs-parent="#accordionInv">
+                                                                <div class="accordion-body bg-white pe-0 ps-0">
+                                                                    <table class="table table-bordered table-sm">
+                                                                        <thead>
+                                                                            <tr>
+                                                                                <th> Inventory Available </th>
+                                                                                <th> Days&rsquo; Worth </th>
+                                                                                <th> Units </th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td>Amazon Inventory</td>
+                                                                                <td class="text-right"> 0 </td>
+                                                                                <td class="text-right"> 0 </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>Warehouse Inventory</td>
+                                                                                <td class="text-right"> 0 </td>
+                                                                                <td class="text-right"> 0 </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>On Order</td>
+                                                                                <td class="text-right"> 0 </td>
+                                                                                <td class="text-right"> 0 </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td class="fw-bold text-uppercase"> Total </td>
+                                                                                <td class="text-right fw-bold"> 0 </td>
+                                                                                <td class="text-right fw-bold"> 0 </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <hr class="mt-0" />
+                                                    <p class="text-center mb-1 fs-2">0 unit</p>
+                                                    <p class="text-center">0 days&rsquo; worth</p>
+                                                </div>
+                                            </div>
+                                            <div class="row mt-4">
+                                                <div class="col-md-6 col-sm-12">
+                                                    <div class="card h-100 bg-light shadow-none">
+                                                        <div class="card-header pb-0 bg-transparent">
+                                                            <h2 class="card-title text-center">Recommended Restock Quantity</h2>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <h3 class="text-center">0 Unit</h3>
+                                                            <table class="table table-sm table-borderless">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>Ideal Max Quantity at FBA</td>
+                                                                        <td class="text-center">&nbsp;</td>
+                                                                        <td class="text-end">0 unit</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Required Inventory to cover Warehouse Lead-time</td>
+                                                                        <td class="text-center">+</td>
+                                                                        <td class="text-end">0 unit</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Current Amazon On Hand</td>
+                                                                        <td class="text-center">-</td>
+                                                                        <td class="text-end">0 unit</td>
+                                                                    </tr>
+                                                                    <tr class="border-top">
+                                                                        <td>Warehouse Quantity Needed</td>
+                                                                        <td class="text-center">=</td>
+                                                                        <td class="text-end">0 unit</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="pt-4">Warehouse Inventory Available</td>
+                                                                        <td class="text-center pt-4">=</td>
+                                                                        <td class="text-end pt-4">0 unit</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 col-sm-12">
+                                                    <div class="card h-100 bg-light shadow-none">
+                                                        <div class="card-header pb-0 bg-transparent">
+                                                            <h2 class="card-title text-center">Recommended Purchase Order Quantity</h2>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <h3 class="text-center">0 Unit</h3>
+                                                            <table class="table table-sm table-borderless">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>Units Required</td>
+                                                                        <td class="text-center">&nbsp;</td>
+                                                                        <td class="text-end">0 unit</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Units Available</td>
+                                                                        <td class="text-center">-</td>
+                                                                        <td class="text-end">0 unit</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Units on PO</td>
+                                                                        <td class="text-center">-</td>
+                                                                        <td class="text-end">0 unit</td>
+                                                                    </tr>
+                                                                    <tr class="border-top">
+                                                                        <td>PO Quantity Required</td>
+                                                                        <td class="text-center">=</td>
+                                                                        <td class="text-end">1 unit</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="pt-4">Minimum PO Qty</td>
+                                                                        <td class="text-center pt-4">=</td>
+                                                                        <td class="text-end pt-4">1 unit</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Case Pack Quantity</td>
+                                                                        <td class="text-center">=</td>
+                                                                        <td class="text-end">1 unit</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
