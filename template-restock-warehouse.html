@@ -477,34 +477,10 @@
 
                 </div>
 
-                <!-- Button trigger modal -->
-                <button type="button" class="btn btn-primary d-none" data-bs-toggle="modal" data-bs-target="#restockModal" id="runSync">
-                    Run Sync
-                </button>
-
-                <!-- Modal: Sync -->
-                <div class="modal fade" id="restockModal" tabindex="-1" aria-labelledby="restockModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title fw-bold" id="restockModalLabel">Please Run Sync and Forecast before creating a shipment</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <ul>
-                                    <li>Sync and Forecast may take up to 10 minutes to complete</li>
-                                    <li>Navigating off this page before shipment completion will result in lost work</li>
-                                </ul>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Okay</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
 
                 <!-- Modal: Add Address -->
-                <div class="modal fade" id="addressModal" tabindex="-1" aria-labelledby="restockModalLabel" aria-hidden="true">
+                <div class="modal fade" id="addressModal" tabindex="-1" aria-labelledby="addressModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -587,12 +563,6 @@
     </div>
 
     <script src="adminkit-pro-3-3-0/dist/js/app.js"></script>
-    <script>
-        $(document).ready(function() {
-            $('#runSync').trigger('click');
-        });
-
-    </script>
 
 </body>
 

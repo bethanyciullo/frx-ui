@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Responsive Admin &amp; Dashboard Template based on Bootstrap 5">
+    <meta name="author" content="AdminKit">
+    <meta name="keywords" content="adminkit, bootstrap, bootstrap 5, admin, dashboard, template, responsive, css, sass, html, theme, front-end, ui kit, web">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="shortcut icon" href="img/logo.svg" type="image/svg+xml">
+
+    <link rel="canonical" href="/" />
+
+    <title>Pop-Ups / Modals | ForecastRx UI</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <link class="js-stylesheet" href="adminkit-pro-3-3-0/dist/css/light.css" rel="stylesheet">
+</head>
+
+<body data-theme="default" data-layout="fluid" data-sidebar-position="left" data-sidebar-layout="default">
+    <div class="wrapper">
+        <nav id="sidebar" class="sidebar js-sidebar">
+            <div class="sidebar-content js-simplebar">
+                <a class="sidebar-brand" href="index.html">
+                    <img src="img/logoTextWhite.svg" alt="ForecastRx" style="max-width: 160px;" />
+                </a>
+
+                <ul class="sidebar-nav">
+                    <li class="sidebar-item">
+                        <a data-bs-target="#manage" data-bs-toggle="collapse" class="sidebar-link collapsed">
+                            <i class="align-middle" data-feather="pie-chart"></i> <span class="align-middle">Manage Company</span>
+                        </a>
+                        <ul id="manage" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-manage-details.html">Company Details</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-subpage.html">Suppliers</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-subpage.html">Items</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-subpage.html">Demand</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-subpage.html">Supply</a></li>
+                            <li class="sidebar-item">
+                                <a data-bs-target="#multiple" data-bs-toggle="collapse" class="sidebar-link collapsed" aria-expanded="false">
+                                    <i class="align-middle" data-feather="bar-chart-2"></i>
+                                    <span class="align-middle">Advanced</span>
+                                </a>
+                                <ul id="multiple" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#manage" style="">
+                                    <li class="sidebar-item"><a class="sidebar-link" href="template-subpage.html">Edit Kits</a></li>
+                                    <li class="sidebar-item"><a class="sidebar-link" href="template-subpage.html">Edit Item History</a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li class="sidebar-item">
+                        <a data-bs-target="#purchasing" data-bs-toggle="collapse" class="sidebar-link collapsed">
+                            <i class="align-middle" data-feather="target"></i> <span class="align-middle">Purchasing</span>
+                        </a>
+                        <ul id="purchasing" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-subpage.html">My Suggested</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-subpage.html">Custom</a></li>
+                        </ul>
+                    </li>
+                    <li class="sidebar-item">
+                        <a data-bs-target="#restock" data-bs-toggle="collapse" class="sidebar-link collapsed">
+                            <i class="align-middle" data-feather="box"></i> <span class="align-middle">RestockAMZ</span>
+                        </a>
+                        <ul id="restock" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-restock-warehouse.html">Restock from Warehouse</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-admin.html">Restock from Supplier</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-admin.html">Address Book</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-admin.html">Manage Shipments</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-restock-settings.html">Settings</a></li>
+                        </ul>
+                    </li>
+                    <li class="sidebar-item">
+                        <a data-bs-target="#admin" data-bs-toggle="collapse" class="sidebar-link collapsed">
+                            <i class="align-middle" data-feather="settings"></i> <span class="align-middle">Administration</span>
+                        </a>
+                        <ul id="admin" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-admin.html">Companies</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-admin.html">Users</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <div class="sidebar-cta">
+                    <div class="sidebar-cta-content p-0 bg-transparent">
+                        <small><a href="https://docs.google.com/spreadsheets/d/1UvRWgy6KKKpdnolvvEq65cyPxl54K6vDEY2_qMLLdLg/edit#gid=49109812" target="_blank" class="text-white-50">v3.75.0</a></small>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="main overflow-visible">
+
+            <nav class="navbar navbar-expand navbar-light navbar-bg sticky-top" id="header">
+                <div class="container">
+                    <a class="sidebar-toggle js-sidebar-toggle">
+                        <i class="hamburger align-self-center"></i>
+                    </a>
+
+                    <form class="d-none d-lg-inline-block">
+                        <div class="input-group input-group-navbar">
+                            <input type="text" class="form-control" placeholder="Search…" aria-label="Search">
+                            <button class="btn" type="button">
+                                <i class="align-middle" data-feather="search"></i>
+                            </button>
+                        </div>
+                    </form>
+
+                    <ul class="navbar-nav d-none d-md-flex">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="resourcesDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Choose Company
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="resourcesDropdown">
+                                <a class="dropdown-item" href="index.html">Fishers Finery Amazon</a>
+                                <a class="dropdown-item" href="template-add.html">+ Add Company</a>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="navbar-collapse collapse">
+                        <ul class="navbar-nav navbar-align">
+
+                            <li class="nav-item">
+                                <a class="nav-icon" href="#">
+                                    <div class="position-relative">
+                                        <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Forecast Report">
+                                            <i class="align-middle" data-feather="book"></i>
+                                        </span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-icon" href="#">
+                                    <div class="position-relative">
+                                        <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Last Sync: [date]">
+                                            <i class="align-middle" data-feather="repeat"></i>
+                                        </span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-icon" href="#">
+                                    <div class="position-relative">
+                                        <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Last Forecast: [date]">
+                                            <i class="align-middle" data-feather="trending-up"></i>
+                                        </span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-icon" href="#">
+                                    <div class="position-relative">
+                                        <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Support" onclick="window.open('https://forecastrx.zendesk.com/', '_blank');">
+                                            <i class="align-middle" data-feather="help-circle"></i>
+                                        </span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-icon js-fullscreen d-none d-lg-block" href="#">
+                                    <div class="position-relative">
+                                        <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Full Screen">
+                                            <i class="align-middle" data-feather="maximize"></i>
+                                        </span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-icon pe-md-0 dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                                    <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="User: [name]">
+                                        <i class="align-middle" data-feather="user"></i>
+                                    </span>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end">
+                                    <span class="dropdown-item pe-none"><strong>Name</strong></span>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="template-profile.html"><i class="align-middle me-1" data-feather="user"></i> Profile</a>
+                                    <a class="dropdown-item" href="template-subscription.html"><i class="align-middle me-1" data-feather="dollar-sign"></i> Subscription</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="template-login.html"><i class="align-middle me-1" data-feather="log-out"></i> Log out</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <main class="content">
+                <div class="container p-0">
+
+
+                    <div class="card">
+                        <div class="card-header pb-0">
+                            <h1 class="card-title">Pop-Ups / Modals</h1>
+                        </div>
+                        <div class="card-body">
+
+                            <!-- Template Modal -->
+                            <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#templateModal">
+                                Template Modal
+                            </button>
+                            <small class="d-block mt-1 mb-3"><strong>Location(s):</strong> Site-wide</small>
+                            <div class="modal fade" id="templateModal" tabindex="-1" aria-labelledby="templateModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title fw-bold" id="estModalLabel">Template Modal</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>Content</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Okay</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /end Template Modal -->
+
+                            <!-- Estimated Margin Modal -->
+                            <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#estModal">
+                                Estimated Margin Modal
+                            </button>
+                            <small class="d-block mt-1 mb-3"><strong>Location(s):</strong> RestockAmz</small>
+                            <div class="modal fade" id="estModal" tabindex="-1" aria-labelledby="estModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title fw-bold" id="estModalLabel">Estimated Margin</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="row">
+                                                <div class="col-md-6 col-sm-12">
+                                                    <div class="card">
+                                                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                                                            <div class="accordion-item bg-white">
+                                                                <h2 class="accordion-header bg-white" id="flush-headingOne">
+                                                                    <button class="accordion-button collapsed bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                                                        <strong class="text-success">Price</strong>
+                                                                    </button>
+                                                                </h2>
+                                                                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                                                    <div class="accordion-body">
+                                                                        <small>Average 7-day Sales Price </small>
+                                                                        <p>Text</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row d-flex align-items-stretch">
+                                                <div class="col-md-6 col-sm-12">
+                                                    <div class="card h-100">
+                                                        <div class="card-body pb-0">
+                                                            <table class="table mb-0">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <td class="pt-2 pb-2 fw-bold text-warning">Cost</td>
+                                                                        <td class="pt-2 pb-2 fw-bold text-warning align-right text-end">$12</td>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td class="pt-2 pb-2">Current Supplier</td>
+                                                                        <td class="pt-2 pb-2 text-end">$2</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="pt-2 pb-2">Inbound Shipping</td>
+                                                                        <td class="pt-2 pb-2 text-end">$2</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="pt-2 pb-2">Reshipping</td>
+                                                                        <td class="pt-2 pb-2 text-end">$2</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="pt-2 pb-2">Repackaging Material</td>
+                                                                        <td class="pt-2 pb-2 text-end">$2</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="pt-2 pb-2">Repackaging Labor</td>
+                                                                        <td class="pt-2 pb-2 text-end">$2</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="pt-2 pb-2 border-bottom-0">Supplier Rebate</td>
+                                                                        <td class="pt-2 pb-2 border-bottom-0 text-end">$2</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 col-sm-12">
+                                                    <div class="card h-100">
+                                                        <div class="card-body pb-0">
+                                                            <table class="table mb-0">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <td class="pt-2 pb-2 fw-bold text-primary">Amazon Fees</td>
+                                                                        <td class="pt-2 pb-2 fw-bold text-primary text-end">$8</td>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td class="pt-2 pb-2">FBA</td>
+                                                                        <td class="pt-2 pb-2 text-end">$2</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="pt-2 pb-2">Referral</td>
+                                                                        <td class="pt-2 pb-2 text-end">$2</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="pt-2 pb-2">Monthly Storage</td>
+                                                                        <td class="pt-2 pb-2 text-end">$2</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="pt-2 pb-2 border-bottom-0">Variable Closing</td>
+                                                                        <td class="pt-2 pb-2 border-bottom-0 text-end">$2</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="table-responsive mt-4">
+                                                <table class="table table-borderless fw-bold w-auto">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="pt-2 pb-2">Estimated Margin ($)&nbsp;&nbsp;=</td>
+                                                            <td class="pt-2 pb-2 ps-0"><span class="text-success">Price</span> ($140) - <span class="text-warning">Cost</span> ($12) - <span class="text-primary">Amazon Fees</span> ($34)</td>
+                                                            <td class="pt-2 pb-2 ps-0">=&nbsp;&nbsp;$94</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="pt-2 pb-2">Estimated Margin (%)&nbsp;&nbsp;=</td>
+                                                            <td class="pt-2 pb-2 ps-0">Estimated Margin ($94) / <span class="text-success">Price</span> ($140)</td>
+                                                            <td class="pt-2 pb-2 ps-0">=&nbsp;&nbsp;67.1%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="pt-2 pb-2">Estimated Margin (%)&nbsp;&nbsp;=</td>
+                                                            <td class="pt-2 pb-2 ps-0">Estimated Margin ($94) / <span class="text-warning">Cost</span> ($12)</td>
+                                                            <td class="pt-2 pb-2 ps-0">=&nbsp;&nbsp;783.3%</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Okay</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /end Estimated Margin Modal -->
+
+                            <!-- Run Sync Modal -->
+                            <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#restockModal" id="runSync">
+                                Run Sync
+                            </button>
+                            <small class="d-block mt-1 mb-3"><strong>Location(s):</strong> RestockAmz &rsaquo; Restock from Warehouse</small>
+                            <div class="modal fade" id="restockModal" tabindex="-1" aria-labelledby="restockModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title fw-bold" id="restockModalLabel">Please Run Sync and Forecast before creating a shipment</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <ul>
+                                                <li>Sync and Forecast may take up to 10 minutes to complete</li>
+                                                <li>Navigating off this page before shipment completion will result in lost work</li>
+                                            </ul>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Okay</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /end Run Sync Modal -->
+
+                            <!-- Add Address Modal -->
+                            <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#addressModal">Add Address +</button>
+                            <small class="d-block mt-1 mb-3"><strong>Location(s):</strong> RestockAmz &rsaquo; Restock from Warehouse</small>
+                            <div class="modal fade" id="addressModal" tabindex="-1" aria-labelledby="addressModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title fw-bold" id="addressLabel">Create Supplier</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form>
+                                                <div class="mb-3">
+                                                    <label class="form-label">Country</label>
+                                                    <select class="form-select">
+                                                        <option value="1">Options</option>
+                                                    </select>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label class="form-label">Supplier Name</label>
+                                                    <select class="form-select">
+                                                        <option value="1">Options</option>
+                                                    </select>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label class="form-label">Street Address</label>
+                                                    <input class="form-control form-control-lg mb-2" type="text" placeholder="Street and number, P.O. box, c/o.">
+                                                    <input class="form-control form-control-lg" type="text" placeholder="Apartment, suite, unit, building, floor, etc.">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label class="form-label">City</label>
+                                                    <input class="form-control form-control-lg" type="text">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label class="form-label">State/Province</label>
+                                                    <input class="form-control form-control-lg" type="text">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label class="form-label">Zip/Postal Code</label>
+                                                    <input class="form-control form-control-lg" type="text">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label class="form-label">Phone Number (optional)</label>
+                                                    <input class="form-control form-control-lg" type="tel">
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary">Create</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /end Add Address Modal -->
+
+                            <!-- Change Item Information Modal -->
+                            <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#changeModal">
+                                Change Item Information Modal
+                            </button>
+                            <small class="d-block mt-1 mb-3"><strong>Location(s):</strong> RestockAmz &rsaquo; Restock from Supplier &rsaquo; [all suppliers] &rsaquo; scroll left &rsaquo; search icon (chose not to display disabled fields)</small>
+                            <div class="modal fade" id="changeModal" tabindex="-1" aria-labelledby="changeModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title fw-bold" id="estModalLabel">Change Item Information</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="row">
+                                                <div class="col-md-4 col-sm-12">
+                                                    <div class="mb-2">
+                                                        <label class="form-label mb-1">Item Name</label>
+                                                        <input class="form-control" type="text">
+                                                    </div>
+                                                    <div class="mb-2">
+                                                        <label class="form-label mb-1">Description</label>
+                                                        <input class="form-control" type="text">
+                                                    </div>
+                                                    <div class="mb-2">
+                                                        <label class="form-label mb-1">MOQ</label>
+                                                        <input class="form-control" type="number">
+                                                    </div>
+                                                    <div class="mb-2">
+                                                        <label class="form-label mb-1">Service Level</label>
+                                                        <input class="form-control" type="number">
+                                                    </div>
+                                                    <div class="mb-2">
+                                                        <label class="form-label mb-1">Warehouse Qty</label>
+                                                        <input class="form-control" type="number">
+                                                    </div>
+                                                    <div class="mb-2">
+                                                        <label class="form-label mb-1">SKU Notes</label>
+                                                        <input class="form-control" type="text">
+                                                    </div>
+                                                    <div class="mb-2">
+                                                        <label class="form-label mb-1">Inbound Shipping Cost</label>
+                                                        <input class="form-control" type="number">
+                                                    </div>
+                                                    <div class="mb-2">
+                                                        <label class="form-label mb-1">Repackaging Labor Cost</label>
+                                                        <input class="form-control" type="number">
+                                                    </div>
+                                                    <div class="mb-2">
+                                                        <label class="form-label mb-1">Purchase As (Item Name)</label>
+                                                        <select class="form-select">
+                                                            <option value="1">Options</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="mb-2">
+                                                        <label class="form-label mb-1">FC Processing</label>
+                                                        <input class="form-control" type="number">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 col-sm-12">
+                                                    <div class="mb-2">
+                                                        <label class="form-label mb-1">AVG 7D Price</label>
+                                                        <input class="form-control" type="number">
+                                                    </div>
+                                                    <div class="mb-2">
+                                                        <label class="form-label mb-1">ASIN</label>
+                                                        <input class="form-control" type="text">
+                                                    </div>
+                                                    <div class="mb-2">
+                                                        <label class="form-label mb-1">Supplier Name</label>
+                                                        <select class="form-select">
+                                                            <option value="1">Options</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="mb-2">
+                                                        <label class="form-label mb-1">Lead Time</label>
+                                                        <input class="form-control" type="number">
+                                                    </div>
+
+                                                    <div class="mb-2">
+                                                        <label class="form-label mb-1">Warehouse Qty Min</label>
+                                                        <input class="form-control" type="number">
+                                                    </div>
+                                                    <div class="mb-2">
+                                                        <label class="form-label mb-1">Prep Notes</label>
+                                                        <input class="form-control" type="text">
+                                                    </div>
+                                                    <div class="mb-2">
+                                                        <label class="form-label mb-1">Reshipping Cost</label>
+                                                        <input class="form-control" type="number">
+                                                    </div>
+                                                    <div class="mb-2">
+                                                        <label class="form-label mb-1">Rank</label>
+                                                        <input class="form-control" type="text">
+                                                    </div>
+                                                    <div class="mb-2">
+                                                        <label class="form-label mb-1">Tags</label>
+                                                        <input class="form-control" type="text">
+                                                    </div>
+                                                    <div class="mb-2">
+                                                        <label class="form-label mb-1">&nbsp;</label>
+                                                        <label class="form-check">
+                                                            <input class="form-check-input" type="checkbox">
+                                                            <span class="form-check-label">
+                                                                Is FBM
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 col-sm-12">
+                                                    <div class="mb-2">
+                                                        <label class="form-label mb-1">FNSKU</label>
+                                                        <input class="form-control" type="text">
+                                                    </div>
+                                                    <div class="mb-2">
+                                                        <label class="form-label mb-1">Supplier Price</label>
+                                                        <input class="form-control" type="number">
+                                                    </div>
+                                                    <div class="mb-2">
+                                                        <label class="form-label mb-1">Order Interval</label>
+                                                        <input class="form-control" type="number">
+                                                    </div>
+                                                    <div class="mb-2">
+                                                        <label class="form-label mb-1">On Hand Qty Min</label>
+                                                        <input class="form-control" type="number">
+                                                    </div>
+                                                    <div class="mb-2">
+                                                        <label class="form-label mb-1">Supplier Rebate</label>
+                                                        <input class="form-control" type="number">
+                                                    </div>
+                                                    <div class="mb-2">
+                                                        <label class="form-label mb-1">Repackaging Material Cost</label>
+                                                        <input class="form-control" type="number">
+                                                    </div>
+                                                    <div class="mb-2">
+                                                        <label class="form-label mb-1">Case Pack Qty</label>
+                                                        <input class="form-control" type="number">
+                                                    </div>
+                                                    <div class="mb-2">
+                                                        <label class="form-label mb-1">Inbound</label>
+                                                        <input class="form-control" type="text">
+                                                    </div>
+                                                    <div class="mb-2">
+                                                        <label class="form-label mb-1">FBA Fees</label>
+                                                        <input class="form-control" type="text">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary">Save</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /end Change Item Information Modal -->
+                            
+                            
+                            <!-- Restock from Suppliers Calculations Modal -->
+                            <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#calcModal">
+                                Restock from Suppliers Calculations Modal
+                            </button>
+                            <small class="d-block mt-1 mb-3"><strong>Location(s):</strong> RestockAmz &rsaquo; Restock from Supplier &rsaquo; [all suppliers] &rsaquo; scroll right &rsaquo; warehouse icon</small>
+                            <div class="modal fade" id="calcModal" tabindex="-1" aria-labelledby="calcModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title fw-bold" id="estModalLabel">Restock from Suppliers Calculations</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            Calculations
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /end Restock from Suppliers Calculations Modal -->
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </main>
+
+            <footer class="footer">
+                <div class="container">
+                    <div class="row text-muted">
+                        <div class="col-md-6 col-sm-12 text-start">
+                            <p class="mb-0">
+                                <a href="https://www.forecastrx.com/" target="_blank" class="text-muted"><strong>&copy;&nbsp;ForecastRx</strong></a> &copy;
+                            </p>
+                        </div>
+                        <div class="col-md-6 col-sm-12 text-md-end text-sm-start">
+                            <ul class="list-inline">
+                                <li class="list-inline-item">
+                                    <a class="text-muted" href="https://forecastrx.zendesk.com" target="_blank">Support</a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a class="text-muted" href="https://www.forecastrx.com/privacy-policy/" target="_blank">Privacy</a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a class="text-muted" href="https://www.forecastrx.com/terms/" target="_blank">Terms</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="adminkit-pro-3-3-0/dist/js/app.js"></script>
+
+</body>
+
+</html>
