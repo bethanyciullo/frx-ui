@@ -691,18 +691,15 @@
                                                             <div id="flush-collapseAvg" class="accordion-collapse collapse" aria-labelledby="flush-headingAvg" data-bs-parent="#accordionAvg">
                                                                 <div class="accordion-body bg-white pe-0 ps-0">
                                                                     <table class="table table-bordered table-sm">
-                                                                        <thead>
+                                                                        <thead class="text-center">
                                                                             <tr>
-                                                                                <th> Period
+                                                                                <th class="text-start"> Period
                                                                                 </th>
-                                                                                <th> Daily Sales Rate
+                                                                                <th>Daily Sales Rate
                                                                                 </th>
-                                                                                <th> Adj. Daily Sales Rate <span ngbtooltip="Daily sales rate adjusted to exclude days out of stock" placement="bottom" class="m-r-2"><i class="fas fa-info-circle"></i></span>
-                                                                                </th>
-                                                                                <th> Weight (%)
-                                                                                </th>
-                                                                                <th> Weighted (units/day)
-                                                                                </th>
+                                                                                <th class="position-relative">Adj. Daily Sales Rate <span ngbtooltip="Daily sales rate adjusted to exclude days out of stock" placement="bottom" class="m-r-2"><i class="fas fa-info-circle"></i></span><span class="position-absolute bottom-0 fs-2 text-primary" style="right:-8px;">&times;</span></th>
+                                                                                <th class="position-relative">Weight (%)<span class="position-absolute bottom-0 fs-2 text-primary" style="right:-8px;">=</span></th>
+                                                                                <th>Weighted (units/day)</th>
                                                                             </tr>
                                                                         </thead>
                                                                         <tbody>
@@ -785,7 +782,7 @@
                                                                                 <td class="text-right"></td>
                                                                                 <td class="text-right"></td>
                                                                                 <td class="text-right"></td>
-                                                                                <td class="text-right">0</td>
+                                                                                <td class="text-right" style="border-top-width: 3px; border-top-color: #333333;">0</td>
                                                                             </tr>
                                                                         </tbody>
                                                                     </table>
