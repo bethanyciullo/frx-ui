@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Responsive Admin &amp; Dashboard Template based on Bootstrap 5">
+    <meta name="author" content="AdminKit">
+    <meta name="keywords" content="adminkit, bootstrap, bootstrap 5, admin, dashboard, template, responsive, css, sass, html, theme, front-end, ui kit, web">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="shortcut icon" href="img/logo.svg" type="image/svg+xml">
+
+    <link rel="canonical" href="/" />
+
+    <title>Dashboard | ForecastRx UI</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <link class="js-stylesheet" href="adminkit-pro-3-3-0/dist/css/light.css" rel="stylesheet">
+</head>
+
+<body data-theme="default" data-layout="fluid" data-sidebar-position="left" data-sidebar-layout="default">
+    <div class="wrapper">
+        <nav id="sidebar" class="sidebar js-sidebar">
+            <div class="sidebar-content js-simplebar">
+                <a class="sidebar-brand" href="index.html">
+                    <img src="img/logoTextWhite.svg" alt="ForecastRx" style="max-width: 160px;" />
+                </a>
+
+                <ul class="sidebar-nav">
+                    <li class="sidebar-item">
+                        <a data-bs-target="#manage" data-bs-toggle="collapse" class="sidebar-link collapsed">
+                            <i class="align-middle" data-feather="pie-chart"></i> <span class="align-middle">Manage Company</span>
+                        </a>
+                        <ul id="manage" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-manage-details.html">Company Details</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-subpage.html">Suppliers</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-subpage.html">Items</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-subpage.html">Demand</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-subpage.html">Supply</a></li>
+                            <li class="sidebar-item">
+                                <a data-bs-target="#multiple" data-bs-toggle="collapse" class="sidebar-link collapsed" aria-expanded="false">
+                                    <i class="align-middle" data-feather="bar-chart-2"></i>
+                                    <span class="align-middle">Advanced</span>
+                                </a>
+                                <ul id="multiple" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#manage" style="">
+                                    <li class="sidebar-item"><a class="sidebar-link" href="template-subpage.html">Edit Kits</a></li>
+                                    <li class="sidebar-item"><a class="sidebar-link" href="template-subpage.html">Edit Item History</a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li class="sidebar-item">
+                        <a data-bs-target="#purchasing" data-bs-toggle="collapse" class="sidebar-link collapsed">
+                            <i class="align-middle" data-feather="target"></i> <span class="align-middle">Purchasing</span>
+                        </a>
+                        <ul id="purchasing" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-subpage.html">My Suggested</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-subpage.html">Custom</a></li>
+                        </ul>
+                    </li>
+                    <li class="sidebar-item">
+                        <a data-bs-target="#restock" data-bs-toggle="collapse" class="sidebar-link collapsed">
+                            <i class="align-middle" data-feather="box"></i> <span class="align-middle">RestockAMZ</span>
+                        </a>
+                        <ul id="restock" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-restock-warehouse.html">Restock from Warehouse</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-admin.html">Restock from Supplier</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-admin.html">Address Book</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-admin.html">Manage Shipments</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-restock-settings.html">Settings</a></li>
+                        </ul>
+                    </li>
+                    <li class="sidebar-item">
+                        <a data-bs-target="#admin" data-bs-toggle="collapse" class="sidebar-link collapsed">
+                            <i class="align-middle" data-feather="settings"></i> <span class="align-middle">Administration</span>
+                        </a>
+                        <ul id="admin" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-admin.html">Companies</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-admin.html">Users</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <div class="sidebar-cta">
+                    <div class="sidebar-cta-content p-0 bg-transparent">
+                        <small><a href="https://docs.google.com/spreadsheets/d/1UvRWgy6KKKpdnolvvEq65cyPxl54K6vDEY2_qMLLdLg/edit#gid=49109812" target="_blank" class="text-white-50">v3.75.0</a></small>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="main overflow-visible">
+
+            <nav class="navbar navbar-expand navbar-light navbar-bg sticky-top" id="header">
+                <div class="container">
+                    <a class="sidebar-toggle js-sidebar-toggle">
+                        <i class="hamburger align-self-center"></i>
+                    </a>
+
+                    <form class="d-none d-lg-inline-block">
+                        <div class="input-group input-group-navbar">
+                            <input type="text" class="form-control" placeholder="Search…" aria-label="Search">
+                            <button class="btn" type="button">
+                                <i class="align-middle" data-feather="search"></i>
+                            </button>
+                        </div>
+                    </form>
+
+                    <ul class="navbar-nav d-none d-md-flex">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="resourcesDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Choose Company
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="resourcesDropdown">
+                                <a class="dropdown-item" href="index.html">Fishers Finery Amazon</a>
+                                <a class="dropdown-item" href="template-add.html">+ Add Company</a>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="navbar-collapse collapse">
+                        <ul class="navbar-nav navbar-align">
+
+                            <li class="nav-item">
+                                <a class="nav-icon" href="#">
+                                    <div class="position-relative">
+                                        <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Forecast Report">
+                                            <i class="align-middle" data-feather="book"></i>
+                                        </span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-icon" href="#">
+                                    <div class="position-relative">
+                                        <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Last Sync: [date]">
+                                            <i class="align-middle" data-feather="repeat"></i>
+                                        </span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-icon" href="#">
+                                    <div class="position-relative">
+                                        <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Last Forecast: [date]">
+                                            <i class="align-middle" data-feather="trending-up"></i>
+                                        </span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-icon" href="#">
+                                    <div class="position-relative">
+                                        <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Support" onclick="window.open('https://forecastrx.zendesk.com/', '_blank');">
+                                            <i class="align-middle" data-feather="help-circle"></i>
+                                        </span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-icon js-fullscreen d-none d-lg-block" href="#">
+                                    <div class="position-relative">
+                                        <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Full Screen">
+                                            <i class="align-middle" data-feather="maximize"></i>
+                                        </span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-icon pe-md-0 dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                                    <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="User: [name]">
+                                        <i class="align-middle" data-feather="user"></i>
+                                    </span>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end">
+                                    <span class="dropdown-item pe-none"><strong>Name</strong></span>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="template-profile.html"><i class="align-middle me-1" data-feather="user"></i> Profile</a>
+                                    <a class="dropdown-item" href="template-subscription.html"><i class="align-middle me-1" data-feather="dollar-sign"></i> Subscription</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="template-login.html"><i class="align-middle me-1" data-feather="log-out"></i> Log out</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <main class="content">
+                <div class="container p-0">
+
+
+                    <div class="row mb-2 mb-xl-3">
+                        <div class="col-auto">
+                            <h3><strong>Sales Profit Analysis</strong> Dashboard</h3>
+                        </div>
+
+                        <div class="col-auto ms-auto text-end mt-n1">
+                            <select class="form-select w-auto me-1 d-inline-block align-middle">
+                                <option selected>Mar 2023</option>
+                                <option>Feb 2023</option>
+                                <option>Jan 2023</option>
+                                <option>Dec 2022</option>
+                            </select>
+                            <a href="https://www.helium10.com/" target="_blank" class="btn btn-primary">AMZ Profit (Helium 10) <i data-feather="external-link"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-center">
+                        <div class="col-lg-3 col-md-6 col-sm-12 d-flex">
+                            <div class="card flex-fill">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col mt-0">
+                                            <h5 class="card-title">Total Profit</h5>
+                                        </div>
+                                        <div class="col-auto">
+                                            <div class="stat" style="background: #345D9D; color: white;">
+                                                <i class="align-middle" data-feather="dollar-sign"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h4 class="mt-0 mb-1">$104,038</h4>
+                                    <span class="text-muted d-block">$8,068 Canada</span>
+                                    <span class="text-muted d-block">$239 Mexico</span>
+
+                                    <div class="mb-0 mt-2">
+                                        <span class="badge badge-success-light"> <i class="mdi mdi-arrow-bottom-right"></i> 17% </span>
+                                        <span class="text-muted text-uppercase" style="font-size: 11px;">profit</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12 d-flex">
+                            <div class="card flex-fill">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col mt-0">
+                                            <h5 class="card-title">DSP/PPC</h5>
+                                        </div>
+                                        <div class="col-auto">
+                                            <div class="stat" style="background: #627EEA; color: white;">
+                                                <i class="align-middle" data-feather="mouse-pointer"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h4 class="mt-0 mb-1">$79,325</h4>
+                                    <span class="text-muted d-block" style="font-size: 12px;line-height: 1.2;">= $22,000 DSP</span>
+                                    <span class="text-muted d-block" style="font-size: 12px;line-height: 1.2;">+ $4,252 Brand PPC</span>
+                                    <span class="text-muted d-block" style="font-size: 12px;line-height: 1.2;">+ $53,073 PPC</span>
+                                    <div class="mb-0 mt-2">
+                                        <span class="text-muted">Volume: 3081</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12 d-flex">
+                            <div class="card flex-fill">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col mt-0">
+                                            <h5 class="card-title">Returns</h5>
+                                        </div>
+                                        <div class="col-auto">
+                                            <div class="stat" style="background: #FF6600; color: white;">
+                                                <i class="align-middle" data-feather="rotate-ccw"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h4 class="mt-0 mb-1">$53,795</h4>
+
+                                    <div class="mb-0">
+                                        <span class="text-muted">Volume: 818</span>
+                                    </div>
+
+                                    <div class="mb-0 mt-2">
+                                        <span class="badge badge-danger-light"> <i class="mdi mdi-arrow-bottom-right"></i> 9% </span>
+                                        <span class="text-muted text-uppercase" style="font-size: 11px;">returns</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12 d-flex">
+                            <div class="card flex-fill">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col mt-0">
+                                            <h5 class="card-title">Monthly Report</h5>
+                                        </div>
+                                        <div class="col-auto">
+                                            <div class="stat" style="background: #F7931A; color: white;">
+                                                <i class="align-middle" data-feather="calendar"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="min-height: 100px;" class="chart chart-sm">
+                                        <canvas id="chartjs-dashboard-bar"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mb-2">
+                        <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                            <div class="card h-100">
+                                <div class="card-header pb-0">
+                                    <h2 class="card-title text-center">Top 5 Products ($)</h2>
+                                </div>
+                                <div class="card-body text-center">
+                                    <div class="chart chart-sm">
+                                        <canvas id="chartjs-pie1"></canvas>
+                                    </div>
+                                    <a href="https://www.chartjs.org/docs/latest/samples/other-charts/pie.html" target="_blank">
+                                        <small>[Chart.js Pie Chart]</small>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                            <div class="card h-100">
+                                <div class="card-header pb-0">
+                                    <h2 class="card-title text-center">Top 5 Products (%)</h2>
+                                </div>
+                                <div class="card-body text-center">
+                                    <div class="chart chart-sm">
+                                        <canvas id="chartjs-pie2"></canvas>
+                                    </div>
+                                    <a href="https://www.chartjs.org/docs/latest/samples/other-charts/pie.html" target="_blank">
+                                        <small>[Chart.js Pie Chart]</small>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-12 col-sm-12 mb-3">
+                            <div class="card h-100">
+                                <div class="card-header pb-0">
+                                    <h2 class="card-title text-center">Orders Over Time (#)</h2>
+                                </div>
+                                <div class="card-body text-center">
+                                    <div class="chart chart-md" style="min-height: 250px;">
+                                        <canvas id="chartjs-bar"></canvas>
+                                    </div>
+                                    <a href="https://www.chartjs.org/docs/latest/charts/bar.html" target="_blank">
+                                        <small>[Chart.js Bar Chart]</small>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mb-2">
+                        <div class="col-lg-6 col-md-12 col-sm-12 mb-3">
+                            <div class="card h-100">
+                                <div class="card-header pb-0">
+                                    <h2 class="card-title text-center">Revenue Over Time ($)</h2>
+                                </div>
+                                <div class="card-body text-center">
+                                    <div class="chart chart-sm" style="min-height: 190px;">
+                                        <canvas id="chartjs-dashboard-line"></canvas>
+                                    </div>
+                                    <a href="https://www.chartjs.org/docs/latest/charts/line.html" target="_blank">
+                                        <small>[Chart.js Line Chart]</small>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                            <div class="card h-100">
+                                <div class="card-body d-flex flex-column text-center">
+                                    <h5 class="card-title mb-3">Top Returned Items (#)</h5>
+                                    <div class="card-text">
+                                        <table class="table table-sm table-striped my-0">
+                                            <tbody>
+                                                <tr>
+                                                    <td>25mm Pillowcase</td>
+                                                    <td><span class="badge badge-primary-light">142</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>30mm Pillowcase</td>
+                                                    <td><span class="badge bg-primary">43</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>19mm Pillowcase</td>
+                                                    <td><span class="badge badge-primary-light">28</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Women&rsquo;s Slouchy</td>
+                                                    <td><span class="badge bg-primary">26</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Silk PJs</td>
+                                                    <td><span class="badge badge-primary-light">25</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Men&rsquo;s Scarf</td>
+                                                    <td><span class="badge bg-primary">25</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Men&rsquo;s Ribbed Hat</td>
+                                                    <td><span class="badge badge-primary-light">23</span></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                            <div class="card h-100">
+                                <div class="card-body d-flex flex-column text-center">
+                                    <h5 class="card-title mb-3">Top Returned Items ($)</h5>
+                                    <div class="card-text">
+                                        <table class="table table-sm table-striped my-0">
+                                            <tbody>
+                                                <tr>
+                                                    <td>25mm Pillowcase</td>
+                                                    <td><span class="badge badge-primary-light">$9,555</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Silk PJs</td>
+                                                    <td><span class="badge bg-primary">$4,989</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>30mm Pillowcase</td>
+                                                    <td><span class="badge badge-primary-light">$3,894</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Shawl</td>
+                                                    <td><span class="badge bg-primary">$1,790</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Cable 3pc Set</td>
+                                                    <td><span class="badge badge-primary-light">$1,593</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Men&rsquo;s Scarf</td>
+                                                    <td><span class="badge bg-primary">$1,480</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3pc Cashmere Set</td>
+                                                    <td><span class="badge badge-primary-light">$1,281</span></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <a href="https://ctcomp-my.sharepoint.com/:x:/g/personal/kyle_hayes_fishersfinery_com/EYYU_lVabZxBsBwtzpVG4LEBcnjX9p0hxbRLmBXsD6DD1Q" target="_blank"><img src="img/grid-sales-min.png" alt="Sales Grid" class="w-100" /></a>
+                            <p class="mb-0 text-center mt-2">[Kendo Grid from <a href="https://ctcomp-my.sharepoint.com/:x:/g/personal/kyle_hayes_fishersfinery_com/EYYU_lVabZxBsBwtzpVG4LEBcnjX9p0hxbRLmBXsD6DD1Q" target="_blank">Sales Profit Analysis Spreadsheet <i data-feather="external-link"></i></a>]</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p><strong>Inspiration:</strong> <a href="https://templatelab.com/excel-dashboards/" target="_blank">KPI Dashboard Template</a>, <a href="https://www.helium10.com/blog/get-started-with-helium-10-today/" target="_blank">The Helium 10 Dashboard</a>, <a href="https://infinitefba.com/helium-10-review/" target="_blank">Adtomic</a>, <a href="https://blog.coupler.io/shopify-dashboard/#How_to_access_Shopify_dashboard" target="_blank">Shopify Analytics Dashboard</a>, <a href="https://demo.adminkit.io/dashboard-ecommerce.html" target="_blank">AdminKit E-Commerce Dashboard</a>, <a href="https://demo.adminkit.io/dashboard-crypto.html" target="_blank">AdminKit Crypto Dashboard</a>, <a href="https://demo.adminkit.io/" target="_blank">AdminKit Analytics Dashboard</a>, <a href="https://www.telerik.com/kendo-angular-ui/components/charts/series-types/" target="_blank">Kendo UI</a></p>
+                    </div>
+
+                </div>
+
+            </main>
+
+            <footer class="footer">
+                <div class="container">
+                    <div class="row text-muted">
+                        <div class="col-md-6 col-sm-12 text-start">
+                            <p class="mb-0">
+                                <a href="https://www.forecastrx.com/" target="_blank" class="text-muted"><strong>&copy;&nbsp;ForecastRx</strong></a> &copy;
+                            </p>
+                        </div>
+                        <div class="col-md-6 col-sm-12 text-md-end text-sm-start">
+                            <ul class="list-inline">
+                                <li class="list-inline-item">
+                                    <a class="text-muted" href="https://forecastrx.zendesk.com" target="_blank">Support</a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a class="text-muted" href="https://www.forecastrx.com/privacy-policy/" target="_blank">Privacy</a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a class="text-muted" href="https://www.forecastrx.com/terms/" target="_blank">Terms</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="adminkit-pro-3-3-0/dist/js/app.js"></script>
+
+    <!-- Bar Chart -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            new Chart(document.getElementById("chartjs-dashboard-bar"), {
+                type: "bar",
+                data: {
+                    labels: ["Profit", "DSP/PPC", "Returns"],
+                    datasets: [{
+                        label: "This month",
+                        backgroundColor: ["#345D9D", "#627EEA", "#FF6600"],
+                        borderColor: ["#345D9D", "#627EEA", "#FF6600"],
+                        hoverBackgroundColor: ["#345D9D", "#627EEA", "#FF6600"],
+                        hoverBorderColor: ["#345D9D", "#627EEA", "#FF6600"],
+                        data: [104038, 79325, 53795],
+                        barPercentage: .3,
+                        categoryPercentage: .5,
+                        borderRadius: 0
+                    }]
+                },
+                options: {
+                    maintainAspectRatio: false,
+                    legend: {
+                        display: false
+                    },
+                    scales: {
+                        yAxes: [{
+                            gridLines: {
+                                display: false
+                            },
+                            stacked: false,
+                            ticks: {
+                                stepSize: 20000,
+                                fontSize: 10
+                            }
+                        }],
+                        xAxes: [{
+                            stacked: false,
+                            gridLines: {
+                                color: "transparent"
+                            },
+                            ticks: {
+                                fontSize: 10
+                            }
+                        }]
+                    }
+                }
+            });
+        });
+
+    </script>
+
+    <!-- Pie Charts -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            new Chart(document.getElementById("chartjs-pie1"), {
+                type: "pie",
+                data: {
+                    labels: ["25mm Pillowcase", "30mm Pillowcase", "Silk PJs", "Mens Ribbed Hat", "19mm Pillowcase"],
+                    datasets: [{
+                        data: [50832, 17913, 3560, 3086, 2739],
+                        backgroundColor: ["#1EC794", "#1CBB8C", "#18A178", "#127A5B", "#093B2C"],
+                        borderColor: "transparent"
+                    }]
+                },
+                options: {
+                    maintainAspectRatio: false,
+                    legend: {
+                        display: true,
+                        position: "bottom"
+                    }
+                }
+            });
+            new Chart(document.getElementById("chartjs-pie2"), {
+                type: "pie",
+                data: {
+                    labels: ["Texere Head Wrap", "Texere Towels Cable", "Texere Towels Diamond", "Yoga 18-inch", "Yoga 2-inch"],
+                    datasets: [{
+                        data: [47, 47, 41, 40, 38],
+                        backgroundColor: ["#18ADC4", "#17A2B8", "#138C9E", "#0E6A78", "#073238"],
+                        borderColor: "transparent"
+                    }]
+                },
+                options: {
+                    maintainAspectRatio: false,
+                    legend: {
+                        display: true,
+                        position: "bottom"
+                    }
+                }
+            });
+        });
+
+    </script>
+
+
+    <!-- Line Chart -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Line chart
+            new Chart(document.getElementById("chartjs-dashboard-line"), {
+                type: "line",
+                data: {
+                    labels: ["Oct", "Nov", "Dec", "Jan", "Feb", "Mar"],
+                    datasets: [{
+                        label: "Sales ($)",
+                        fill: true,
+                        backgroundColor: "transparent",
+                        borderColor: window.theme.primary,
+                        data: [
+                            154922,
+                            318664,
+                            474018,
+                            80512,
+                            123700,
+                            107252
+                        ]
+                    }]
+                },
+                options: {
+                    maintainAspectRatio: false,
+                    legend: {
+                        display: false
+                    },
+                    tooltips: {
+                        intersect: false
+                    },
+                    hover: {
+                        intersect: true
+                    },
+                    plugins: {
+                        filler: {
+                            propagate: false
+                        }
+                    },
+                    scales: {
+                        xAxes: [{
+                            reverse: true,
+                            gridLines: {
+                                color: "rgba(0,0,0,0.0)"
+                            }
+                        }],
+                        yAxes: [{
+                            ticks: {
+                                stepSize: 100000
+                            },
+                            display: true,
+                            borderDash: [3, 3],
+                            gridLines: {
+                                color: "rgba(0,0,0,0.0)",
+                                fontColor: "#fff"
+                            }
+                        }]
+                    }
+                }
+            });
+        });
+
+    </script>
+
+    <!-- Bar Chart -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            new Chart(document.getElementById("chartjs-bar"), {
+                type: "bar",
+                data: {
+                    labels: ["Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec", "Jan", "Feb", "Mar"],
+                    datasets: [{
+                        label: "Last year",
+                        backgroundColor: window.theme.primary,
+                        borderColor: window.theme.primary,
+                        hoverBackgroundColor: window.theme.primary,
+                        hoverBorderColor: window.theme.primary,
+                        data: [2144, 1667, 1252, 1527, 1165, 1463, 1713, 3240, 5052, 999, 1448, 1316],
+                        barPercentage: .5,
+                        categoryPercentage: .5
+                    }]
+                },
+                options: {
+                    maintainAspectRatio: false,
+                    legend: {
+                        display: false
+                    },
+                    scales: {
+                        yAxes: [{
+                            gridLines: {
+                                display: false
+                            },
+                            stacked: false,
+                            ticks: {
+                                stepSize: 1000
+                            }
+                        }],
+                        xAxes: [{
+                            stacked: false,
+                            gridLines: {
+                                color: "transparent"
+                            }
+                        }]
+                    }
+                }
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>
