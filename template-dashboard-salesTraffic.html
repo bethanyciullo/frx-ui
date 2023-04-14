@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Responsive Admin &amp; Dashboard Template based on Bootstrap 5">
+    <meta name="author" content="AdminKit">
+    <meta name="keywords" content="adminkit, bootstrap, bootstrap 5, admin, dashboard, template, responsive, css, sass, html, theme, front-end, ui kit, web">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="shortcut icon" href="img/logo.svg" type="image/svg+xml">
+
+    <link rel="canonical" href="/" />
+
+    <title>Dashboard | Sales and Traffic | ForecastRx UI</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <link class="js-stylesheet" href="adminkit-pro-3-3-0/dist/css/light.css" rel="stylesheet">
+</head>
+
+<body data-theme="default" data-layout="fluid" data-sidebar-position="left" data-sidebar-layout="default">
+    <div class="wrapper">
+        <nav id="sidebar" class="sidebar js-sidebar">
+            <div class="sidebar-content js-simplebar">
+                <a class="sidebar-brand" href="index.html">
+                    <img src="img/logoTextWhite.svg" alt="ForecastRx" style="max-width: 160px;" />
+                </a>
+
+                <ul class="sidebar-nav">
+                    <li class="sidebar-item">
+                        <a data-bs-target="#manage" data-bs-toggle="collapse" class="sidebar-link collapsed">
+                            <i class="align-middle" data-feather="pie-chart"></i> <span class="align-middle">Manage Company</span>
+                        </a>
+                        <ul id="manage" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-manage-details.html">Company Details</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-subpage.html">Suppliers</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-subpage.html">Items</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-subpage.html">Demand</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-subpage.html">Supply</a></li>
+                            <li class="sidebar-item">
+                                <a data-bs-target="#multiple" data-bs-toggle="collapse" class="sidebar-link collapsed" aria-expanded="false">
+                                    <i class="align-middle" data-feather="bar-chart-2"></i>
+                                    <span class="align-middle">Advanced</span>
+                                </a>
+                                <ul id="multiple" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#manage" style="">
+                                    <li class="sidebar-item"><a class="sidebar-link" href="template-subpage.html">Edit Kits</a></li>
+                                    <li class="sidebar-item"><a class="sidebar-link" href="template-subpage.html">Edit Item History</a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li class="sidebar-item">
+                        <a data-bs-target="#purchasing" data-bs-toggle="collapse" class="sidebar-link collapsed">
+                            <i class="align-middle" data-feather="target"></i> <span class="align-middle">Purchasing</span>
+                        </a>
+                        <ul id="purchasing" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-subpage.html">My Suggested</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-subpage.html">Custom</a></li>
+                        </ul>
+                    </li>
+                    <li class="sidebar-item">
+                        <a data-bs-target="#restock" data-bs-toggle="collapse" class="sidebar-link collapsed">
+                            <i class="align-middle" data-feather="box"></i> <span class="align-middle">RestockAMZ</span>
+                        </a>
+                        <ul id="restock" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-restock-warehouse.html">Restock from Warehouse</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-admin.html">Restock from Supplier</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-admin.html">Address Book</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-admin.html">Manage Shipments</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-restock-settings.html">Settings</a></li>
+                        </ul>
+                    </li>
+                    <li class="sidebar-item">
+                        <a data-bs-target="#admin" data-bs-toggle="collapse" class="sidebar-link collapsed">
+                            <i class="align-middle" data-feather="settings"></i> <span class="align-middle">Administration</span>
+                        </a>
+                        <ul id="admin" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-admin.html">Companies</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-admin.html">Users</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <div class="sidebar-cta">
+                    <div class="sidebar-cta-content p-0 bg-transparent">
+                        <small><a href="https://docs.google.com/spreadsheets/d/1UvRWgy6KKKpdnolvvEq65cyPxl54K6vDEY2_qMLLdLg/edit#gid=49109812" target="_blank" class="text-white-50">v3.75.0</a></small>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="main overflow-visible">
+
+            <nav class="navbar navbar-expand navbar-light navbar-bg sticky-top" id="header">
+                <div class="container">
+                    <a class="sidebar-toggle js-sidebar-toggle">
+                        <i class="hamburger align-self-center"></i>
+                    </a>
+
+                    <form class="d-none d-lg-inline-block">
+                        <div class="input-group input-group-navbar">
+                            <input type="text" class="form-control" placeholder="Search…" aria-label="Search">
+                            <button class="btn" type="button">
+                                <i class="align-middle" data-feather="search"></i>
+                            </button>
+                        </div>
+                    </form>
+
+                    <ul class="navbar-nav d-none d-md-flex">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="resourcesDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Choose Company
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="resourcesDropdown">
+                                <a class="dropdown-item" href="index.html">Fishers Finery Amazon</a>
+                                <a class="dropdown-item" href="template-add.html">+ Add Company</a>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="navbar-collapse collapse">
+                        <ul class="navbar-nav navbar-align">
+
+                            <li class="nav-item">
+                                <a class="nav-icon" href="#">
+                                    <div class="position-relative">
+                                        <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Forecast Report">
+                                            <i class="align-middle" data-feather="book"></i>
+                                        </span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-icon" href="#">
+                                    <div class="position-relative">
+                                        <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Last Sync: [date]">
+                                            <i class="align-middle" data-feather="repeat"></i>
+                                        </span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-icon" href="#">
+                                    <div class="position-relative">
+                                        <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Last Forecast: [date]">
+                                            <i class="align-middle" data-feather="trending-up"></i>
+                                        </span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-icon" href="#">
+                                    <div class="position-relative">
+                                        <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Support" onclick="window.open('https://forecastrx.zendesk.com/', '_blank');">
+                                            <i class="align-middle" data-feather="help-circle"></i>
+                                        </span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-icon js-fullscreen d-none d-lg-block" href="#">
+                                    <div class="position-relative">
+                                        <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Full Screen">
+                                            <i class="align-middle" data-feather="maximize"></i>
+                                        </span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-icon pe-md-0 dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                                    <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="User: [name]">
+                                        <i class="align-middle" data-feather="user"></i>
+                                    </span>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end">
+                                    <span class="dropdown-item pe-none"><strong>Name</strong></span>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="template-profile.html"><i class="align-middle me-1" data-feather="user"></i> Profile</a>
+                                    <a class="dropdown-item" href="template-subscription.html"><i class="align-middle me-1" data-feather="dollar-sign"></i> Subscription</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="template-login.html"><i class="align-middle me-1" data-feather="log-out"></i> Log out</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <main class="content">
+                <div class="container p-0">
+
+
+                    <div class="row mb-2 mb-xl-3">
+                        <div class="col-auto">
+                            <h3><strong>Sales and Traffic</strong> Dashboard</h3>
+                        </div>
+
+                        <div class="col-auto ms-auto text-end mt-n1">
+                            <select class="form-select w-auto me-1 mb-1 d-inline-block align-middle" autocomplete="off">
+                                <option selected>Today</option>
+                                <option>Yesterday</option>
+                                <option>Last 7 Days</option>
+                                <option>Last 30 Days</option>
+                                <option>Last 90 Days</option>
+                                <option>Last Month</option>
+                                <option>Last Quarter</option>
+                                <option>Last Year</option>
+                            </select>
+                            <br class="d-md-none d-block" />
+                            <strong class="ms-1">Compare:</strong>
+                            <select class="form-select w-auto me-1 mb-1 d-inline-block align-middle" autocomplete="off">
+                                <option>No Comparison</option>
+                                <option selected>Previous Period</option>
+                                <option>Previous Quarter</option>
+                                <option>Previous Year</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-md-6 col-sm-12 mb-3">
+                            <div class="card h-100">
+                                <div class="card-header pb-0">
+                                    <h2 class="card-title">
+                                        Ordered Product Sales<button id="viewReport" type="button" class="btn btn-sm btn-secondary float-end" data-bs-toggle="tooltip" data-bs-placement="bottom" title="View Report"><i class="fa-solid fa-chart-simple"></i></button></h2>
+                                    <big class="fw-bold align-middle">2023: $663,612.50</big> <span class="badge badge-success-light"> <i style="height: 12px;" data-feather="arrow-up-right"></i>7%</span>
+                                    <big class="d-block">2022: $619,749.70</big>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-sm table-borderless">
+                                            <thead class="fw-bold">
+                                                <tr>
+                                                    <td>&nbsp;</td>
+                                                    <td>2023</td>
+                                                    <td>2022</td>
+                                                    <td>&nbsp;</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Sessions</td>
+                                                    <td>199,048</td>
+                                                    <td>201,884</td>
+                                                    <td><span class="badge badge-danger-light w-100"> <i style="height: 12px;" data-feather="arrow-down-right"></i>-1%</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Page Views</td>
+                                                    <td>241,465</td>
+                                                    <td>247,245</td>
+                                                    <td><span class="badge badge-danger-light w-100"> <i style="height: 12px;" data-feather="arrow-down-right"></i>-2%</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Units Ordered</td>
+                                                    <td>11,274</td>
+                                                    <td>11,435</td>
+                                                    <td><span class="badge badge-danger-light w-100"> <i style="height: 12px;" data-feather="arrow-down-right"></i>1%</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Unit Session Percentage</td>
+                                                    <td>11.14%</td>
+                                                    <td>5.22%</td>
+                                                    <td><span class="badge badge-success-light w-100"> <i style="height: 12px;" data-feather="arrow-up-right"></i>+114%</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Total Order Items</td>
+                                                    <td>10,405</td>
+                                                    <td>10,491</td>
+                                                    <td><span class="badge badge-danger-light w-100"> <i style="height: 12px;" data-feather="arrow-down-right"></i>1%</span></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-sm-12 mb-3">
+                            <div class="card h-100">
+                                <div class="card-header pb-0">
+                                    <h2 class="card-title">Sales Over Time</h2>
+                                </div>
+                                <div class="card-body pt-0 pb-0">
+                                    <div class="chart chart-md">
+                                        <canvas id="chartjs-line" style="height: 300px;"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="card d-none" id="reportTable">
+                        <div class="card-header pb-0">
+                            <h2 class="card-title">Report</h2>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive" style="max-height: 400px;">
+                                <table class="table table-sm">
+                                    <tr class="fw-bold" style="white-space: nowrap;">
+                                        <td>(Parent) ASIN</td>
+                                        <td>(Child) ASIN</td>
+                                        <td style="min-width: 400px !important;">Title</td>
+                                        <td style="min-width: 150px !important;">SKU</td>
+                                        <td>Sessions<br /> - Total</td>
+                                        <td>Sessions<br /> - Total (2022)</td>
+                                        <td>%change</td>
+                                        <td>Session <br />Percentage - Total</td>
+                                        <td>Page Views<br /> - Total</td>
+                                        <td>Page Views<br /> - Total (2022)</td>
+                                        <td>%change</td>
+                                        <td>Page Views <br />Percentage - Total</td>
+                                        <td>Featured Offer (Buy Box) <br />Percentage</td>
+                                        <td>Units Ordered</td>
+                                        <td>Units Ordered<br /> (2022)</td>
+                                        <td>%change</td>
+                                        <td>Unit Session <br />Percentage</td>
+                                        <td>Unit Session <br />Percentage (2022)</td>
+                                        <td>%change</td>
+                                        <td>Ordered Product Sales</td>
+                                        <td>Ordered Product Sales<br /> (2022)</td>
+                                        <td>%change</td>
+                                        <td>Total Order Items</td>
+                                        <td>Total Order Items<br /> (2022) </td>
+                                        <td>%change</td>
+                                    </tr>
+                                    <tr class="fw-bold">
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>199048</td>
+                                        <td>201884</td>
+                                        <td>-1%</td>
+                                        <td></td>
+                                        <td>241465</td>
+                                        <td>247245</td>
+                                        <td>-2%</td>
+                                        <td></td>
+                                        <td>93.22%</td>
+                                        <td>11274</td>
+                                        <td>11435</td>
+                                        <td>-1%</td>
+                                        <td>11.14%</td>
+                                        <td>5.22%</td>
+                                        <td>114%</td>
+                                        <td> $663,612.50 </td>
+                                        <td> $619,749.70 </td>
+                                        <td>7%</td>
+                                        <td>10405</td>
+                                        <td>10491</td>
+                                        <td>-1%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>B077XJZY22</td>
+                                        <td>B00E6A1WDY</td>
+                                        <td>Texere Women&#39;s Viscose from Bamboo and Cotton Terry Hair Towel - Lightweight, Absorbent Quick Drying Hair Wrap for Thick and Curly Hair (Tya, Almond Buff, U)</td>
+                                        <td>AB0101-ABF-U</td>
+                                        <td>156</td>
+                                        <td>64</td>
+                                        <td>144%</td>
+                                        <td>0.08%</td>
+                                        <td>204</td>
+                                        <td>77</td>
+                                        <td>165%</td>
+                                        <td>0.08%</td>
+                                        <td>98.53%</td>
+                                        <td>8</td>
+                                        <td>4</td>
+                                        <td>100%</td>
+                                        <td>5.13%</td>
+                                        <td>6.25%</td>
+                                        <td>-18%</td>
+                                        <td>$159.92 </td>
+                                        <td>$79.96 </td>
+                                        <td>100%</td>
+                                        <td>7</td>
+                                        <td>3</td>
+                                        <td>133%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>B077XJZY22</td>
+                                        <td>B07CTZWGW8</td>
+                                        <td>Texere Women&#39;s Bamboo Viscose Hair Towel (Tya, Blue Fog, U)</td>
+                                        <td>AB0101-BFG-U</td>
+                                        <td>58</td>
+                                        <td>53</td>
+                                        <td>9%</td>
+                                        <td>0.03%</td>
+                                        <td>67</td>
+                                        <td>76</td>
+                                        <td>-12%</td>
+                                        <td>0.03%</td>
+                                        <td>98.51%</td>
+                                        <td>2</td>
+                                        <td>9</td>
+                                        <td>-78%</td>
+                                        <td>3.45%</td>
+                                        <td>16.98%</td>
+                                        <td>-80%</td>
+                                        <td>$39.98 </td>
+                                        <td>$178.91 </td>
+                                        <td>-78%</td>
+                                        <td>2</td>
+                                        <td>8</td>
+                                        <td>-75%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>B077XJZY22</td>
+                                        <td>B06XSMZY1R</td>
+                                        <td>Texere Women&#39;s Viscose from Bamboo and Cotton Terry Hair Towel - Lightweight, Absorbent Quick Drying Hair Wrap - Twist Towel with Elastic Loop Holder (Tya, Black, U)</td>
+                                        <td>AB0101-BLK-U</td>
+                                        <td>169</td>
+                                        <td>26</td>
+                                        <td>550%</td>
+                                        <td>0.08%</td>
+                                        <td>207</td>
+                                        <td>33</td>
+                                        <td>527%</td>
+                                        <td>0.09%</td>
+                                        <td>98.55%</td>
+                                        <td>9</td>
+                                        <td>3</td>
+                                        <td>200%</td>
+                                        <td>5.33%</td>
+                                        <td>11.54%</td>
+                                        <td>-54%</td>
+                                        <td>$179.91 </td>
+                                        <td>$59.97 </td>
+                                        <td>200%</td>
+                                        <td>6</td>
+                                        <td>3</td>
+                                        <td>100%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>B077XJZY22</td>
+                                        <td>B07CTXXRJG</td>
+                                        <td>Texere Women&#39;s Bamboo Viscose Hair Towel (Tya, Black Plum, U)</td>
+                                        <td>AB0101-BPL-U</td>
+                                        <td>139</td>
+                                        <td>52</td>
+                                        <td>167%</td>
+                                        <td>0.07%</td>
+                                        <td>161</td>
+                                        <td>66</td>
+                                        <td>144%</td>
+                                        <td>0.07%</td>
+                                        <td>98.14%</td>
+                                        <td>8</td>
+                                        <td>4</td>
+                                        <td>100%</td>
+                                        <td>5.76%</td>
+                                        <td>7.69%</td>
+                                        <td>-25%</td>
+                                        <td>$159.92 </td>
+                                        <td>$79.96 </td>
+                                        <td>100%</td>
+                                        <td>8</td>
+                                        <td>4</td>
+                                        <td>100%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>B077XJZY22</td>
+                                        <td>B00E6A1Y5U</td>
+                                        <td>Texere Women&#39;s Viscose from Bamboo and Cotton Terry Hair Towel - Lightweight, Absorbent Fast Drying Hair Wrap for Anti Frizz and Anti Breakage (Tya, Barely Pink, U)</td>
+                                        <td>AB0101-BPN-U</td>
+                                        <td>119</td>
+                                        <td>69</td>
+                                        <td>72%</td>
+                                        <td>0.06%</td>
+                                        <td>147</td>
+                                        <td>84</td>
+                                        <td>75%</td>
+                                        <td>0.06%</td>
+                                        <td>100.00%</td>
+                                        <td>9</td>
+                                        <td>9</td>
+                                        <td>0%</td>
+                                        <td>7.56%</td>
+                                        <td>13.04%</td>
+                                        <td>-42%</td>
+                                        <td>$179.91 </td>
+                                        <td>$179.91 </td>
+                                        <td>0%</td>
+                                        <td>9</td>
+                                        <td>8</td>
+                                        <td>13%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>B077XJZY22</td>
+                                        <td>B01FIQBSPG</td>
+                                        <td>Texere Women&#39;s Bamboo Viscose Hair Towel (Tya, Kashmir Blue, U)</td>
+                                        <td>AB0101-KHB-U</td>
+                                        <td>77</td>
+                                        <td>36</td>
+                                        <td>114%</td>
+                                        <td>0.04%</td>
+                                        <td>104</td>
+                                        <td>42</td>
+                                        <td>148%</td>
+                                        <td>0.04%</td>
+                                        <td>95.19%</td>
+                                        <td>6</td>
+                                        <td>7</td>
+                                        <td>-14%</td>
+                                        <td>7.79%</td>
+                                        <td>19.44%</td>
+                                        <td>-60%</td>
+                                        <td>$119.94 </td>
+                                        <td>$139.93 </td>
+                                        <td>-14%</td>
+                                        <td>5</td>
+                                        <td>7</td>
+                                        <td>-29%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>B077XJZY22</td>
+                                        <td>B00USBXWHY</td>
+                                        <td>Texere Women&#39;s Viscose from Bamboo and Cotton Terry Spa Hair Towel - Fast Drying, Absorbent Hair Wrap Twist Turban for Long, Thick, and Curly Hair (Tya, Lily Green, U)</td>
+                                        <td>AB0101-LGN-U</td>
+                                        <td>173</td>
+                                        <td>84</td>
+                                        <td>106%</td>
+                                        <td>0.09%</td>
+                                        <td>210</td>
+                                        <td>127</td>
+                                        <td>65%</td>
+                                        <td>0.09%</td>
+                                        <td>99.52%</td>
+                                        <td>12</td>
+                                        <td>7</td>
+                                        <td>71%</td>
+                                        <td>6.94%</td>
+                                        <td>8.33%</td>
+                                        <td>-17%</td>
+                                        <td>$239.88 </td>
+                                        <td>$139.93 </td>
+                                        <td>71%</td>
+                                        <td>12</td>
+                                        <td>7</td>
+                                        <td>71%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>B077XJZY22</td>
+                                        <td>B00T8H28KG</td>
+                                        <td>Texere Women&#39;s Viscose from Bamboo and Cotton Terry Spa Hair Towel - Fast Drying, Absorbent Hair Wrap Twist Turban for Long, Thick, and Curly Hair (Tya, Lavender Fog, U)</td>
+                                        <td>AB0101-LVF-U</td>
+                                        <td>104</td>
+                                        <td>30</td>
+                                        <td>247%</td>
+                                        <td>0.05%</td>
+                                        <td>129</td>
+                                        <td>35</td>
+                                        <td>269%</td>
+                                        <td>0.05%</td>
+                                        <td>97.67%</td>
+                                        <td>5</td>
+                                        <td>1</td>
+                                        <td>400%</td>
+                                        <td>4.81%</td>
+                                        <td>3.33%</td>
+                                        <td>44%</td>
+                                        <td>$99.95 </td>
+                                        <td>$19.99 </td>
+                                        <td>400%</td>
+                                        <td>5</td>
+                                        <td>1</td>
+                                        <td>400%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>B077XJZY22</td>
+                                        <td>B00E6A226A</td>
+                                        <td>Texere Women&#39;s Viscose from Bamboo and Cotton Terry Spa Hair Towel - Quick Dry, Absorbent and Lightweight Hair Wrap Towel with Loop and Twist Closure(Tya, Natural White, U)</td>
+                                        <td>AB0101-NWH-U</td>
+                                        <td>162</td>
+                                        <td>73</td>
+                                        <td>122%</td>
+                                        <td>0.08%</td>
+                                        <td>214</td>
+                                        <td>94</td>
+                                        <td>128%</td>
+                                        <td>0.09%</td>
+                                        <td>98.13%</td>
+                                        <td>21</td>
+                                        <td>10</td>
+                                        <td>110%</td>
+                                        <td>12.96%</td>
+                                        <td>13.70%</td>
+                                        <td>-5%</td>
+                                        <td>$418.79 </td>
+                                        <td>$199.90 </td>
+                                        <td>109%</td>
+                                        <td>19</td>
+                                        <td>10</td>
+                                        <td>90%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>B077XJZY22</td>
+                                        <td>B06WWDMJD6</td>
+                                        <td>Texere Women&#39;s Viscose from Bamboo and Cotton Terry Spa Hair Towel - Quick Dry, Absorbent and Lightweight Hair Wrap Towel with Loop and Twist Closure (Tya, Purple, U)</td>
+                                        <td>AB0101-PRP-U</td>
+                                        <td>57</td>
+                                        <td>33</td>
+                                        <td>73%</td>
+                                        <td>0.03%</td>
+                                        <td>65</td>
+                                        <td>40</td>
+                                        <td>63%</td>
+                                        <td>0.03%</td>
+                                        <td>95.38%</td>
+                                        <td>6</td>
+                                        <td>3</td>
+                                        <td>100%</td>
+                                        <td>10.53%</td>
+                                        <td>9.09%</td>
+                                        <td>16%</td>
+                                        <td>$119.94 </td>
+                                        <td>$59.97 </td>
+                                        <td>100%</td>
+                                        <td>4</td>
+                                        <td>3</td>
+                                        <td>33%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>B077XJZY22</td>
+                                        <td>B06XSM9971</td>
+                                        <td>Texere Women&#39;s Viscose from Bamboo and Cotton Terry Spa Hair Towel Wrap - Absorbent and Fast Drying for Long, Curly, Thick Hair - Towel with Loop and Twist Closure (Tya, Pewter, U)</td>
+                                        <td>AB0101-PWT-U</td>
+                                        <td>151</td>
+                                        <td>35</td>
+                                        <td>331%</td>
+                                        <td>0.08%</td>
+                                        <td>195</td>
+                                        <td>45</td>
+                                        <td>333%</td>
+                                        <td>0.08%</td>
+                                        <td>100.00%</td>
+                                        <td>7</td>
+                                        <td>2</td>
+                                        <td>250%</td>
+                                        <td>4.64%</td>
+                                        <td>5.71%</td>
+                                        <td>-19%</td>
+                                        <td>$139.93 </td>
+                                        <td>$39.98 </td>
+                                        <td>250%</td>
+                                        <td>7</td>
+                                        <td>2</td>
+                                        <td>250%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>B077XJZY22</td>
+                                        <td>B07CV1PRXF</td>
+                                        <td>Texere Women&#39;s Bamboo Viscose Hair Towel (Tya, Robin&#39;s Egg, U)</td>
+                                        <td>AB0101-RBE-U</td>
+                                        <td>56</td>
+                                        <td>28</td>
+                                        <td>100%</td>
+                                        <td>0.03%</td>
+                                        <td>64</td>
+                                        <td>34</td>
+                                        <td>88%</td>
+                                        <td>0.03%</td>
+                                        <td>98.44%</td>
+                                        <td>8</td>
+                                        <td>5</td>
+                                        <td>60%</td>
+                                        <td>14.29%</td>
+                                        <td>17.86%</td>
+                                        <td>-20%</td>
+                                        <td>$159.92 </td>
+                                        <td>$99.95 </td>
+                                        <td>60%</td>
+                                        <td>8</td>
+                                        <td>5</td>
+                                        <td>60%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>B07ZS5B36R</td>
+                                        <td>B07MGZBXXV</td>
+                                        <td>Fishers Finery Bamboo Viscose Wash Cloth Gift Set - 2 Pack (Blue)</td>
+                                        <td>BA-01-WC-812-BLU-2PK</td>
+                                        <td>59</td>
+                                        <td>0</td>
+                                        <td>#DIV/0!</td>
+                                        <td>0.03%</td>
+                                        <td>73</td>
+                                        <td>0</td>
+                                        <td>#DIV/0!</td>
+                                        <td>0.03%</td>
+                                        <td>100.00%</td>
+                                        <td>2</td>
+                                        <td>0</td>
+                                        <td>#DIV/0!</td>
+                                        <td>3.39%</td>
+                                        <td>0.00%</td>
+                                        <td>#DIV/0!</td>
+                                        <td>$19.98 </td>
+                                        <td>$0.00 </td>
+                                        <td>#DIV/0!</td>
+                                        <td>2</td>
+                                        <td>0</td>
+                                        <td>#DIV/0!</td>
+                                    </tr>
+                                    <tr>
+                                        <td>B07ZS5B36R</td>
+                                        <td>B07YNXMJ39</td>
+                                        <td>Fishers Finery Baby Washcloth; Soft Bamboo Viscose - 3 Pack (Blue)</td>
+                                        <td>BA-01-WC-812-BLU-3PK</td>
+                                        <td>69</td>
+                                        <td>78</td>
+                                        <td>-12%</td>
+                                        <td>0.03%</td>
+                                        <td>78</td>
+                                        <td>89</td>
+                                        <td>-12%</td>
+                                        <td>0.03%</td>
+                                        <td>97.44%</td>
+                                        <td>5</td>
+                                        <td>12</td>
+                                        <td>-58%</td>
+                                        <td>7.25%</td>
+                                        <td>15.38%</td>
+                                        <td>-53%</td>
+                                        <td>$64.69 </td>
+                                        <td>$155.88 </td>
+                                        <td>-59%</td>
+                                        <td>3</td>
+                                        <td>12</td>
+                                        <td>-75%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>B07ZS5B36R</td>
+                                        <td>B07YNWR3M8</td>
+                                        <td>Fishers Finery Washcloth Baby Bamboo Viscose Towel; Wash Set - 2 Pack (Pink)</td>
+                                        <td>BA-01-WC-812-PNK-2PK</td>
+                                        <td>75</td>
+                                        <td>94</td>
+                                        <td>-20%</td>
+                                        <td>0.04%</td>
+                                        <td>86</td>
+                                        <td>102</td>
+                                        <td>-16%</td>
+                                        <td>0.04%</td>
+                                        <td>98.84%</td>
+                                        <td>7</td>
+                                        <td>9</td>
+                                        <td>-22%</td>
+                                        <td>9.33%</td>
+                                        <td>9.57%</td>
+                                        <td>-3%</td>
+                                        <td>$69.93 </td>
+                                        <td>$79.82 </td>
+                                        <td>-12%</td>
+                                        <td>7</td>
+                                        <td>9</td>
+                                        <td>-22%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>B07ZS5B36R</td>
+                                        <td>B07MDDNC3D</td>
+                                        <td>Fishers Finery Bamboo Viscose Infant Boy Washcloths; Wash Mitt; 5 Pack (Pink)</td>
+                                        <td>BA-01-WC-812-PNK-5PK</td>
+                                        <td>181</td>
+                                        <td>65</td>
+                                        <td>178%</td>
+                                        <td>0.09%</td>
+                                        <td>220</td>
+                                        <td>83</td>
+                                        <td>165%</td>
+                                        <td>0.09%</td>
+                                        <td>99.55%</td>
+                                        <td>7</td>
+                                        <td>3</td>
+                                        <td>133%</td>
+                                        <td>3.87%</td>
+                                        <td>4.62%</td>
+                                        <td>-16%</td>
+                                        <td>$132.93 </td>
+                                        <td>$56.97 </td>
+                                        <td>133%</td>
+                                        <td>7</td>
+                                        <td>3</td>
+                                        <td>133%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>B00JWV17N2</td>
+                                        <td>B01D1U7XLO</td>
+                                        <td>Fishers Finery 19mm Mulberry Silk King Pillowcase, Moonless Night</td>
+                                        <td>HB-02-PC1-819-BLK-K</td>
+                                        <td>74</td>
+                                        <td>130</td>
+                                        <td>-43%</td>
+                                        <td>0.04%</td>
+                                        <td>78</td>
+                                        <td>142</td>
+                                        <td>-45%</td>
+                                        <td>0.03%</td>
+                                        <td>97.44%</td>
+                                        <td>3</td>
+                                        <td>6</td>
+                                        <td>-50%</td>
+                                        <td>4.05%</td>
+                                        <td>4.62%</td>
+                                        <td>-12%</td>
+                                        <td>$134.97 </td>
+                                        <td>$239.94 </td>
+                                        <td>-44%</td>
+                                        <td>3</td>
+                                        <td>4</td>
+                                        <td>-25%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>B00JWV17N2</td>
+                                        <td>B01D1U7Y7M</td>
+                                        <td>Fishers Finery 19mm 100% Pure Mulberry Silk Pillowcase, Good Housekeeping Quality Tested (Black, Q)</td>
+                                        <td>HB-02-PC1-819-BLK-Q</td>
+                                        <td>134</td>
+                                        <td>258</td>
+                                        <td>-48%</td>
+                                        <td>0.07%</td>
+                                        <td>143</td>
+                                        <td>286</td>
+                                        <td>-50%</td>
+                                        <td>0.06%</td>
+                                        <td>97.20%</td>
+                                        <td>3</td>
+                                        <td>7</td>
+                                        <td>-57%</td>
+                                        <td>2.24%</td>
+                                        <td>2.71%</td>
+                                        <td>-17%</td>
+                                        <td>$119.97 </td>
+                                        <td>$265.93 </td>
+                                        <td>-55%</td>
+                                        <td>3</td>
+                                        <td>6</td>
+                                        <td>-50%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>B00JWV17N2</td>
+                                        <td>B00FW49P0U</td>
+                                        <td>Fishers Finery 19mm 100% Pure Mulberry Silk Pillowcase, Good Housekeeping Quality Tested (Blue, K)</td>
+                                        <td>HB-02-PC1-819-BLU-K</td>
+                                        <td>190</td>
+                                        <td>506</td>
+                                        <td>-62%</td>
+                                        <td>0.10%</td>
+                                        <td>212</td>
+                                        <td>645</td>
+                                        <td>-67%</td>
+                                        <td>0.09%</td>
+                                        <td>99.06%</td>
+                                        <td>4</td>
+                                        <td>34</td>
+                                        <td>-88%</td>
+                                        <td>2.11%</td>
+                                        <td>6.72%</td>
+                                        <td>-69%</td>
+                                        <td>$179.96 </td>
+                                        <td>$1,364.66 </td>
+                                        <td>-87%</td>
+                                        <td>3</td>
+                                        <td>29</td>
+                                        <td>-90%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>B00JWV17N2</td>
+                                        <td>B00FW49PZA</td>
+                                        <td>Fishers Finery 19mm 100% Pure Mulberry Silk Pillowcase, Good Housekeeping Quality Tested (Blue, Q)</td>
+                                        <td>HB-02-PC1-819-BLU-Q</td>
+                                        <td>281</td>
+                                        <td>1906</td>
+                                        <td>-85%</td>
+                                        <td>0.14%</td>
+                                        <td>315</td>
+                                        <td>2339</td>
+                                        <td>-87%</td>
+                                        <td>0.13%</td>
+                                        <td>100.00%</td>
+                                        <td>14</td>
+                                        <td>45</td>
+                                        <td>-69%</td>
+                                        <td>4.98%</td>
+                                        <td>2.36%</td>
+                                        <td>111%</td>
+                                        <td>$559.86 </td>
+                                        <td>$1,749.54 </td>
+                                        <td>-68%</td>
+                                        <td>10</td>
+                                        <td>38</td>
+                                        <td>-74%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>B00JWV17N2</td>
+                                        <td>B01M020X9L</td>
+                                        <td>Fishers Finery 19mm 100% Pure Mulberry Silk PillowcaseGood Housekeeping Quality Tested (Navy, K)</td>
+                                        <td>HB-02-PC1-819-DBL-K</td>
+                                        <td>72</td>
+                                        <td>123</td>
+                                        <td>-41%</td>
+                                        <td>0.04%</td>
+                                        <td>89</td>
+                                        <td>150</td>
+                                        <td>-41%</td>
+                                        <td>0.04%</td>
+                                        <td>95.51%</td>
+                                        <td>2</td>
+                                        <td>10</td>
+                                        <td>-80%</td>
+                                        <td>2.78%</td>
+                                        <td>8.13%</td>
+                                        <td>-66%</td>
+                                        <td>$89.98 </td>
+                                        <td>$399.90 </td>
+                                        <td>-77%</td>
+                                        <td>2</td>
+                                        <td>9</td>
+                                        <td>-78%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>B00JWV17N2</td>
+                                        <td>B01LYFBJIO</td>
+                                        <td>Fishers Finery 19mm 100% Pure Mulberry Silk Pillowcase, Good Housekeeping Quality Tested (Navy, Q)</td>
+                                        <td>HB-02-PC1-819-DBL-Q</td>
+                                        <td>211</td>
+                                        <td>296</td>
+                                        <td>-29%</td>
+                                        <td>0.11%</td>
+                                        <td>245</td>
+                                        <td>329</td>
+                                        <td>-26%</td>
+                                        <td>0.10%</td>
+                                        <td>100.00%</td>
+                                        <td>9</td>
+                                        <td>29</td>
+                                        <td>-69%</td>
+                                        <td>4.27%</td>
+                                        <td>9.80%</td>
+                                        <td>-56%</td>
+                                        <td>$359.91 </td>
+                                        <td>$1,101.71 </td>
+                                        <td>-67%</td>
+                                        <td>8</td>
+                                        <td>25</td>
+                                        <td>-68%</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="mt-3"><strong>Based on:</strong> <a href="https://ffinery.myshopify.com/admin/dashboards" target="_blank">Shopify Analytics Dashboard</a>, <a href="https://ctcomp.sharepoint.com/:x:/s/ForecastRx/EYem83nAkYtApVKIErSS6CEBYFmclQOIN94Ji83ezx19Hg?e=hI3xHL" target="_blank">Spreadsheet</a></p>
+
+                </div>
+
+            </main>
+
+            <footer class="footer">
+                <div class="container">
+                    <div class="row text-muted">
+                        <div class="col-md-6 col-sm-12 text-start">
+                            <p class="mb-0">
+                                <a href="https://www.forecastrx.com/" target="_blank" class="text-muted"><strong>&copy;&nbsp;ForecastRx</strong></a> &copy;
+                            </p>
+                        </div>
+                        <div class="col-md-6 col-sm-12 text-md-end text-sm-start">
+                            <ul class="list-inline">
+                                <li class="list-inline-item">
+                                    <a class="text-muted" href="https://forecastrx.zendesk.com" target="_blank">Support</a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a class="text-muted" href="https://www.forecastrx.com/privacy-policy/" target="_blank">Privacy</a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a class="text-muted" href="https://www.forecastrx.com/terms/" target="_blank">Terms</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="adminkit-pro-3-3-0/dist/js/app.js"></script>
+
+    <!-- Line Chart -->
+    <script>
+        new Chart(document.getElementById("chartjs-line"), {
+            type: "line",
+            data: {
+                labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+                datasets: [{
+                    label: "2023",
+                    fill: true,
+                    backgroundColor: "transparent",
+                    borderColor: window.theme.primary,
+                    data: [2115, 1562, 1584, 1892, 1487, 2223, 2966, 2448, 2905, 3838, 2917, 3327]
+                }, {
+                    label: "2022",
+                    fill: true,
+                    backgroundColor: "transparent",
+                    borderColor: "#adb5bd",
+                    borderDash: [4, 4],
+                    data: [958, 724, 629, 883, 915, 1214, 1476, 1212, 1554, 2128, 1466, 1827]
+                }]
+            },
+            options: {
+                scales: {
+                    xAxes: [{
+                        reverse: true,
+                        gridLines: {
+                            color: "rgba(0,0,0,0.05)"
+                        }
+                    }],
+                    yAxes: [{
+                        borderDash: [5, 5],
+                        gridLines: {
+                            color: "rgba(0,0,0,0)",
+                            fontColor: "#fff"
+                        }
+                    }]
+                }
+            }
+        });
+
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            $('#viewReport').on('click', function(e) {
+                e.preventDefault();
+                $('#reportTable').removeClass('d-none').addClass('d-block');
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>
