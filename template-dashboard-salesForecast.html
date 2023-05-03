@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Responsive Admin &amp; Dashboard Template based on Bootstrap 5">
+    <meta name="author" content="AdminKit">
+    <meta name="keywords" content="adminkit, bootstrap, bootstrap 5, admin, dashboard, template, responsive, css, sass, html, theme, front-end, ui kit, web">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="shortcut icon" href="img/logo.svg" type="image/svg+xml">
+
+    <link rel="canonical" href="/" />
+
+    <title>Dashboard | Sales Forecast | ForecastRx UI</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <link class="js-stylesheet" href="adminkit-pro-3-3-0/dist/css/light.css" rel="stylesheet">
+</head>
+
+<body data-theme="default" data-layout="fluid" data-sidebar-position="left" data-sidebar-layout="default">
+    <div class="wrapper">
+        <nav id="sidebar" class="sidebar js-sidebar">
+            <div class="sidebar-content js-simplebar">
+                <a class="sidebar-brand" href="index.html">
+                    <img src="img/logoTextWhite.svg" alt="ForecastRx" style="max-width: 160px;" />
+                </a>
+
+                <ul class="sidebar-nav">
+                    <li class="sidebar-item">
+                        <a data-bs-target="#manage" data-bs-toggle="collapse" class="sidebar-link collapsed">
+                            <i class="align-middle" data-feather="pie-chart"></i> <span class="align-middle">Manage Company</span>
+                        </a>
+                        <ul id="manage" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-manage-details.html">Company Details</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-subpage.html">Suppliers</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-subpage.html">Items</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-subpage.html">Demand</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-subpage.html">Supply</a></li>
+                            <li class="sidebar-item">
+                                <a data-bs-target="#multiple" data-bs-toggle="collapse" class="sidebar-link collapsed" aria-expanded="false">
+                                    <i class="align-middle" data-feather="bar-chart-2"></i>
+                                    <span class="align-middle">Advanced</span>
+                                </a>
+                                <ul id="multiple" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#manage" style="">
+                                    <li class="sidebar-item"><a class="sidebar-link" href="template-subpage.html">Edit Kits</a></li>
+                                    <li class="sidebar-item"><a class="sidebar-link" href="template-subpage.html">Edit Item History</a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li class="sidebar-item">
+                        <a data-bs-target="#purchasing" data-bs-toggle="collapse" class="sidebar-link collapsed">
+                            <i class="align-middle" data-feather="target"></i> <span class="align-middle">Purchasing</span>
+                        </a>
+                        <ul id="purchasing" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-subpage.html">My Suggested</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-subpage.html">Custom</a></li>
+                        </ul>
+                    </li>
+                    <li class="sidebar-item">
+                        <a data-bs-target="#restock" data-bs-toggle="collapse" class="sidebar-link collapsed">
+                            <i class="align-middle" data-feather="box"></i> <span class="align-middle">RestockAMZ</span>
+                        </a>
+                        <ul id="restock" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-restock-warehouse.html">Restock from Warehouse</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-admin.html">Restock from Supplier</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-admin.html">Address Book</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-admin.html">Manage Shipments</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-restock-settings.html">Settings</a></li>
+                        </ul>
+                    </li>
+                    <li class="sidebar-item">
+                        <a data-bs-target="#admin" data-bs-toggle="collapse" class="sidebar-link collapsed">
+                            <i class="align-middle" data-feather="settings"></i> <span class="align-middle">Administration</span>
+                        </a>
+                        <ul id="admin" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-admin.html">Companies</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-admin.html">Users</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <div class="sidebar-cta">
+                    <div class="sidebar-cta-content p-0 bg-transparent">
+                        <small><a href="https://docs.google.com/spreadsheets/d/1UvRWgy6KKKpdnolvvEq65cyPxl54K6vDEY2_qMLLdLg/edit#gid=49109812" target="_blank" class="text-white-50">v3.75.0</a></small>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="main overflow-visible">
+
+            <nav class="navbar navbar-expand navbar-light navbar-bg sticky-top" id="header">
+                <div class="container">
+                    <a class="sidebar-toggle js-sidebar-toggle">
+                        <i class="hamburger align-self-center"></i>
+                    </a>
+
+                    <form class="d-none d-lg-inline-block">
+                        <div class="input-group input-group-navbar">
+                            <input type="text" class="form-control" placeholder="Search…" aria-label="Search">
+                            <button class="btn" type="button">
+                                <i class="align-middle" data-feather="search"></i>
+                            </button>
+                        </div>
+                    </form>
+
+                    <ul class="navbar-nav d-none d-md-flex">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="resourcesDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Choose Company
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="resourcesDropdown">
+                                <a class="dropdown-item" href="index.html">Fishers Finery Amazon</a>
+                                <a class="dropdown-item" href="template-add.html">+ Add Company</a>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="navbar-collapse collapse">
+                        <ul class="navbar-nav navbar-align">
+
+                            <li class="nav-item">
+                                <a class="nav-icon" href="#">
+                                    <div class="position-relative">
+                                        <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Forecast Report">
+                                            <i class="align-middle" data-feather="book"></i>
+                                        </span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-icon" href="#">
+                                    <div class="position-relative">
+                                        <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Last Sync: [date]">
+                                            <i class="align-middle" data-feather="repeat"></i>
+                                        </span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-icon" href="#">
+                                    <div class="position-relative">
+                                        <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Last Forecast: [date]">
+                                            <i class="align-middle" data-feather="trending-up"></i>
+                                        </span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-icon" href="#">
+                                    <div class="position-relative">
+                                        <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Support" onclick="window.open('https://forecastrx.zendesk.com/', '_blank');">
+                                            <i class="align-middle" data-feather="help-circle"></i>
+                                        </span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-icon js-fullscreen d-none d-lg-block" href="#">
+                                    <div class="position-relative">
+                                        <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Full Screen">
+                                            <i class="align-middle" data-feather="maximize"></i>
+                                        </span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-icon pe-md-0 dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                                    <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="User: [name]">
+                                        <i class="align-middle" data-feather="user"></i>
+                                    </span>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end">
+                                    <span class="dropdown-item pe-none"><strong>Name</strong></span>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="template-profile.html"><i class="align-middle me-1" data-feather="user"></i> Profile</a>
+                                    <a class="dropdown-item" href="template-subscription.html"><i class="align-middle me-1" data-feather="dollar-sign"></i> Subscription</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="template-login.html"><i class="align-middle me-1" data-feather="log-out"></i> Log out</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <main class="content">
+                <div class="container p-0">
+
+
+                    <div class="row mb-2 mb-xl-3">
+                        <div class="col-auto">
+                            <h3><strong>Sales Forecast</strong> Dashboard</h3>
+                        </div>
+
+                        <div class="col-auto ms-auto text-end mt-n1">
+                            <select class="form-select w-auto me-1 mb-1 d-inline-block align-middle" autocomplete="off">
+                                <option selected>Today</option>
+                                <option>Yesterday</option>
+                                <option>Last 7 Days</option>
+                                <option>Last 30 Days</option>
+                                <option>Last 90 Days</option>
+                                <option>Last Month</option>
+                                <option>Last Quarter</option>
+                                <option>Last Year</option>
+                            </select>
+                            <br class="d-md-none d-block" />
+                            <strong class="ms-1">View:</strong>
+                            <select class="form-select w-auto me-1 mb-1 d-inline-block align-middle" autocomplete="off">
+                                <option selected>Account Level</option>
+                                <option>Parent ASIN</option>
+                                <option>Item 1</option>
+                                <option>Item 2</option>
+                                <option>Item 3</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-md-6 col-sm-12 mb-3">
+                            <div class="card h-100">
+                                <div class="card-header pb-0">
+                                    <h2 class="card-title">
+                                        Forecast Data<button id="viewReport" type="button" class="btn btn-sm btn-secondary float-end" data-bs-toggle="tooltip" data-bs-placement="bottom" title="View Report"><i class="fa-solid fa-chart-simple"></i></button></h2>
+                                    <big class="fw-bold align-middle">2023: 472</big> <span class="badge badge-success-light"> <i style="height: 12px;" data-feather="arrow-up-right"></i>8.3%</span>
+                                    <big class="d-block">2022: 436</big>
+                                </div>
+                                <div class="card-body">
+                                    <div class="mb-2">
+                                        Units (#)&nbsp;
+                                        <div class="form-check form-switch d-inline-block">
+                                            <input class="form-check-input" type="checkbox" autocomplete="off" id="toggleDollarsData">
+                                            <label class="form-check-label" for="toggleDollarsData">Sales ($)</label>
+                                        </div>
+                                    </div>
+                                    <div class="table-responsive">
+                                        <table class="table table-sm table-borderless">
+                                            <thead>
+                                                <tr class="fw-bold">
+                                                    <td>&nbsp;</td>
+                                                    <td>May</td>
+                                                    <td>Jun</td>
+                                                    <td>Jul</td>
+                                                    <td>Aug</td>
+                                                    <td>Sep</td>
+                                                    <td>Oct</td>
+                                                    <td>Nov</td>
+                                                    <td>Dec</td>
+                                                    <td>Jan</td>
+                                                    <td>Feb</td>
+                                                    <td>Mar</td>
+                                                    <td>Apr</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="fw-bold bg-success text-white">2023</td>
+                                                    <td>40</td>
+                                                    <td>39</td>
+                                                    <td>39</td>
+                                                    <td>40</td>
+                                                    <td>39</td>
+                                                    <td>39</td>
+                                                    <td>39</td>
+                                                    <td>39</td>
+                                                    <td>40</td>
+                                                    <td>40</td>
+                                                    <td>38</td>
+                                                    <td>40</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="fw-bold bg-info text-white">2022</td>
+                                                    <td>37</td>
+                                                    <td>36</td>
+                                                    <td>36</td>
+                                                    <td>37</td>
+                                                    <td>36</td>
+                                                    <td>36</td>
+                                                    <td>36</td>
+                                                    <td>36</td>
+                                                    <td>37</td>
+                                                    <td>37</td>
+                                                    <td>35</td>
+                                                    <td>37</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="fw-bold bg-primary text-white">2021</td>
+                                                    <td>34</td>
+                                                    <td>33</td>
+                                                    <td>33</td>
+                                                    <td>34</td>
+                                                    <td>33</td>
+                                                    <td>33</td>
+                                                    <td>33</td>
+                                                    <td>33</td>
+                                                    <td>34</td>
+                                                    <td>34</td>
+                                                    <td>32</td>
+                                                    <td>34</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="fw-bold text-white" style="background: #adb5bd;">2020</td>
+                                                    <td>31</td>
+                                                    <td>30</td>
+                                                    <td>30</td>
+                                                    <td>31</td>
+                                                    <td>30</td>
+                                                    <td>30</td>
+                                                    <td>30</td>
+                                                    <td>30</td>
+                                                    <td>31</td>
+                                                    <td>31</td>
+                                                    <td>29</td>
+                                                    <td>31</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-sm-12 mb-3">
+                            <div class="card h-100">
+                                <div class="card-header pb-0">
+                                    <h2 class="card-title">Forecast Graph</h2>
+                                </div>
+                                <div class="card-body pt-0 pb-0">
+                                    <div class="mt-2 mb-1">
+                                        Units (#)&nbsp;
+                                        <div class="form-check form-switch d-inline-block">
+                                            <input class="form-check-input" type="checkbox" autocomplete="off" id="toggleDollarsGraph">
+                                            <label class="form-check-label" for="toggleDollarsGraph">Sales ($)</label>
+                                        </div>
+                                    </div>
+                                    <div class="chart chart-md">
+                                        <canvas id="chartjs-line" style="height: 300px;"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="card d-none" id="reportTable">
+                        <div class="card-header pb-0">
+                            <h2 class="card-title">Report</h2>
+                            Units (#)&nbsp;
+                            <div class="form-check form-switch d-inline-block">
+                                <input class="form-check-input" type="checkbox" autocomplete="off" id="toggleDollarsTable">
+                                <label class="form-check-label" for="toggleDollarsTable">Sales ($)</label>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive" style="max-height: 400px;">
+                                <table class="table table-sm">
+                                    <thead>
+                                        <tr class="fw-bold">
+                                            <td style="min-width: 150px;">Parent ASIN</td>
+                                            <td style="min-width: 110px;">Child ASIN</td>
+                                            <td style="min-width: 300px;">Key</td>
+                                            <td style="min-width: 190px;">Name</td>
+                                            <td style="min-width: 80px;">SKU</td>
+                                            <td>5/1/23</td>
+                                            <td>6/1/23</td>
+                                            <td>7/1/23</td>
+                                            <td>8/1/23</td>
+                                            <td>9/1/23</td>
+                                            <td>10/1/23</td>
+                                            <td>11/1/23</td>
+                                            <td>12/1/23</td>
+                                            <td>1/1/24</td>
+                                            <td>2/1/24</td>
+                                            <td>3/1/24</td>
+                                            <td>4/1/24</td>
+                                        </tr>
+                                        <tr class="fw-bold">
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>40</td>
+                                            <td>39</td>
+                                            <td>39</td>
+                                            <td>40</td>
+                                            <td>39</td>
+                                            <td>39</td>
+                                            <td>39</td>
+                                            <td>39</td>
+                                            <td>40</td>
+                                            <td>40</td>
+                                            <td>38</td>
+                                            <td>40</td>
+                                        </tr>
+                                    </thead>
+
+                                    <!-- PARENT ASIN 1 -->
+                                    <tbody id="parentASIN1">
+                                        <tr class="fw-bold bg-light">
+                                            <td><a href="#parentASIN1" class="toggle-asin btn btn-primary btn-sm me-2"><i class="fa-solid fa-minus"></i><i class="fa-solid fa-plus d-none"></i></a>Parent ASIN 1</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>34</td>
+                                            <td>34</td>
+                                            <td>34</td>
+                                            <td>35</td>
+                                            <td>34</td>
+                                            <td>33</td>
+                                            <td>33</td>
+                                            <td>33</td>
+                                            <td>34</td>
+                                            <td>34</td>
+                                            <td>33</td>
+                                            <td>34</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Parent ASIN 1</td>
+                                            <td>Child ASIN 1</td>
+                                            <td>B0029XL078-MB0101-NWH-SM</td>
+                                            <td>MB0101-NWH-SM</td>
+                                            <td>SKU 1</td>
+                                            <td>3</td>
+                                            <td>3</td>
+                                            <td>3</td>
+                                            <td>3</td>
+                                            <td>3</td>
+                                            <td>3</td>
+                                            <td>3</td>
+                                            <td>3</td>
+                                            <td>3</td>
+                                            <td>3</td>
+                                            <td>3</td>
+                                            <td>3</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Parent ASIN 1</td>
+                                            <td>Child ASIN 2</td>
+                                            <td>B0029XL07I-MB0101-NWH-LXL</td>
+                                            <td>MB0101-NWH-LXL</td>
+                                            <td>SKU 2</td>
+                                            <td>10</td>
+                                            <td>10</td>
+                                            <td>10</td>
+                                            <td>10</td>
+                                            <td>10</td>
+                                            <td>10</td>
+                                            <td>10</td>
+                                            <td>10</td>
+                                            <td>10</td>
+                                            <td>10</td>
+                                            <td>10</td>
+                                            <td>10</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Parent ASIN 1</td>
+                                            <td>Child ASIN 3</td>
+                                            <td>B002A219FQ-WB0101-NWH-LXL</td>
+                                            <td>WB0101-NWH-LXL</td>
+                                            <td>SKU 3</td>
+                                            <td>9</td>
+                                            <td>9</td>
+                                            <td>9</td>
+                                            <td>9</td>
+                                            <td>9</td>
+                                            <td>9</td>
+                                            <td>9</td>
+                                            <td>9</td>
+                                            <td>9</td>
+                                            <td>9</td>
+                                            <td>9</td>
+                                            <td>9</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Parent ASIN 1</td>
+                                            <td>Child ASIN 4</td>
+                                            <td>B002A28VB6-WB0101-NWH-SM</td>
+                                            <td>WB0101-NWH-SM</td>
+                                            <td>SKU 4</td>
+                                            <td>10</td>
+                                            <td>10</td>
+                                            <td>10</td>
+                                            <td>10</td>
+                                            <td>10</td>
+                                            <td>10</td>
+                                            <td>10</td>
+                                            <td>10</td>
+                                            <td>10</td>
+                                            <td>10</td>
+                                            <td>10</td>
+                                            <td>10</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Parent ASIN 1</td>
+                                            <td>Child ASIN 5</td>
+                                            <td>B0050DJJL8-WS-02-NG1-010-LBU-M</td>
+                                            <td>WS-02-NG1-010-LBU-M</td>
+                                            <td>SKU 5</td>
+                                            <td>2</td>
+                                            <td>2</td>
+                                            <td>2</td>
+                                            <td>3</td>
+                                            <td>2</td>
+                                            <td>2</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>2</td>
+                                            <td>2</td>
+                                            <td>1</td>
+                                            <td>2</td>
+                                        </tr>
+                                    </tbody>
+                                    <!-- END PARENT ASIN 1 -->
+
+                                    <!-- PARENT ASIN 2 -->
+                                    <tbody id="parentASIN2">
+                                        <tr class="fw-bold bg-light">
+                                            <td><a href="#parentASIN2" class="toggle-asin btn btn-primary btn-sm me-2"><i class="fa-solid fa-minus"></i><i class="fa-solid fa-plus d-none"></i></a>Parent ASIN 2</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>6</td>
+                                            <td>5</td>
+                                            <td>5</td>
+                                            <td>5</td>
+                                            <td>5</td>
+                                            <td>5</td>
+                                            <td>6</td>
+                                            <td>6</td>
+                                            <td>6</td>
+                                            <td>6</td>
+                                            <td>5</td>
+                                            <td>6</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Parent ASIN 2</td>
+                                            <td>Child ASIN 11</td>
+                                            <td>B0050DJLW0-WS-02-NG1-010-LBU-XS</td>
+                                            <td>WS-02-NG1-010-LBU-XS</td>
+                                            <td>SKU 11</td>
+                                            <td>2</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>2</td>
+                                            <td>2</td>
+                                            <td>2</td>
+                                            <td>2</td>
+                                            <td>1</td>
+                                            <td>2</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Parent ASIN 2</td>
+                                            <td>Child ASIN 12</td>
+                                            <td>B0050DJM4C-WS-02-NG1-010-LBU-XL</td>
+                                            <td>WS-02-NG1-010-LBU-XL</td>
+                                            <td>SKU 12</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Parent ASIN 2</td>
+                                            <td>Child ASIN 13</td>
+                                            <td>B0050DJMDS-WS-02-NG1-010-LGN-XL</td>
+                                            <td>WS-02-NG1-010-LGN-XL</td>
+                                            <td>SKU 13</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Parent ASIN 2</td>
+                                            <td>Child ASIN 14</td>
+                                            <td>B0050DJMNS-WS-02-NG1-010-LGN-XS</td>
+                                            <td>WS-02-NG1-010-LGN-XS</td>
+                                            <td>SKU 14</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Parent ASIN 2</td>
+                                            <td>Child ASIN 15</td>
+                                            <td>B0050DJOX6-WS-02-NG1-010-PNK-XL</td>
+                                            <td>WS-02-NG1-010-PNK-XL</td>
+                                            <td>SKU 15</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                        </tr>
+                                    </tbody>
+                                    <!-- END PARENT ASIN 2 -->
+
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="mt-3 mb-0"><strong>Note 1:</strong> Parent ASIN rows show sums of units/sales.</p>
+                    <p class="mt-0"><strong>Note 2:</strong> When the dollar toggle is selected, data repopulates with dollar data. When deselected, data repopulates with unit data.</p>
+                    <p class="mt-3"><strong>Based on:</strong> <a href="https://ffinery.myshopify.com/admin/dashboards" target="_blank">Shopify Analytics Dashboard</a>, <a href="https://ctcomp.sharepoint.com/:x:/s/ForecastRx/EYem83nAkYtApVKIErSS6CEBYFmclQOIN94Ji83ezx19Hg?e=hI3xHL" target="_blank">Spreadsheet</a></p>
+
+                </div>
+
+            </main>
+
+            <footer class="footer">
+                <div class="container">
+                    <div class="row text-muted">
+                        <div class="col-md-6 col-sm-12 text-start">
+                            <p class="mb-0">
+                                <a href="https://www.forecastrx.com/" target="_blank" class="text-muted"><strong>&copy;&nbsp;ForecastRx</strong></a> &copy;
+                            </p>
+                        </div>
+                        <div class="col-md-6 col-sm-12 text-md-end text-sm-start">
+                            <ul class="list-inline">
+                                <li class="list-inline-item">
+                                    <a class="text-muted" href="https://forecastrx.zendesk.com" target="_blank">Support</a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a class="text-muted" href="https://www.forecastrx.com/privacy-policy/" target="_blank">Privacy</a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a class="text-muted" href="https://www.forecastrx.com/terms/" target="_blank">Terms</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="adminkit-pro-3-3-0/dist/js/app.js"></script>
+
+    <!-- Line Chart -->
+    <script>
+        new Chart(document.getElementById("chartjs-line"), {
+            type: "line",
+            data: {
+                labels: ["May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec", "Jan", "Feb", "Mar", "Apr"],
+                datasets: [{
+                    label: "2023",
+                    fill: true,
+                    backgroundColor: "transparent",
+                    borderColor: window.theme.success,
+                    data: [40, 39, 39, 40, 39, 39, 39, 39, 40, 40, 38, 40]
+                }, {
+                    label: "2022",
+                    fill: true,
+                    backgroundColor: "transparent",
+                    borderColor: window.theme.info,
+                    data: [37, 36, 36, 37, 36, 36, 36, 36, 37, 37, 35, 37]
+                }, {
+                    label: "2021",
+                    fill: true,
+                    backgroundColor: "transparent",
+                    borderColor: window.theme.primary,
+                    borderDash: [4, 4],
+                    data: [34, 33, 33, 34, 33, 33, 33, 33, 34, 34, 32, 34]
+                }, {
+                    label: "2020",
+                    fill: true,
+                    backgroundColor: "transparent",
+                    borderColor: "#adb5bd",
+                    borderDash: [4, 4],
+                    data: [31, 30, 30, 31, 30, 30, 30, 30, 31, 31, 29, 31]
+                }]
+            },
+            options: {
+                scales: {
+                    xAxes: [{
+                        reverse: true,
+                        gridLines: {
+                            color: "rgba(0,0,0,0.05)"
+                        }
+                    }],
+                    yAxes: [{
+                        borderDash: [5, 5],
+                        gridLines: {
+                            color: "rgba(0,0,0,0)",
+                            fontColor: "#fff"
+                        }
+                    }]
+                }
+            }
+        });
+
+    </script>
+
+    <script>
+        $(document).ready(function() {
+
+            /* view report when press column icon button */
+            $('#viewReport').on('click', function(e) {
+                e.preventDefault();
+                $('#reportTable').removeClass('d-none').addClass('d-block');
+            });
+
+            /* collapse/expand report by parent asin */
+            $('.toggle-asin').on('click', function(e) {
+                e.preventDefault();
+                var h = $(this).attr('href');
+
+                if ($(this).hasClass('collapsed')) {
+                    $(h).find('tr:not(.bg-light)').removeClass('d-none');
+                    $(this).removeClass('collapsed');
+                    $(this).find('.fa-minus').removeClass('d-none');
+                    $(this).find('.fa-plus').addClass('d-none');
+                } else {
+                    $(h).find('tr:not(.bg-light)').addClass('d-none');
+                    $(this).addClass('collapsed');
+                    $(this).find('.fa-plus').removeClass('d-none');
+                    $(this).find('.fa-minus').addClass('d-none');
+                }
+
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>
