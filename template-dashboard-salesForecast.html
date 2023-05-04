@@ -802,6 +802,7 @@
                 var t = $('#frxData').html();
                 doc.text("Forecast Data", 50, 50);
                 doc.autoTable({ html: '#frxData table', theme: 'striped', margin: { top: 75 } });
+                doc.text('*Forecasted data.', 50, 225);
                 doc.save('ForecastRx-Data.pdf');
             });
 
