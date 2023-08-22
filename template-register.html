@@ -19,6 +19,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
     <link class="js-stylesheet" href="adminkit-pro-3-3-0/dist/css/light.css" rel="stylesheet">
+
+    <style>
+        ul.list-checkmark {
+          list-style: none;
+            padding-left: 1.5rem
+        }
+        
+        ul.list-checkmark li {
+            position: relative;
+        }
+
+        ul.list-checkmark li:before {
+          content: '\2713';
+            position: absolute;
+            left: -1.5rem;
+            top: 0;
+        }
+    </style>
 </head>
 
 <body data-theme="default" data-layout="fluid" data-sidebar-position="left" data-sidebar-layout="default">
@@ -32,9 +50,7 @@
                         <div class="text-center mt-4">
                             <a href="https://www.forecastrx.com/" target="_blank"><img src="img/logoText.svg" alt="ForecastRx" width="200" /></a>
                             <hr />
-                            <h1 class="h2">Get started with your 30-day free trial.</h1>
-                            <p class="lead mb-0">Create an account to do some awesome things with ForecastRx.</p>
-                            <p class="lead">Read <a href="https://www.forecastrx.com/faqs/" target="_blank">Frequently Asked Questions</a>.</p>
+                            <h1 class="h2 mb-3">Create an account to start your free trial.</h1>
                         </div>
 
                         <!-- POP-UP TO ADD -->
@@ -43,21 +59,21 @@
                             <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#whyModal">
                                 Why ForecastRx? <i class="align-middle mb-1" data-feather="plus-square"></i>
                             </button>
-                            
+
                             <div class="modal fade" id="whyModal" tabindex="-1" aria-labelledby="whyModalLabel" aria-hidden="true">
                                 <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h5 class="modal-title fw-bold fs-4" id="whyModalLabel">Why ForecastRx?</h5>
+                                            <h5 class="modal-title fw-bold fs-4" id="whyModalLabel">30-Day Free Trial</h5>
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body text-start">
-                                            <h6 class="fw-bold fs-3 mb-3">Start a free trial to receive:</h6>
-                                            <ul class="fs-4" style="line-height: 1.23">
-                                                <li class="mb-3">Best-In-Class Ecommerce Inventory Forecasting and Restocking Solution.</li>
-                                                <li class="mb-3">Integrations with Amazon FBA &amp; FBM and QuickBooks Desktop.</li>
-                                                <li class="mb-3">An inventory forecasting seller tool that analyzes your previous sales data, seamlessly incorporates every variable of your re-ordering process, and predicts precise future purchase order quantities.</li>
-                                                <li>Decreased lost sales due to stock-outs while simultaneously avoiding the expenses associated with being woefully overstocked.</li>
+                                            <p class="fs-4">With <strong>ForecastRx</strong>, you can avoid lost sales and enhance stock order performance, empowering your brand to exceed your customers&rsquo; needs with the data you need to inform decision-making, inventory management, and demand forecasting. Your free trial gives you access to:</p>
+                                            <ul class="fs-4 list-checkmark" style="line-height: 1.23">
+                                                <li class="mb-3">All your purchase orders in one convenient place—including open POs, FBA, and multiple warehouses</li>
+                                                <li class="mb-3">Over 80 hybrid forecasting algorithms from your data to provide your brand with actionable reorder quantities</li>
+                                                <li class="mb-3">Up to 4 years of your sales data to get the most accurate inventory demand forecasting possible</li>
+                                                <li>Industry-leading forecasting algorithms and customizable sales velocities to pinpoint seasonality and trends based on your data</li>
                                             </ul>
                                         </div>
                                         <div class="modal-footer">
@@ -70,47 +86,73 @@
                         </div>
                         <!-- /END POP-UP TO ADD -->
 
-                        <div class="card">
+                        <div class="card mb-0">
                             <div class="card-body">
                                 <div class="m-sm-4">
                                     <form>
-                                        <div class="mb-3">
-                                            <label class="form-label">First Name</label>
-                                            <input class="form-control form-control-lg" type="text" name="name" placeholder="Enter your first name">
+
+                                        <div class="row">
+                                            <div class="col-md-12 col-lg-6">
+                                                <div class="mb-3">
+                                                    <label class="form-label">First Name</label>
+                                                    <input class="form-control form-control-lg" type="text" name="name" placeholder="Enter your first name">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 col-lg-6">
+                                                <div class="mb-3">
+                                                    <label class="form-label">Last Name</label>
+                                                    <input class="form-control form-control-lg" type="text" name="name" placeholder="Enter your last name">
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="mb-3">
-                                            <label class="form-label">Last Name</label>
-                                            <input class="form-control form-control-lg" type="text" name="name" placeholder="Enter your last name">
+                                        <div class="row">
+                                            <div class="col-md-12 col-lg-6">
+                                                <div class="mb-3">
+                                                    <label class="form-label">Company</label>
+                                                    <input class="form-control form-control-lg" type="text" name="company" placeholder="Enter your company name">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 col-lg-6">
+                                                <div class="mb-3">
+                                                    <label class="form-label">Choose Company Type</label>
+                                                    <select class="form-select">
+                                                        <option value="" disabled>Choose Company Type</option>
+                                                        <option value="1: ASC">Amazon Seller Central</option>
+                                                        <option value="2: CSV">Comma Separated Values File</option>
+                                                        <option value="3: QBFS">QuickBooks Desktop</option>
+                                                    </select>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="mb-3">
-                                            <label class="form-label">Company</label>
-                                            <input class="form-control form-control-lg" type="text" name="company" placeholder="Enter your company name">
+                                        <div class="row">
+                                            <div class="col-md-12 col-lg-6">
+                                                <div class="mb-3">
+                                                    <label class="form-label">Email</label>
+                                                    <input class="form-control form-control-lg" type="email" name="email" placeholder="Enter your email">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 col-lg-6">
+                                                <div class="mb-3">
+                                                    <label class="form-label">Phone</label>
+                                                    <input class="form-control form-control-lg" type="tel" name="tel" placeholder="Enter your phone number">
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="mb-3">
-                                            <label class="form-label">Choose Company Type</label>
-                                            <select class="form-select">
-                                                <option value="" disabled>Choose Company Type</option>
-                                                <option value="1: ASC">Amazon Seller Central</option>
-                                                <option value="2: CSV">Comma Separated Values File</option>
-                                                <option value="3: QBFS">QuickBooks Desktop</option>
-                                            </select>
+                                        <div class="row">
+                                            <div class="col-md-12 col-lg-6">
+                                                <div class="mb-3">
+                                                    <label class="form-label">Password</label>
+                                                    <input class="form-control form-control-lg" type="password" name="password" placeholder="Enter password">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 col-lg-6">
+                                                <div class="mb-3">
+                                                    <label class="form-label">Confirm Password</label>
+                                                    <input class="form-control form-control-lg" type="password" name="password" placeholder="Enter password">
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="mb-3">
-                                            <label class="form-label">Email</label>
-                                            <input class="form-control form-control-lg" type="email" name="email" placeholder="Enter your email">
-                                        </div>
-                                        <div class="mb-3">
-                                            <label class="form-label">Phone</label>
-                                            <input class="form-control form-control-lg" type="tel" name="tel" placeholder="Enter your phone number">
-                                        </div>
-                                        <div class="mb-3">
-                                            <label class="form-label">Password</label>
-                                            <input class="form-control form-control-lg" type="password" name="password" placeholder="Enter password">
-                                        </div>
-                                        <div class="mb-3">
-                                            <label class="form-label">Confirm Password</label>
-                                            <input class="form-control form-control-lg" type="password" name="password" placeholder="Enter password">
-                                        </div>
+
                                         <div class="form-check">
                                             <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
                                             <label class="form-check-label" for="flexCheckChecked">
@@ -118,11 +160,15 @@
                                             </label>
                                         </div>
                                         <div class="text-center mt-3">
-                                            <a href="index.html" class="btn btn-lg btn-primary">Sign up</a>
+                                            <a href="index.html" class="btn btn-lg btn-primary">Get Started</a>
                                         </div>
                                     </form>
                                 </div>
                             </div>
+                        </div>
+
+                        <div class="text-center mt-4">
+                            <p class="lead">Read <a href="https://www.forecastrx.com/faqs/" target="_blank">Frequently Asked Questions</a>.</p>
                         </div>
 
                     </div>
