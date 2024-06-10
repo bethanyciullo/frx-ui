@@ -391,21 +391,21 @@
                                             <h3 class="fs-5 fw-bold text-uppercase">Purchase Order</h3>
                                             <div class="row">
                                                 <div class="col-lg-3 col-md-6 col-sm-12">
-                                                    <label class="fw-bold">Vendor</label>
+                                                    <label class="fw-bold mt-2">Vendor</label>
                                                     <select class="form-select">
                                                         <option value="1">Vendor - 12345</option>
                                                     </select>
                                                 </div>
                                                 <div class="col-lg-3 col-md-6 col-sm-12">
-                                                    <label class="fw-bold">PO Number</label>
+                                                    <label class="fw-bold mt-2">PO Number</label>
                                                     <input type="text" class="form-control" />
                                                 </div>
                                                 <div class="col-lg-3 col-md-6 col-sm-12">
-                                                    <label class="fw-bold">Due Date</label>
+                                                    <label class="fw-bold mt-2">Due Date</label>
                                                     <input type="text" class="form-control flatpickr-minimum" placeholder="Select Date" />
                                                 </div>
                                                 <div class="col-lg-3 col-md-6 col-sm-12">
-                                                    <label class="fw-bold">Doc Date</label>
+                                                    <label class="fw-bold mt-2">Doc Date</label>
                                                     <input type="text" class="form-control flatpickr-minimum" placeholder="Select Date" />
                                                 </div>
                                             </div>
@@ -454,25 +454,146 @@
                                             <h2 class="card-title mb-0">Purchase Order Wizard: Step 2/3</h2>
                                             <hr />
 
-                                            <div class="mb-3">
-                                                <label class="form-label">From Address</label>
-                                                <div class="row">
-                                                    <div class="col-lg-11 col-md-10 col-sm-8">
-                                                        <select class="form-select">
-                                                            <option value="1">Options</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="col-lg-1 col-md-2 col-sm-4">
-                                                        <button type="button" class="btn btn-primary d-block text-center w-100" data-bs-toggle="modal" data-bs-target="#addressModal">+</button>
-                                                    </div>
+                                            <!-- Billing Address -->
+                                            <div class="row">
+                                                <div class="col-lg-9 col-md-6 col-sm-12">
+                                                    <h3 class="fs-5 fw-bold text-uppercase">Billing Address</h3>
+                                                </div>
+                                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                                    <select class="form-select">
+                                                        <option value="1">Default Billing Address</option>
+                                                    </select>
                                                 </div>
                                             </div>
-
-                                            <div class="mb-4">
-                                                <label class="form-label">Purchase Order Wizard: Step 3/3</label>
-                                                <select class="form-select">
-                                                    <option value="1">Options</option>
-                                                </select>
+                                            <div class="row">
+                                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                                    <label class="fw-bold mt-2">Street Address 1</label>
+                                                    <input type="text" class="form-control" />
+                                                </div>
+                                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                                    <label class="fw-bold mt-2">Street Address 2</label>
+                                                    <input type="text" class="form-control" />
+                                                </div>
+                                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                                    <label class="fw-bold mt-2">City</label>
+                                                    <input type="text" class="form-control" />
+                                                </div>
+                                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                                    <label class="fw-bold mt-2">State/Province</label>
+                                                    <input type="text" class="form-control" />
+                                                </div>
+                                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                                    <label class="fw-bold mt-2">Zip/Postal Code</label>
+                                                    <input type="text" class="form-control" />
+                                                </div>
+                                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                                    <label class="fw-bold mt-2">Country/Region</label>
+                                                    <input type="text" class="form-control" />
+                                                </div>
+                                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                                    <label class="fw-bold mt-2">Phone</label>
+                                                    <input type="text" class="form-control" />
+                                                </div>
+                                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                                    <label class="fw-bold mt-2">Email</label>
+                                                    <input type="text" class="form-control" />
+                                                </div>
+                                            </div>
+                                            
+                                            <hr class="mt-4 mb-4" />
+                                            
+                                            <!-- Shipping Address -->
+                                            <div class="row">
+                                                <div class="col-lg-9 col-md-6 col-sm-12">
+                                                    <h3 class="fs-5 fw-bold text-uppercase">Shipping Address</h3>
+                                                </div>
+                                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                                    <select class="form-select">
+                                                        <option value="1">Warehouse Address</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                                    <label class="fw-bold mt-2">Street Address 1</label>
+                                                    <input type="text" class="form-control" />
+                                                </div>
+                                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                                    <label class="fw-bold mt-2">Street Address 2</label>
+                                                    <input type="text" class="form-control" />
+                                                </div>
+                                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                                    <label class="fw-bold mt-2">City</label>
+                                                    <input type="text" class="form-control" />
+                                                </div>
+                                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                                    <label class="fw-bold mt-2">State/Province</label>
+                                                    <input type="text" class="form-control" />
+                                                </div>
+                                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                                    <label class="fw-bold mt-2">Zip/Postal Code</label>
+                                                    <input type="text" class="form-control" />
+                                                </div>
+                                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                                    <label class="fw-bold mt-2">Country/Region</label>
+                                                    <input type="text" class="form-control" />
+                                                </div>
+                                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                                    <label class="fw-bold mt-2">Phone</label>
+                                                    <input type="text" class="form-control" />
+                                                </div>
+                                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                                    <label class="fw-bold mt-2">Email</label>
+                                                    <input type="text" class="form-control" />
+                                                </div>
+                                            </div>
+                                            
+                                            <hr class="mt-4 mb-4" />
+                                            
+                                            <!-- Billing Address -->
+                                            <div class="row">
+                                                <div class="col-lg-9 col-md-6 col-sm-12">
+                                                    <h3 class="fs-5 fw-bold text-uppercase">Vendor Address</h3>
+                                                </div>
+                                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                                    <select class="form-select">
+                                                        <option value="1">-- Custom Address --</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                                    <label class="fw-bold mt-2">Street Address 1</label>
+                                                    <input type="text" class="form-control" />
+                                                </div>
+                                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                                    <label class="fw-bold mt-2">Street Address 2</label>
+                                                    <input type="text" class="form-control" />
+                                                </div>
+                                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                                    <label class="fw-bold mt-2">City</label>
+                                                    <input type="text" class="form-control" />
+                                                </div>
+                                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                                    <label class="fw-bold mt-2">State/Province</label>
+                                                    <input type="text" class="form-control" />
+                                                </div>
+                                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                                    <label class="fw-bold mt-2">Zip/Postal Code</label>
+                                                    <input type="text" class="form-control" />
+                                                </div>
+                                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                                    <label class="fw-bold mt-2">Country/Region</label>
+                                                    <input type="text" class="form-control" />
+                                                </div>
+                                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                                    <label class="fw-bold mt-2">Phone</label>
+                                                    <input type="text" class="form-control" />
+                                                </div>
+                                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                                    <label class="fw-bold mt-2">Email</label>
+                                                    <input type="text" class="form-control" />
+                                                </div>
                                             </div>
 
                                             <hr />
