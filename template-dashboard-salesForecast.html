@@ -61,6 +61,7 @@
                         <ul id="purchasing" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
                             <li class="sidebar-item"><a class="sidebar-link" href="template-subpage.html">My Suggested</a></li>
                             <li class="sidebar-item"><a class="sidebar-link" href="template-subpage.html">Custom</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-PO-wizard.html">Purchase Order Wizard</a></li>
                         </ul>
                     </li>
                     <li class="sidebar-item">
@@ -801,7 +802,13 @@
                 const doc = new jsPDF('p', 'pt', 'letter');
                 var t = $('#frxData').html();
                 doc.text("Forecast Data", 50, 50);
-                doc.autoTable({ html: '#frxData table', theme: 'striped', margin: { top: 75 } });
+                doc.autoTable({
+                    html: '#frxData table',
+                    theme: 'striped',
+                    margin: {
+                        top: 75
+                    }
+                });
                 doc.text('*Forecasted data.', 50, 225);
                 doc.save('ForecastRx-Data.pdf');
             });

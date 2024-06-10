@@ -61,6 +61,7 @@
                         <ul id="purchasing" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
                             <li class="sidebar-item"><a class="sidebar-link" href="template-subpage.html">My Suggested</a></li>
                             <li class="sidebar-item"><a class="sidebar-link" href="template-subpage.html">Custom</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="template-PO-wizard.html">Purchase Order Wizard</a></li>
                         </ul>
                     </li>
                     <li class="sidebar-item">
@@ -941,18 +942,18 @@
 
     <script>
         $(document).ready(function() {
-            
+
             /* view report when press column icon button */
             $('#viewReport').on('click', function(e) {
                 e.preventDefault();
                 $('#reportTable').removeClass('d-none').addClass('d-block');
             });
-            
+
             /* collapse/expand report by parent asin */
             $('.toggle-asin').on('click', function(e) {
                 e.preventDefault();
                 var h = $(this).attr('href');
-                
+
                 if ($(this).hasClass('collapsed')) {
                     $(h).find('tr:not(.bg-light)').removeClass('d-none');
                     $(this).removeClass('collapsed');
@@ -964,7 +965,7 @@
                     $(this).find('.fa-plus').removeClass('d-none');
                     $(this).find('.fa-minus').addClass('d-none');
                 }
-                
+
             });
         });
 
