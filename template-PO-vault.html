@@ -14,7 +14,7 @@
 
     <link rel="canonical" href="/" />
 
-    <title>Restock Settings | ForecastRx UI</title>
+    <title>Purchase Order Vault | ForecastRx UI</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
@@ -201,127 +201,73 @@
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb mb-0">
                                     <li class="breadcrumb-item" style="line-height: 1.2;"><a href="index.html"><i class="align-middle" data-feather="home"></i> </a></li>
-                                    <li class="breadcrumb-item pe-none"><a href="#">RestockAMZ</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page"><strong>Settings</strong></li>
+                                    <li class="breadcrumb-item pe-none"><a href="#">Purchasing</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page"><strong>Purchase Order Vault</strong></li>
                                 </ol>
                             </nav>
                         </div>
                     </div>
 
                     <div class="card">
-                        <div class="card-header pb-0">
-                            <h1 class="card-title mb-0"><i class="fa-solid fa-calculator me-2"></i>FBA Replenishment Model</h1>
-                        </div>
                         <div class="card-body">
-                            <p>Select how you typically replenish products so your forecast will account for the correct lead times when calculating your restock suggestions.</p>
-                            <select class="form-select w-auto mw-100">
-                                <option value="1">Supplier Ships to FBA</option>
-                            </select>
-                            <p class="mt-3 mb-0"><i class="fa-regular fa-lightbulb text-success me-1"></i><em><span class="text-success">Tip:</span> Global Default Value, this can also be set on the Item or Supplier Level.</em></p>
-                        </div>
-                    </div>
 
-                    <div class="card">
-                        <div class="card-header pb-0">
-                            <h1 class="card-title mb-0"><i class="fa-solid fa-truck me-2"></i>Warehouse Lead Time</h1>
-                        </div>
-                        <div class="card-body">
-                            <p>The average # of days it takes from creating a shipment to arrival at Amazon.</p>
-                            <div class="mb-3">
-                                <input class="form-control form-control-lg d-inline align-middle" type="number" value="7" style="width: 80px;"> days
-                            </div>
-                            <p class="mt-3 mb-0"><i class="fa-regular fa-lightbulb text-success me-1"></i><em><span class="text-success">Tip:</span> This setting can be changed at any time and is often good to increase during peak seasons, e.g., fourth quarter, to account for longer shipment processing times at Amazon.</em></p>
-                        </div>
-                    </div>
+                            <h2 class="card-title mb-0">Purchase Orders</h2>
+                            <p>Below you will find all of your saved purchase orders. Click on the purchase order title to view the items for that purchase order.</p>
+                            <hr />
 
-                    <div class="card">
-                        <div class="card-header pb-0">
-                            <h1 class="card-title mb-0"><i class="fa-solid fa-cart-shopping me-2"></i>Ideal FBA Inventory</h1>
-                        </div>
-                        <div class="card-body">
-                            <p>Choose a range for the number of days of inventory coverage you'd like to keep at Amazon.
-                                <br />Products quantities <strong>below</strong> your <strong>minimum</strong> will be flagged <strong style="color:#FE8945;">orange</strong> in your Restock Suggestions. <br />Products quantities <strong>between</strong> your <strong>minimum and maximum</strong> will be flagged <strong class="text-warning">yellow</strong> in your Restock Suggestions.</p>
-                            <div class="mb-3">
-                                <input class="form-control form-control-lg d-inline align-middle" type="number" value="30" style="width: 80px;"> <i class="fa-solid fa-flag" style="color:#FE8945;"></i> Minimum Days of FBA Inventory
-                            </div>
-                            <div class="mb-3">
-                                <input class="form-control form-control-lg d-inline align-middle" type="number" value="45" style="width: 80px;"> <i class="fa-solid fa-flag text-warning"></i> Maximum Days of FBA Inventory
-                            </div>
-                            <p class="mt-3 mb-0"><i class="fa-regular fa-lightbulb text-success me-1"></i><em><span class="text-success">Tip:</span> We recommend starting with '30' and '45' days and adjusting the time period up or down if desired.</em></p>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-header pb-0">
-                            <h1 class="card-title mb-0"><i class="fa-solid fa-percent me-2"></i>RestockAMZ Daily Sales Rate Rules</h1>
-                        </div>
-                        <div class="card-body">
-                            <select class="form-select w-auto mw-100 mb-2" id="sales-velocity-settings" autocomplete="off">
-                                <!-- select -->
-                                <option value="average">Average</option>
-                                <option value="dateRange">Date Range</option>
-                                <option value="auto" selected>Automatically Adjusted Weightings</option>
-                            </select>
-
-                            <div id="select_average" class="select_options d-none">
-                                <p>Daily Sales Rate Weightings</p>
-                                <div class="table-responsive mt-3">
-                                    <table class="table table-borderless w-auto mw-100">
-                                        <thead class="fw-bold">
-                                            <tr>
-                                                <td class="p-0 pe-2">Days</td>
-                                                <td class="p-0 text-center">2</td>
-                                                <td class="p-0 text-center">7</td>
-                                                <td class="p-0 text-center">14</td>
-                                                <td class="p-0 text-center">30</td>
-                                                <td class="p-0 text-center">60</td>
-                                                <td class="p-0 text-center">90</td>
-                                                <td class="p-0 text-center"><strong>180</strong></td>
-                                                <td class="p-0" style="position: relative;height: 30px;"><strong style="position: absolute;top: 0px;left: 2px;white-space: nowrap;line-height: 1;">ForecastRx<br />Demand</strong></td>
-                                                <td class="p-0">&nbsp;</td>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td class="p-0 pe-2"><strong>Rate</strong></td>
-                                                <td class="p-0 text-center"><input value="10" type="text" style="width: 40px;" class="form-control form-control-lg d-inline align-middle ps-1 pe-1 text-center rounded-0 border-end-0"></td>
-                                                <td class="p-0 text-center"><input value="10" type="text" style="width: 40px;" class="form-control form-control-lg d-inline align-middle ps-1 pe-1 text-center rounded-0 border-end-0"></td>
-                                                <td class="p-0 text-center"><input value="10" type="text" style="width: 40px;" class="form-control form-control-lg d-inline align-middle ps-1 pe-1 text-center rounded-0 border-end-0"></td>
-                                                <td class="p-0 text-center"><input value="10" type="text" style="width: 40px;" class="form-control form-control-lg d-inline align-middle ps-1 pe-1 text-center rounded-0 border-end-0"></td>
-                                                <td class="p-0 text-center"><input value="10" type="text" style="width: 40px;" class="form-control form-control-lg d-inline align-middle ps-1 pe-1 text-center rounded-0 border-end-0"></td>
-                                                <td class="p-0 text-center"><input value="10" type="text" style="width: 40px;" class="form-control form-control-lg d-inline align-middle ps-1 pe-1 text-center rounded-0 border-end-0"></td>
-                                                <td class="p-0 text-center"><input value="15" type="text" style="width: 40px;" class="form-control form-control-lg d-inline align-middle ps-1 pe-1 text-center rounded-0 border-end-0"></td>
-                                                <td class="p-0"><input value="25" type="text" style="width: 40px;" class="form-control form-control-lg d-inline align-middle ps-1 pe-1 text-center rounded-0"></td>
-                                                <td class="p-0"><strong><big>=&nbsp;100%</big></strong></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-
-                            <div id="select_dateRange" class="select_options d-none">
-                                <p>Past date range to be used to calculate sales rate</p>
-                                <div class="row mt-3">
-                                    <div class="col-lg-3 col-md-4 col-sm-12 mb-3">
-                                        <label class="form-label"><strong>From</strong></label>
-                                        <input type="text" class="form-control flatpickr-minimum" placeholder="Select date.." />
-
+                            <div class="accordion accordion-flush" id="acc">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="acchdg1">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#acc1" aria-expanded="true" aria-controls="acc1">
+                                            Vendor - 12345
+                                        </button>
+                                    </h2>
+                                    <div id="acc1" class="accordion-collapse collapse show bg-white" aria-labelledby="acchdg1">
+                                        <div class="accordion-body">
+                                            text
+                                        </div>
                                     </div>
-                                    <div class="col-lg-3 col-md-4 col-sm-12 mb-3">
-                                        <label class="form-label"><strong>To</strong></label>
-                                        <input type="text" class="form-control flatpickr-minimum" placeholder="Select date.." />
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="acchdg2">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#acc2" aria-expanded="false" aria-controls="acc2">
+                                            Vendor - 23456
+                                        </button>
+                                    </h2>
+                                    <div id="acc2" class="accordion-collapse collapse bg-white" aria-labelledby="acchdg2">
+                                        <div class="accordion-body">
+                                            text
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="acchdg3">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#acc3" aria-expanded="false" aria-controls="acc3">
+                                            Vendor - 34567
+                                        </button>
+                                    </h2>
+                                    <div id="acc3" class="accordion-collapse collapse bg-white" aria-labelledby="acchdg3">
+                                        <div class="accordion-body">
+                                            text
+                                        </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <div id="select_auto" class="select_options">
-                                <p>Auto-apply weight to calculation.</p>
-                            </div>
+                            <nav aria-label="Pagination" class="mt-4">
+                                <ul class="pagination pagination-md">
+                                    <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-left"></i></a></li>
+                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                    <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-right"></i></a></li>
+                                </ul>
+                            </nav>
 
                         </div>
                     </div>
-
-                    <a href="#" class="btn btn-lg btn-primary"><i class="fa-solid fa-floppy-disk align-middle me-2"></i><span class="align-middle">Save Changes</span></a>
 
                 </div>
 
@@ -355,44 +301,6 @@
     </div>
 
     <script src="adminkit-pro-3-3-0/dist/js/app.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            // Flatpickr
-            flatpickr(".flatpickr-minimum");
-            flatpickr(".flatpickr-datetime", {
-                enableTime: true,
-                dateFormat: "Y-m-d H:i",
-            });
-            flatpickr(".flatpickr-human", {
-                altInput: true,
-                altFormat: "F j, Y",
-                dateFormat: "Y-m-d",
-            });
-            flatpickr(".flatpickr-multiple", {
-                mode: "multiple",
-                dateFormat: "Y-m-d"
-            });
-            flatpickr(".flatpickr-range", {
-                mode: "range",
-                dateFormat: "Y-m-d"
-            });
-            flatpickr(".flatpickr-time", {
-                enableTime: true,
-                noCalendar: true,
-                dateFormat: "H:i",
-            });
-        });
-
-        /* select show/hide */
-        $(document).ready(function() {
-            $('#sales-velocity-settings').on('change', function(e) {
-                var opt = '#select_' + $(this).val();
-                $('.select_options').addClass('d-none').removeClass('d-block');
-                $(opt).addClass('d-block').removeClass('d-none');
-            });
-        });
-
-    </script>
 
 </body>
 
