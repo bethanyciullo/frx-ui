@@ -499,9 +499,9 @@
                                                     <input type="text" class="form-control" />
                                                 </div>
                                             </div>
-                                            
+
                                             <hr class="mt-4 mb-4" />
-                                            
+
                                             <!-- Shipping Address -->
                                             <div class="row">
                                                 <div class="col-lg-9 col-md-6 col-sm-12">
@@ -547,9 +547,9 @@
                                                     <input type="text" class="form-control" />
                                                 </div>
                                             </div>
-                                            
+
                                             <hr class="mt-4 mb-4" />
-                                            
+
                                             <!-- Billing Address -->
                                             <div class="row">
                                                 <div class="col-lg-9 col-md-6 col-sm-12">
@@ -607,13 +607,48 @@
                                 <div class="tab-pane fade" id="tab5" role="tabpanel">
                                     <div class="row py-4">
                                         <div class="col-12">
-                                            <h2 class="card-title mb-0">Shipment Review</h2>
+                                            <h2 class="card-title mb-0">Purchase Order Wizard: Step 3/3</h2>
                                             <hr />
-                                            <p>[Kendo Existing Grid]</p>
+                                            <h3 class="fs-5 fw-bold text-uppercase">Extra Fees</h3>
+                                            <div class="row">
+                                                <div class="col-md-4 col-sm-12">
+                                                    <label class="fw-bold mt-2">Taxes ($)</label>
+                                                    <input type="number" step=".01" class="form-control" />
+                                                </div>
+                                                <div class="col-md-4 col-sm-12">
+                                                    <label class="fw-bold mt-2">Shipping ($)</label>
+                                                    <input type="number" step=".01" class="form-control" />
+                                                </div>
+                                                <div class="col-md-4 col-sm-12">
+                                                    <label class="fw-bold mt-2">Other ($)</label>
+                                                    <input type="number" step=".01" class="form-control" placeholder="(Optional)" />
+                                                </div>
+                                            </div>
+
+                                            <hr class="mt-4 mb-4" />
+
+                                            <h3 class="fs-5 fw-bold text-uppercase">Miscellaneous</h3>
+                                            <div class="row">
+                                                <div class="col-md-4 col-sm-12">
+                                                    <label class="fw-bold mt-2">Ship Via</label>
+                                                    <input type="text" class="form-control" placeholder="(Optional)" />
+                                                </div>
+                                                <div class="col-md-4 col-sm-12">
+                                                    <label class="fw-bold mt-2">F.O.B.</label>
+                                                    <input type="text" class="form-control" placeholder="(Optional)" />
+                                                </div>
+                                                <div class="col-md-4 col-sm-12">
+                                                    <label class="fw-bold mt-2">Payment Terms</label>
+                                                    <input type="text" class="form-control" placeholder="(Optional)" />
+                                                </div>
+                                            </div>
+                                            <label class="fw-bold mt-2">Comments</label>
+                                            <textarea class="form-control" style="resize:none;" rows="4"></textarea>
+
                                             <hr />
                                             <p class="mb-0 text-center">
                                                 <a href="#" class="btn btn-lg btn-secondary">Back</a>
-                                                <a href="#" class="btn btn-lg btn-primary">Continue</a>
+                                                <a href="#" class="btn btn-lg btn-primary">Create Purchase Order</a>
                                             </p>
                                         </div>
                                     </div>
@@ -621,131 +656,110 @@
                                 <div class="tab-pane fade" id="tab6" role="tabpanel">
                                     <div class="row py-4">
                                         <div class="col-12">
-                                            <h2 class="card-title mb-0">Shipment Complete</h2>
+                                            <h2 class="card-title mb-0">Purchase Order Complete</h2>
                                             <hr />
-                                            <p>Your shipment was successfully created.</p>
-                                            <p>Here is a preview of your label. Please select any additional line items to be printed, the format and output option. For thermal printers, choose the Custom Size format and enter your sticker size in milimeters. </p>
-                                            <p>For best result, we suggest using the Download button and printing from Adobe reader.</p>
-                                            <p><a href="#">Modify Sticker Quantities</a><br /><small>(leads to Kendo existing grid)</small></p>
-                                            <div class="row justify-content-center">
-                                                <div class="col-lg-4 col-md-6 col-sm-12">
-                                                    <svg _ngcontent-tcp-c436="" id="barcode" width="320px" height="70px" x="0px" y="0px" viewBox="0 0 320 70" xmlns="http://www.w3.org/2000/svg" version="1.1" style="transform: translate(0,0)">
-                                                        <rect x="0" y="0" width="320" height="70" style="fill:#ffffff;"></rect>
-                                                        <g transform="translate(10, 10)" style="fill:#000000;">
-                                                            <rect x="0" y="0" width="3" height="50"></rect>
-                                                            <rect x="4.5" y="0" width="1.5" height="50"></rect>
-                                                            <rect x="9" y="0" width="1.5" height="50"></rect>
-                                                            <rect x="16.5" y="0" width="1.5" height="50"></rect>
-                                                            <rect x="22.5" y="0" width="3" height="50"></rect>
-                                                            <rect x="30" y="0" width="1.5" height="50"></rect>
-                                                            <rect x="33" y="0" width="1.5" height="50"></rect>
-                                                            <rect x="36" y="0" width="4.5" height="50"></rect>
-                                                            <rect x="45" y="0" width="3" height="50"></rect>
-                                                            <rect x="49.5" y="0" width="3" height="50"></rect>
-                                                            <rect x="54" y="0" width="4.5" height="50"></rect>
-                                                            <rect x="60" y="0" width="1.5" height="50"></rect>
-                                                            <rect x="66" y="0" width="1.5" height="50"></rect>
-                                                            <rect x="69" y="0" width="3" height="50"></rect>
-                                                            <rect x="76.5" y="0" width="4.5" height="50"></rect>
-                                                            <rect x="82.5" y="0" width="3" height="50"></rect>
-                                                            <rect x="87" y="0" width="4.5" height="50"></rect>
-                                                            <rect x="93" y="0" width="4.5" height="50"></rect>
-                                                            <rect x="99" y="0" width="1.5" height="50"></rect>
-                                                            <rect x="102" y="0" width="3" height="50"></rect>
-                                                            <rect x="108" y="0" width="4.5" height="50"></rect>
-                                                            <rect x="115.5" y="0" width="1.5" height="50"></rect>
-                                                            <rect x="121.5" y="0" width="1.5" height="50"></rect>
-                                                            <rect x="127.5" y="0" width="3" height="50"></rect>
-                                                            <rect x="132" y="0" width="1.5" height="50"></rect>
-                                                            <rect x="138" y="0" width="6" height="50"></rect>
-                                                            <rect x="145.5" y="0" width="1.5" height="50"></rect>
-                                                            <rect x="148.5" y="0" width="3" height="50"></rect>
-                                                            <rect x="157.5" y="0" width="1.5" height="50"></rect>
-                                                            <rect x="160.5" y="0" width="1.5" height="50"></rect>
-                                                            <rect x="165" y="0" width="1.5" height="50"></rect>
-                                                            <rect x="172.5" y="0" width="1.5" height="50"></rect>
-                                                            <rect x="177" y="0" width="3" height="50"></rect>
-                                                            <rect x="181.5" y="0" width="1.5" height="50"></rect>
-                                                            <rect x="189" y="0" width="3" height="50"></rect>
-                                                            <rect x="193.5" y="0" width="1.5" height="50"></rect>
-                                                            <rect x="198" y="0" width="1.5" height="50"></rect>
-                                                            <rect x="202.5" y="0" width="6" height="50"></rect>
-                                                            <rect x="210" y="0" width="1.5" height="50"></rect>
-                                                            <rect x="214.5" y="0" width="1.5" height="50"></rect>
-                                                            <rect x="222" y="0" width="3" height="50"></rect>
-                                                            <rect x="226.5" y="0" width="1.5" height="50"></rect>
-                                                            <rect x="231" y="0" width="1.5" height="50"></rect>
-                                                            <rect x="237" y="0" width="6" height="50"></rect>
-                                                            <rect x="244.5" y="0" width="1.5" height="50"></rect>
-                                                            <rect x="247.5" y="0" width="3" height="50"></rect>
-                                                            <rect x="256.5" y="0" width="1.5" height="50"></rect>
-                                                            <rect x="259.5" y="0" width="1.5" height="50"></rect>
-                                                            <rect x="264" y="0" width="4.5" height="50"></rect>
-                                                            <rect x="270" y="0" width="1.5" height="50"></rect>
-                                                            <rect x="273" y="0" width="3" height="50"></rect>
-                                                            <rect x="280.5" y="0" width="3" height="50"></rect>
-                                                            <rect x="288" y="0" width="4.5" height="50"></rect>
-                                                            <rect x="294" y="0" width="1.5" height="50"></rect>
-                                                            <rect x="297" y="0" width="3" height="50"></rect>
-                                                        </g>
-                                                    </svg>
-                                                    <p>FNSKU &nbsp;&nbsp;&nbsp; Condition</p>
-                                                    <p>Title/Description</p>
-                                                    <div class="mb-3">
-                                                        <select class="form-select">
-                                                            <option value="1">Blank</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="mb-3">
-                                                        <select class="form-select" disabled>
-                                                            <option value="1">Blank</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            <p>Your purchase order was successfully created.</p>
+                                            <p>Here is a summary of your order.</p>
 
-                                            <hr class="mb-4" />
-
-                                            <div class="row mb-1">
-                                                <div class="col-lg-2 col-md-2 col-sm-12">
-                                                    <label class="form-label">Format:</label>
-                                                </div>
-                                                <div class="col-lg-7 col-md-6 col-sm-12">
-                                                    <div class="mb-3">
-                                                        <select class="form-select">
-                                                            <option value="1">Options</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-3 col-md-4 col-sm-12">
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                                                        <label class="form-check-label" for="flexCheckChecked">
-                                                            Print Required Sticker Only
-                                                        </label>
-                                                    </div>
-                                                    <a href="#" class="btn btn-lg btn-primary d-block">Download</a>
-                                                </div>
-                                            </div>
                                             <div class="row">
-                                                <div class="col-lg-2 col-md-2 col-sm-12">
-                                                    <label class="form-label">Option:</label>
+                                                <div class="col-md-6 col-sm-12">
+                                                    <h3 class="fs-5 fw-bold text-uppercase">VENDOR</h3>
+                                                    <p>Vendor - 12345<br />Address<br />Hartford, CT</p>
                                                 </div>
-                                                <div class="col-lg-7 col-md-6 col-sm-12">
-                                                    <div class="mb-3">
-                                                        <select class="form-select">
-                                                            <option value="1">Options</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-3 col-md-4 col-sm-12">
-                                                    <a href="#" class="btn btn-lg btn-primary d-block">Print</a>
+                                                <div class="col-md-6 col-sm-12">
+                                                    <h3 class="fs-5 fw-bold text-uppercase">SHIP TO</h3>
+                                                    <p>Storage<br />Address<br />Hartford, CT</p>
                                                 </div>
                                             </div>
 
-                                            <p>Ready to print a Pick List?<br />Please go to the Manage Shipments page and click the print option for your shipment(s).</p>
+                                            <hr class="mt-4 mb-4" />
 
-                                            <p class="fw-bold text-danger">This order will be deleted from RestockAMZ. You will be able to track your shipment in RestockAMZ once the shipment has been create in Seller Central.</p>
+                                            <div class="row">
+                                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                                    <h3 class="fs-5 fw-bold text-uppercase">PO REF</h3>
+                                                    <p>##</p>
+                                                </div>
+                                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                                    <h3 class="fs-5 fw-bold text-uppercase">SHIP VIA</h3>
+                                                    <p>N/A</p>
+                                                </div>
+                                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                                    <h3 class="fs-5 fw-bold text-uppercase">F.O.B.</h3>
+                                                    <p>N/A</p>
+                                                </div>
+                                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                                    <h3 class="fs-5 fw-bold text-uppercase">PAYMENT TERMS</h3>
+                                                    <p>N/A</p>
+                                                </div>
+                                            </div>
+
+                                            <hr class="mt-4 mb-4" />
+                                            
+                                            <table class="table mb-5" style="table-layout: fixed;">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">Item #</th>
+                                                        <th scope="col">Description</th>
+                                                        <th scope="col">QTY</th>
+                                                        <th scope="col">Unit Price</th>
+                                                        <th scope="col">Total Price</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Item A</td>
+                                                        <td>##</td>
+                                                        <td>Desc</td>
+                                                        <td>$$</td>
+                                                        <td class="bg-light">$$</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Item B</td>
+                                                        <td>##</td>
+                                                        <td>Desc</td>
+                                                        <td>$$</td>
+                                                        <td class="bg-light">$$</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Item C</td>
+                                                        <td>##</td>
+                                                        <td>Desc</td>
+                                                        <td>$$</td>
+                                                        <td class="bg-light">$$</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="border-0"></td>
+                                                        <td class="border-0"></td>
+                                                        <td class="border-0"></td>
+                                                        <td class="border-0"></td>
+                                                        <td class="border-0"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="border-0 align-top" colspan="3" rowspan="5">
+                                                            <label class="fw-bold">Comments or Special Requests</label>
+                                                            <p>Text, text, text.</p>
+                                                        </td>
+                                                        <td class="fw-bold text-uppercase">Subtotal</td>
+                                                        <td class="bg-light">$$</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="fw-bold text-uppercase">Tax</td>
+                                                        <td class="bg-light">$$</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="fw-bold text-uppercase">Shipping</td>
+                                                        <td class="bg-light">$$</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="fw-bold text-uppercase">Other</td>
+                                                        <td class="bg-light">$$</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="fw-bold text-uppercase">Total</td>
+                                                        <td class="bg-light">$$</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
 
                                             <hr />
                                             <p class="mb-0 text-center">
