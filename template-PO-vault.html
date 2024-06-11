@@ -215,45 +215,121 @@
                             <p>Below you will find all of your saved purchase orders. Click on the purchase order title to view the items for that purchase order.</p>
                             <hr />
 
+                            <div class="row mb-3">
+                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                    <label class="fw-bold mt-2">Sort By</label>
+                                    <select class="form-select">
+                                        <option value="1">Vendor Name</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                    <label class="fw-bold mt-2">Search By</label>
+                                    <select class="form-select">
+                                        <option value="1">PO Number</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                    <label class="fw-bold mt-2">&nbsp;</label>
+                                    <input type="text" class="form-control" placeholder="Search for PO Number…" />
+                                </div>
+                            </div>
                             <div class="accordion accordion-flush" id="acc">
                                 <div class="accordion-item">
-                                    <h2 class="accordion-header" id="acchdg1">
+                                    <h2 class="accordion-header position-relative" id="acchdg1">
                                         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#acc1" aria-expanded="true" aria-controls="acc1">
-                                            Vendor - 12345
+                                            <span class="d-block w-100" style="max-width: calc(100% - 120px);overflow: hidden;text-overflow: ellipsis;">Vendor - 12345</span>
                                         </button>
+                                        <button data-bs-toggle="tooltip" data-bs-placement="top" title="Due: mm/dd/yyyy" type="button" class="btn btn-link position-absolute top-50 translate-middle-y pe-1 ps-1" style="z-index: 100; right: 120px; cursor: default;"><i class="align-middle" style="margin-bottom: 3px;" data-feather="clock"></i></button>
+                                        <button data-bs-toggle="tooltip" data-bs-placement="top" title="View" type="button" class="btn btn-primary position-absolute top-50 translate-middle-y pe-2 ps-2" style="z-index: 100; right: 85px;"><i class="align-middle" style="margin-bottom: 3px;" data-feather="eye"></i></button>
+                                        <button data-bs-toggle="tooltip" data-bs-placement="top" title="Delete" type="button" class="btn btn-primary position-absolute top-50 translate-middle-y pe-2 ps-2" style="z-index: 100; right: 50px;"><i class="align-middle" style="margin-bottom: 3px;" data-feather="delete"></i></button>
                                     </h2>
                                     <div id="acc1" class="accordion-collapse collapse show bg-white" aria-labelledby="acchdg1">
                                         <div class="accordion-body">
-                                            text
+                                            <table class="table mb-0" style="table-layout: fixed;">
+                                                <tbody>
+                                                    <tr>
+                                                        <td><strong>Item ###</strong> ($$)</td>
+                                                        <td class="text-end"><strong>##</strong> units</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><strong>Item ###</strong> ($$)</td>
+                                                        <td class="text-end"><strong>##</strong> units</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="border-0"><strong>Item ###</strong> ($$)</td>
+                                                        <td class="border-0 text-end"><strong>##</strong> units</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="accordion-item">
-                                    <h2 class="accordion-header" id="acchdg2">
+                                    <h2 class="accordion-header position-relative" id="acchdg2">
                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#acc2" aria-expanded="false" aria-controls="acc2">
-                                            Vendor - 23456
+                                            <span class="d-block w-100" style="max-width: calc(100% - 120px);overflow: hidden;text-overflow: ellipsis;">Vendor - 23456</span>
                                         </button>
+                                        <button data-bs-toggle="tooltip" data-bs-placement="top" title="Due: mm/dd/yyyy" type="button" class="btn btn-link position-absolute top-50 translate-middle-y pe-1 ps-1" style="z-index: 100; right: 120px; cursor: default;"><i class="align-middle" style="margin-bottom: 3px;" data-feather="clock"></i></button>
+                                        <button data-bs-toggle="tooltip" data-bs-placement="top" title="View" type="button" class="btn btn-primary position-absolute top-50 translate-middle-y pe-2 ps-2" style="z-index: 100; right: 85px;"><i class="align-middle" style="margin-bottom: 3px;" data-feather="eye"></i></button>
+                                        <button data-bs-toggle="tooltip" data-bs-placement="top" title="Delete" type="button" class="btn btn-primary position-absolute top-50 translate-middle-y pe-2 ps-2" style="z-index: 100; right: 50px;"><i class="align-middle" style="margin-bottom: 3px;" data-feather="delete"></i></button>
                                     </h2>
                                     <div id="acc2" class="accordion-collapse collapse bg-white" aria-labelledby="acchdg2">
                                         <div class="accordion-body">
-                                            text
+                                            <table class="table mb-0" style="table-layout: fixed;">
+                                                <tbody>
+                                                    <tr>
+                                                        <td><strong>Item ###</strong> ($$)</td>
+                                                        <td class="text-end"><strong>##</strong> units</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><strong>Item ###</strong> ($$)</td>
+                                                        <td class="text-end"><strong>##</strong> units</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="border-0"><strong>Item ###</strong> ($$)</td>
+                                                        <td class="border-0 text-end"><strong>##</strong> units</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="accordion-item">
-                                    <h2 class="accordion-header" id="acchdg3">
+                                    <h2 class="accordion-header position-relative" id="acchdg3">
                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#acc3" aria-expanded="false" aria-controls="acc3">
-                                            Vendor - 34567
+                                            <span class="d-block w-100" style="max-width: calc(100% - 120px);overflow: hidden;text-overflow: ellipsis;">Vendor - 34567</span>
                                         </button>
+                                        <button data-bs-toggle="tooltip" data-bs-placement="top" title="Due: mm/dd/yyyy" type="button" class="btn btn-link position-absolute top-50 translate-middle-y pe-1 ps-1" style="z-index: 100; right: 120px; cursor: default;"><i class="align-middle" style="margin-bottom: 3px;" data-feather="clock"></i></button>
+                                        <button data-bs-toggle="tooltip" data-bs-placement="top" title="View" type="button" class="btn btn-primary position-absolute top-50 translate-middle-y pe-2 ps-2" style="z-index: 100; right: 85px;"><i class="align-middle" style="margin-bottom: 3px;" data-feather="eye"></i></button>
+                                        <button data-bs-toggle="tooltip" data-bs-placement="top" title="Delete" type="button" class="btn btn-primary position-absolute top-50 translate-middle-y pe-2 ps-2" style="z-index: 100; right: 50px;"><i class="align-middle" style="margin-bottom: 3px;" data-feather="delete"></i></button>
                                     </h2>
                                     <div id="acc3" class="accordion-collapse collapse bg-white" aria-labelledby="acchdg3">
                                         <div class="accordion-body">
-                                            text
+                                            <table class="table mb-0" style="table-layout: fixed;">
+                                                <tbody>
+                                                    <tr>
+                                                        <td><strong>Item ###</strong> ($$)</td>
+                                                        <td class="text-end"><strong>##</strong> units</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><strong>Item ###</strong> ($$)</td>
+                                                        <td class="text-end"><strong>##</strong> units</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="border-0"><strong>Item ###</strong> ($$)</td>
+                                                        <td class="border-0 text-end"><strong>##</strong> units</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
+                            <hr class="mt-4" />
+                            
                             <nav aria-label="Pagination" class="mt-4">
                                 <ul class="pagination pagination-md">
                                     <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-left"></i></a></li>
